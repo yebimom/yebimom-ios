@@ -10,4 +10,7 @@
 
 @interface CenterTableViewCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIImageView *centerImage;
+@property (strong, nonatomic) IBOutlet UILabel *centerNameLabel;
+
 @end

@@ -29,6 +29,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="centerImage" destination="0YX-pj-hh7" id="rrr-0Q-Qvp"/>
+                                    <outlet property="centerNameLabel" destination="I6S-UP-cqd" id="bZb-h1-CmR"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
