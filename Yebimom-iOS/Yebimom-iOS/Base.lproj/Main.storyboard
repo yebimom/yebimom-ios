@@ -4,16 +4,16 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Center Table View Controller-->
         <scene sceneID="svN-YJ-iI3">
             <objects>
-                <tableViewController id="ONF-Bs-DTS" sceneMemberID="viewController">
+                <tableViewController id="ONF-Bs-DTS" customClass="CenterTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3Aj-yG-JdQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XWP-qC-asO">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XWP-qC-asO" customClass="CenterTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XWP-qC-asO" id="5n0-3L-EL3">
                                     <autoresizingMask key="autoresizingMask"/>
