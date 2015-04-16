@@ -18,11 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    _centerNameLabels = @[@"center1",
-                         @"center2",
-                         @"center3",
-                         @"center4",
-                         @"center5",];
+    _centerNames = @[@"미즈 산후조리원 1",
+                     @"미즈 산후조리원 2",
+                     @"미즈 산후조리원 3",
+                     @"미즈 산후조리원 4",
+                     @"미즈 산후조리원 5"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -39,24 +39,30 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.g
+    // Return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 0;
+    return [self.centerNames count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"centerTableCell";
+    
+    CenterTableViewCell *cell = [tableView
+                                 dequeueReusableCellWithIdentifier:CellIdentifier
+                                 forIndexPath:indexPath];
+    
+    NSLog(@"%@", cell);
     
     // Configure the cell...
+    long row = [indexPath row];
+    cell.centerNameLabel.text = _centerNames[row];
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
