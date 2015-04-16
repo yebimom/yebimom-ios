@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D944CE771ADEEFC1005879D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D944CE761ADEEFC1005879D1 /* main.m */; };
 		D944CE7A1ADEEFC1005879D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D944CE791ADEEFC1005879D1 /* AppDelegate.m */; };
-		D944CE7D1ADEEFC1005879D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D944CE7C1ADEEFC1005879D1 /* ViewController.m */; };
 		D944CE801ADEEFC1005879D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D944CE7E1ADEEFC1005879D1 /* Main.storyboard */; };
 		D944CE821ADEEFC1005879D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D944CE811ADEEFC1005879D1 /* Images.xcassets */; };
 		D944CE851ADEEFC1005879D1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D944CE831ADEEFC1005879D1 /* LaunchScreen.xib */; };
@@ -32,8 +31,6 @@
 		D944CE761ADEEFC1005879D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D944CE781ADEEFC1005879D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D944CE791ADEEFC1005879D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D944CE7B1ADEEFC1005879D1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D944CE7C1ADEEFC1005879D1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D944CE7F1ADEEFC1005879D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D944CE811ADEEFC1005879D1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D944CE841ADEEFC1005879D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -83,8 +80,6 @@
 			children = (
 				D944CE781ADEEFC1005879D1 /* AppDelegate.h */,
 				D944CE791ADEEFC1005879D1 /* AppDelegate.m */,
-				D944CE7B1ADEEFC1005879D1 /* ViewController.h */,
-				D944CE7C1ADEEFC1005879D1 /* ViewController.m */,
 				D944CE7E1ADEEFC1005879D1 /* Main.storyboard */,
 				D944CE811ADEEFC1005879D1 /* Images.xcassets */,
 				D944CE831ADEEFC1005879D1 /* LaunchScreen.xib */,
@@ -219,7 +214,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D944CE7D1ADEEFC1005879D1 /* ViewController.m in Sources */,
 				D944CE7A1ADEEFC1005879D1 /* AppDelegate.m in Sources */,
 				D944CE771ADEEFC1005879D1 /* main.m in Sources */,
 			);
@@ -418,6 +412,7 @@
 				D944CE961ADEEFC1005879D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D944CE971ADEEFC1005879D1 /* Build configuration list for PBXNativeTarget "Yebimom-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +421,7 @@
 				D944CE991ADEEFC1005879D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
