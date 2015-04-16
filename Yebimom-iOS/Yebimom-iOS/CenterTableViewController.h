@@ -10,7 +10,6 @@
 
 @interface CenterTableViewController : UITableViewController
 
-@property (nonatomic, strong) NSArray *centerImages;
-@property (nonatomic, strong) NSArray *centerNameLabels;
+@property (nonatomic, strong) NSArray *centerNames;
 
 @end
