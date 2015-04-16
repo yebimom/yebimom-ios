@@ -14,6 +14,7 @@
 		D944CE851ADEEFC1005879D1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D944CE831ADEEFC1005879D1 /* LaunchScreen.xib */; };
 		D944CE911ADEEFC1005879D1 /* Yebimom_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D944CE901ADEEFC1005879D1 /* Yebimom_iOSTests.m */; };
 		D9AE7FAD1ADFA7F400DBD974 /* CenterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9AE7FAC1ADFA7F400DBD974 /* CenterTableViewController.m */; };
+		D9AE7FB01ADFA97600DBD974 /* CenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9AE7FAF1ADFA97600DBD974 /* CenterTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		D944CE901ADEEFC1005879D1 /* Yebimom_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Yebimom_iOSTests.m; sourceTree = "<group>"; };
 		D9AE7FAB1ADFA7F400DBD974 /* CenterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterTableViewController.h; sourceTree = "<group>"; };
 		D9AE7FAC1ADFA7F400DBD974 /* CenterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterTableViewController.m; sourceTree = "<group>"; };
+		D9AE7FAE1ADFA97600DBD974 /* CenterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterTableViewCell.h; sourceTree = "<group>"; };
+		D9AE7FAF1ADFA97600DBD974 /* CenterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 		D944CE731ADEEFC1005879D1 /* Yebimom-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D9AE7FAE1ADFA97600DBD974 /* CenterTableViewCell.h */,
+				D9AE7FAF1ADFA97600DBD974 /* CenterTableViewCell.m */,
 				D9AE7FAB1ADFA7F400DBD974 /* CenterTableViewController.h */,
 				D9AE7FAC1ADFA7F400DBD974 /* CenterTableViewController.m */,
 				D944CE781ADEEFC1005879D1 /* AppDelegate.h */,
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9AE7FB01ADFA97600DBD974 /* CenterTableViewCell.m in Sources */,
 				D944CE7A1ADEEFC1005879D1 /* AppDelegate.m in Sources */,
 				D9AE7FAD1ADFA7F400DBD974 /* CenterTableViewController.m in Sources */,
 				D944CE771ADEEFC1005879D1 /* main.m in Sources */,
