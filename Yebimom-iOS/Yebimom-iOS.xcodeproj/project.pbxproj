@@ -13,6 +13,7 @@
 		D944CE821ADEEFC1005879D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D944CE811ADEEFC1005879D1 /* Images.xcassets */; };
 		D944CE851ADEEFC1005879D1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D944CE831ADEEFC1005879D1 /* LaunchScreen.xib */; };
 		D944CE911ADEEFC1005879D1 /* Yebimom_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D944CE901ADEEFC1005879D1 /* Yebimom_iOSTests.m */; };
+		D9AE7FAD1ADFA7F400DBD974 /* CenterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9AE7FAC1ADFA7F400DBD974 /* CenterTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,8 @@
 		D944CE8A1ADEEFC1005879D1 /* Yebimom-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yebimom-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D944CE8F1ADEEFC1005879D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D944CE901ADEEFC1005879D1 /* Yebimom_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Yebimom_iOSTests.m; sourceTree = "<group>"; };
+		D9AE7FAB1ADFA7F400DBD974 /* CenterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterTableViewController.h; sourceTree = "<group>"; };
+		D9AE7FAC1ADFA7F400DBD974 /* CenterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 		D944CE731ADEEFC1005879D1 /* Yebimom-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D9AE7FAB1ADFA7F400DBD974 /* CenterTableViewController.h */,
+				D9AE7FAC1ADFA7F400DBD974 /* CenterTableViewController.m */,
 				D944CE781ADEEFC1005879D1 /* AppDelegate.h */,
 				D944CE791ADEEFC1005879D1 /* AppDelegate.m */,
 				D944CE7E1ADEEFC1005879D1 /* Main.storyboard */,
@@ -215,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D944CE7A1ADEEFC1005879D1 /* AppDelegate.m in Sources */,
+				D9AE7FAD1ADFA7F400DBD974 /* CenterTableViewController.m in Sources */,
 				D944CE771ADEEFC1005879D1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
