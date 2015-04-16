@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    _centerNameLabel = @[@"center1",
+    _centerNameLabels = @[@"center1",
                          @"center2",
                          @"center3",
                          @"center4",
