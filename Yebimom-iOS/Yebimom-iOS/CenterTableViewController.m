@@ -24,6 +24,12 @@
                      @"미즈 산후조리원 4",
                      @"미즈 산후조리원 5"];
     
+    _centerImages =@[@"miz-center.png",
+                     @"miz-center.png",
+                     @"miz-center.png",
+                     @"miz-center.png",
+                     @"miz-center.png"];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -55,11 +61,10 @@
                                  dequeueReusableCellWithIdentifier:CellIdentifier
                                  forIndexPath:indexPath];
     
-    NSLog(@"%@", cell);
-    
     // Configure the cell...
     long row = [indexPath row];
     cell.centerNameLabel.text = _centerNames[row];
+    cell.centerImage.image = [UIImage imageNamed:_centerImages[row]];
     
     return cell;
 }
