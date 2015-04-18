@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D936697D1AE27281000BBD1B /* CenterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D936697C1AE27281000BBD1B /* CenterDetailViewController.m */; };
 		D944CE771ADEEFC1005879D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D944CE761ADEEFC1005879D1 /* main.m */; };
 		D944CE7A1ADEEFC1005879D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D944CE791ADEEFC1005879D1 /* AppDelegate.m */; };
 		D944CE801ADEEFC1005879D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D944CE7E1ADEEFC1005879D1 /* Main.storyboard */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D936697B1AE27281000BBD1B /* CenterDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterDetailViewController.h; sourceTree = "<group>"; };
+		D936697C1AE27281000BBD1B /* CenterDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterDetailViewController.m; sourceTree = "<group>"; };
 		D944CE711ADEEFC1005879D1 /* Yebimom-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yebimom-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D944CE751ADEEFC1005879D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D944CE761ADEEFC1005879D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 			children = (
 				D9AE7FAE1ADFA97600DBD974 /* CenterTableViewCell.h */,
 				D9AE7FAF1ADFA97600DBD974 /* CenterTableViewCell.m */,
+				D936697B1AE27281000BBD1B /* CenterDetailViewController.h */,
+				D936697C1AE27281000BBD1B /* CenterDetailViewController.m */,
 				D9AE7FAB1ADFA7F400DBD974 /* CenterTableViewController.h */,
 				D9AE7FAC1ADFA7F400DBD974 /* CenterTableViewController.m */,
 				D944CE781ADEEFC1005879D1 /* AppDelegate.h */,
@@ -231,6 +236,7 @@
 				D9AE7FB01ADFA97600DBD974 /* CenterTableViewCell.m in Sources */,
 				D944CE7A1ADEEFC1005879D1 /* AppDelegate.m in Sources */,
 				D9AE7FAD1ADFA7F400DBD974 /* CenterTableViewController.m in Sources */,
+				D936697D1AE27281000BBD1B /* CenterDetailViewController.m in Sources */,
 				D944CE771ADEEFC1005879D1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
