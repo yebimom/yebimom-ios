@@ -27,11 +27,18 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Di7-93-Frz">
+                                            <rect key="frame" x="10" y="305" width="580" height="25"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="centerImageView" destination="0YX-pj-hh7" id="icL-aw-lmF"/>
                                     <outlet property="centerNameLabel" destination="I6S-UP-cqd" id="bZb-h1-CmR"/>
+                                    <outlet property="centerRegionLabel" destination="Di7-93-Frz" id="oGQ-Ym-81Y"/>
                                     <segue destination="Ore-bp-wui" kind="show" identifier="ShowCenterDetails" id="tZF-P7-fGl"/>
                                 </connections>
                             </tableViewCell>
