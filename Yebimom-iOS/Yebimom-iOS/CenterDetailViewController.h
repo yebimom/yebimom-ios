@@ -14,5 +14,6 @@
 @property (strong, nonatomic) IBOutlet UIImageView *centerImageView;
 @property (strong, nonatomic) IBOutlet UILabel *centerNameLabel;
 @property (strong, nonatomic) NSArray *centerDetail;
+@property (strong, nonatomic) IBOutlet UILabel *centerRegionLabel;
 
 @end
