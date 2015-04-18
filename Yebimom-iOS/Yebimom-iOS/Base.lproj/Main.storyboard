@@ -32,7 +32,7 @@
                                 <connections>
                                     <outlet property="centerImage" destination="0YX-pj-hh7" id="3Za-CR-ALo"/>
                                     <outlet property="centerNameLabel" destination="I6S-UP-cqd" id="bZb-h1-CmR"/>
-                                    <segue destination="Ore-bp-wui" kind="show" identifier="ShowCenterDetail" id="tZF-P7-fGl"/>
+                                    <segue destination="Ore-bp-wui" kind="show" identifier="ShowCenterDetails" id="tZF-P7-fGl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -63,7 +63,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="270"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaO-bq-LEO">
-                                <rect key="frame" x="10" y="342" width="580" height="25"/>
+                                <rect key="frame" x="10" y="343" width="580" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -71,6 +71,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="CenterImageView" destination="Agx-yJ-66I" id="4pb-IE-wp8"/>
+                        <outlet property="CenterNameLabel" destination="jaO-bq-LEO" id="Y8X-SI-CxG"/>
+                        <outlet property="centerImageView" destination="Agx-yJ-66I" id="bfB-2J-NEa"/>
+                        <outlet property="centerNameLabel" destination="jaO-bq-LEO" id="u7P-VV-ee6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFP-o4-l89" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
