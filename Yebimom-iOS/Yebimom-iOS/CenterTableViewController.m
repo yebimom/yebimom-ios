@@ -8,6 +8,7 @@
 
 #import "CenterTableViewController.h"
 #import "CenterTableViewCell.h"
+#import "CenterDetailViewController.h"
 
 @interface CenterTableViewController ()
 
@@ -121,14 +122,26 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    
+    if ([[segue identifier] isEqualToString:@"ShowCenterDetails"])
+    {
+        CenterDetailViewController *detailViewController = [segue destinationViewController];
+        
+        NSIndexPath *centerIndexPath = [self.tableView indexPathForSelectedRow];
+        
+        long row = [centerIndexPath row];
+        
+        detailViewController.centerDetail = @[_centerNames[row], _centerImages[row]];
+    }
 }
-*/
+
 
 @end
