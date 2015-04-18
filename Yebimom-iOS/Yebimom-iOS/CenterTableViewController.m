@@ -83,7 +83,7 @@
     // Configure the cell...
     long row = [indexPath row];
     cell.centerNameLabel.text = _centerNames[row];
-    cell.centerImage.image = [UIImage imageNamed:_centerImages[row]];
+    cell.centerImageView.image = [UIImage imageNamed:_centerImages[row]];
     
     return cell;
 }
