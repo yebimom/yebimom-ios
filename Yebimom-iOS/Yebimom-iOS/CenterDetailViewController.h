@@ -10,4 +10,9 @@
 
 @interface CenterDetailViewController : UIViewController
 
+
+@property (strong, nonatomic) IBOutlet UIImageView *centerImageView;
+@property (strong, nonatomic) IBOutlet UILabel *centerNameLabel;
+@property (strong, nonatomic) NSArray *centerDetail;
+
 @end
