@@ -155,7 +155,9 @@
         
         long row = [centerIndexPath row];
         
-        detailViewController.centerDetail = @[_centerNames[row], _centerImages[row]];
+        detailViewController.centerDetail = @[_centerImages[row],
+                                              _centerNames[row],
+                                              _centerRegions[row]];
     }
 }
 

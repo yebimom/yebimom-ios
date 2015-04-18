@@ -17,9 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _centerNameLabel.text = _centerDetail[0];
-    _centerImageView.image = [UIImage imageNamed:_centerDetail[1]];
-    // Do any additional setup after loading the view.
+
+    _centerImageView.image = [UIImage imageNamed:_centerDetail[0]];
+    _centerNameLabel.text = _centerDetail[1];
+    _centerRegionLabel.text = _centerDetail[2];
 }
 
 - (void)didReceiveMemoryWarning {
