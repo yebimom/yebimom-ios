@@ -32,7 +32,7 @@
                                 <connections>
                                     <outlet property="centerImage" destination="0YX-pj-hh7" id="3Za-CR-ALo"/>
                                     <outlet property="centerNameLabel" destination="I6S-UP-cqd" id="bZb-h1-CmR"/>
-                                    <segue destination="Ore-bp-wui" kind="show" id="tZF-P7-fGl"/>
+                                    <segue destination="Ore-bp-wui" kind="show" identifier="ShowCenterDetail" id="tZF-P7-fGl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
