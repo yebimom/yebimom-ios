@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     _centerNames = @[@"미즈 산후조리원 1",
                      @"미즈 산후조리원 2",
                      @"미즈 산후조리원 3",
@@ -33,6 +33,21 @@
                      @"미즈 산후조리원 12",
                      @"미즈 산후조리원 13",
                      @"미즈 산후조리원 14"];
+    
+    _centerRegions =@[@"region1",
+                      @"region2",
+                      @"region3",
+                      @"region4",
+                      @"region5",
+                      @"region6",
+                      @"region7",
+                      @"region8",
+                      @"region9",
+                      @"region10",
+                      @"region11",
+                      @"region12",
+                      @"region13",
+                      @"region14"];
     
     _centerImages =@[@"miz-center.png",
                      @"miz-center.png",
@@ -83,6 +98,7 @@
     // Configure the cell...
     long row = [indexPath row];
     cell.centerNameLabel.text = _centerNames[row];
+    cell.centerRegionLabel.text = _centerRegions[row];
     cell.centerImageView.image = [UIImage imageNamed:_centerImages[row]];
     
     return cell;
