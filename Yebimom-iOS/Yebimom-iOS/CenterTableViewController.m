@@ -16,36 +16,40 @@
 
 @implementation CenterTableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (NSData *)requests:(NSString *)targetURL {
+    NSURL * url = [[NSURL alloc] initWithString:targetURL];
     
-    
-    /// Temporary codes, It should be refactored
-    // Prepare the link that is going to be used on the GET request
-    NSURL * url = [[NSURL alloc] initWithString:@"http://dev.yebimom.com/api/regions/"];
-    
-    // Prepare the request object
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url
                                                 cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                             timeoutInterval:30];
     
-    // Prepare the variables for the JSON response
-    NSData *urlData;
     NSURLResponse *response;
     NSError *error;
     
-    // Make synchronous request
-    urlData = [NSURLConnection sendSynchronousRequest:urlRequest
+    NSData *urlData = [NSURLConnection sendSynchronousRequest:urlRequest
                                     returningResponse:&response
                                                 error:&error];
-    NSLog(@"%@", urlData);
     
-    // Construct a Array around the Data from the response
-    NSArray* object = [NSJSONSerialization
-                       JSONObjectWithData:urlData
+    return urlData;
+}
+
+- (NSArray *)getJsonArrayFromResponse:(NSData *)responseData {
+    NSError *error;
+    NSArray* jsonArray = [NSJSONSerialization
+                       JSONObjectWithData:responseData
                        options:0
                        error:&error];
-    ///
+    
+    return jsonArray;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    
+    NSString *regionsURL = @"http://dev.yebimom.com/api/regions/";
+    NSData *responseData = [[NSData alloc] initWithData:[self requests:regionsURL]];
+    NSArray* regionsArray = [self getJsonArrayFromResponse:responseData];
     
     _centerNames = @[@"미즈 산후조리원 1",
                      @"미즈 산후조리원 2",
@@ -62,21 +66,21 @@
                      @"미즈 산후조리원 13",
                      @"미즈 산후조리원 14"];
     
-    _centerRegions = @[[object[0] objectForKey:@"name"],
-                       [object[1] objectForKey:@"name"],
-                       [object[2] objectForKey:@"name"],
-                       [object[3] objectForKey:@"name"],
-                       [object[4] objectForKey:@"name"],
-                       [object[5] objectForKey:@"name"],
-                       [object[6] objectForKey:@"name"],
-                       [object[7] objectForKey:@"name"],
-                       [object[8] objectForKey:@"name"],
-                       [object[9] objectForKey:@"name"],
-                       [object[10] objectForKey:@"name"],
-                       [object[11] objectForKey:@"name"],
-                       [object[12] objectForKey:@"name"],
-                       [object[13] objectForKey:@"name"],
-                       [object[14] objectForKey:@"name"]];
+    _centerRegions = @[[regionsArray[0] objectForKey:@"name"],
+                       [regionsArray[1] objectForKey:@"name"],
+                       [regionsArray[2] objectForKey:@"name"],
+                       [regionsArray[3] objectForKey:@"name"],
+                       [regionsArray[4] objectForKey:@"name"],
+                       [regionsArray[5] objectForKey:@"name"],
+                       [regionsArray[6] objectForKey:@"name"],
+                       [regionsArray[7] objectForKey:@"name"],
+                       [regionsArray[8] objectForKey:@"name"],
+                       [regionsArray[9] objectForKey:@"name"],
+                       [regionsArray[10] objectForKey:@"name"],
+                       [regionsArray[11] objectForKey:@"name"],
+                       [regionsArray[12] objectForKey:@"name"],
+                       [regionsArray[13] objectForKey:@"name"],
+                       [regionsArray[14] objectForKey:@"name"]];
      
     _centerImages = @[@"miz-center.png",
                      @"miz-center.png",

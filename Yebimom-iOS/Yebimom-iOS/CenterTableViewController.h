@@ -14,4 +14,7 @@
 @property (nonatomic, strong) NSArray *centerImages;
 @property (nonatomic, strong) NSArray *centerRegions;
 
+- (NSData *)requests:(NSString *)targetURL;
+- (NSArray *)getJsonArrayFromResponse:(NSData *)responseData;
+
 @end
