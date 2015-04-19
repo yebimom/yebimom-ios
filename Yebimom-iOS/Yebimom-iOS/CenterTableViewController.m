@@ -46,25 +46,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
     NSString *regionsURL = @"http://dev.yebimom.com/api/regions/";
     NSData *responseData = [[NSData alloc] initWithData:[self requests:regionsURL]];
     NSArray* regionsArray = [self getJsonArrayFromResponse:responseData];
     
-    _centerNames = @[@"미즈 산후조리원 1",
-                     @"미즈 산후조리원 2",
-                     @"미즈 산후조리원 3",
-                     @"미즈 산후조리원 4",
-                     @"미즈 산후조리원 5",
-                     @"미즈 산후조리원 6",
-                     @"미즈 산후조리원 7",
-                     @"미즈 산후조리원 8",
-                     @"미즈 산후조리원 9",
-                     @"미즈 산후조리원 10",
-                     @"미즈 산후조리원 11",
-                     @"미즈 산후조리원 12",
-                     @"미즈 산후조리원 13",
-                     @"미즈 산후조리원 14"];
+    NSString *moviesURL = @"http://api.androidhive.info/json/movies.json";
+    responseData = [[NSData alloc] initWithData:[self requests:moviesURL]];
+    NSArray* moviesArray = [self getJsonArrayFromResponse:responseData];
+    
+    _centerNames = @[[moviesArray[0] objectForKey:@"title"],
+                     [moviesArray[1] objectForKey:@"title"],
+                     [moviesArray[2] objectForKey:@"title"],
+                     [moviesArray[3] objectForKey:@"title"],
+                     [moviesArray[4] objectForKey:@"title"],
+                     [moviesArray[5] objectForKey:@"title"],
+                     [moviesArray[6] objectForKey:@"title"],
+                     [moviesArray[7] objectForKey:@"title"],
+                     [moviesArray[8] objectForKey:@"title"],
+                     [moviesArray[9] objectForKey:@"title"],
+                     [moviesArray[10] objectForKey:@"title"],
+                     [moviesArray[11] objectForKey:@"title"],
+                     [moviesArray[12] objectForKey:@"title"],
+                     [moviesArray[13] objectForKey:@"title"],
+                     [moviesArray[14] objectForKey:@"title"]];
     
     _centerRegions = @[[regionsArray[0] objectForKey:@"name"],
                        [regionsArray[1] objectForKey:@"name"],
@@ -81,21 +85,22 @@
                        [regionsArray[12] objectForKey:@"name"],
                        [regionsArray[13] objectForKey:@"name"],
                        [regionsArray[14] objectForKey:@"name"]];
-     
-    _centerImages = @[@"miz-center.png",
-                     @"miz-center.png",
-                     @"miz-center.png",
-                     @"miz-center.png",
-                     @"miz-center.png",
-                     @"miz-center.png",
-                     @"miz-center.png",
-                     @"miz-center.png",
-                     @"miz-center.png",
-                     @"miz-center.png",
-                     @"miz-center.png",
-                     @"miz-center.png",
-                     @"miz-center.png",
-                     @"miz-center.png"];
+    
+    _centerImages = @[[moviesArray[0] objectForKey:@"image"],
+                      [moviesArray[1] objectForKey:@"image"],
+                      [moviesArray[2] objectForKey:@"image"],
+                      [moviesArray[3] objectForKey:@"image"],
+                      [moviesArray[4] objectForKey:@"image"],
+                      [moviesArray[5] objectForKey:@"image"],
+                      [moviesArray[6] objectForKey:@"image"],
+                      [moviesArray[7] objectForKey:@"image"],
+                      [moviesArray[8] objectForKey:@"image"],
+                      [moviesArray[9] objectForKey:@"image"],
+                      [moviesArray[10] objectForKey:@"image"],
+                      [moviesArray[11] objectForKey:@"image"],
+                      [moviesArray[12] objectForKey:@"image"],
+                      [moviesArray[13] objectForKey:@"image"],
+                      [moviesArray[14] objectForKey:@"image"]];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -132,7 +137,10 @@
     long row = [indexPath row];
     cell.centerNameLabel.text = _centerNames[row];
     cell.centerRegionLabel.text = _centerRegions[row];
-    cell.centerImageView.image = [UIImage imageNamed:_centerImages[row]];
+    
+    NSURL *imageURL = [NSURL URLWithString:_centerImages[row]];
+    NSData *imageDataFromURL = [NSData dataWithContentsOfURL:imageURL];
+    cell.centerImageView.image = [UIImage imageWithData:imageDataFromURL];
     
     return cell;
 }
