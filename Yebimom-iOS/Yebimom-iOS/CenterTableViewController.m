@@ -19,6 +19,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    /// Temporary codes, It should be refactored
+    // Prepare the link that is going to be used on the GET request
+    NSURL * url = [[NSURL alloc] initWithString:@"http://dev.yebimom.com/api/regions/"];
+    
+    // Prepare the request object
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url
+                                                cachePolicy:NSURLRequestReturnCacheDataElseLoad
+                                            timeoutInterval:30];
+    
+    // Prepare the variables for the JSON response
+    NSData *urlData;
+    NSURLResponse *response;
+    NSError *error;
+    
+    // Make synchronous request
+    urlData = [NSURLConnection sendSynchronousRequest:urlRequest
+                                    returningResponse:&response
+                                                error:&error];
+    NSLog(@"%@", urlData);
+    
+    // Construct a Array around the Data from the response
+    NSArray* object = [NSJSONSerialization
+                       JSONObjectWithData:urlData
+                       options:0
+                       error:&error];
+    ///
+    
     _centerNames = @[@"미즈 산후조리원 1",
                      @"미즈 산후조리원 2",
                      @"미즈 산후조리원 3",
@@ -34,22 +62,23 @@
                      @"미즈 산후조리원 13",
                      @"미즈 산후조리원 14"];
     
-    _centerRegions =@[@"region1",
-                      @"region2",
-                      @"region3",
-                      @"region4",
-                      @"region5",
-                      @"region6",
-                      @"region7",
-                      @"region8",
-                      @"region9",
-                      @"region10",
-                      @"region11",
-                      @"region12",
-                      @"region13",
-                      @"region14"];
-    
-    _centerImages =@[@"miz-center.png",
+    _centerRegions = @[[object[0] objectForKey:@"name"],
+                       [object[1] objectForKey:@"name"],
+                       [object[2] objectForKey:@"name"],
+                       [object[3] objectForKey:@"name"],
+                       [object[4] objectForKey:@"name"],
+                       [object[5] objectForKey:@"name"],
+                       [object[6] objectForKey:@"name"],
+                       [object[7] objectForKey:@"name"],
+                       [object[8] objectForKey:@"name"],
+                       [object[9] objectForKey:@"name"],
+                       [object[10] objectForKey:@"name"],
+                       [object[11] objectForKey:@"name"],
+                       [object[12] objectForKey:@"name"],
+                       [object[13] objectForKey:@"name"],
+                       [object[14] objectForKey:@"name"]];
+     
+    _centerImages = @[@"miz-center.png",
                      @"miz-center.png",
                      @"miz-center.png",
                      @"miz-center.png",
