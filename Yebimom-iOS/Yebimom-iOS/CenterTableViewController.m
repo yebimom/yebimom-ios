@@ -53,7 +53,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    SWRevealViewController *revealViewController = self.revealViewController;
+    SWRevealViewController *revealViewController = [self revealViewController];
+    
+    [revealViewController tapGestureRecognizer];
+    
     if ( revealViewController )
     {
         [self.sidebarButton setTarget: self.revealViewController];
