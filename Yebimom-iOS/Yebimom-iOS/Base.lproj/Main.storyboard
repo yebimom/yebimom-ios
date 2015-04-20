@@ -49,9 +49,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Sjz-SM-ZGo">
-                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="1rQ-f2-jO1">
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="1rQ-f2-jO1"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="rtP-Yl-kGs">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
@@ -123,4 +121,7 @@
             <point key="canvasLocation" x="188" y="142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu" width="22" height="22"/>
+    </resources>
 </document>
