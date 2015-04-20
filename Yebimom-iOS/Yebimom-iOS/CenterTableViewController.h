@@ -17,5 +17,6 @@
 
 - (NSData *)requests:(NSString *)targetURL;
 - (NSArray *)getJsonArrayFromResponse:(NSData *)responseData;
+- (UIImage *)getImageFromURL:(NSString *)imageURL;
 
 @end
