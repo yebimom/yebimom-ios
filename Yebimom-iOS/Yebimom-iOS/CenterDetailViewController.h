@@ -16,4 +16,6 @@
 @property (strong, nonatomic) NSArray *centerDetail;
 @property (strong, nonatomic) IBOutlet UILabel *centerRegionLabel;
 
+- (UIImage *)getImageFromURL:(NSString *)imageURL;
+
 @end

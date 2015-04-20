@@ -44,6 +44,12 @@
     return jsonArray;
 }
 
+- (UIImage *)getImageFromURL:(NSString *)imageURLStr {
+    NSURL *imageURL = [NSURL URLWithString:imageURLStr];
+    NSData *imageDataFromURL = [NSData dataWithContentsOfURL:imageURL];
+    return [UIImage imageWithData:imageDataFromURL];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -145,10 +151,7 @@
     long row = [indexPath row];
     cell.centerNameLabel.text = _centerNames[row];
     cell.centerRegionLabel.text = _centerRegions[row];
-    
-    NSURL *imageURL = [NSURL URLWithString:_centerImages[row]];
-    NSData *imageDataFromURL = [NSData dataWithContentsOfURL:imageURL];
-    cell.centerImageView.image = [UIImage imageWithData:imageDataFromURL];
+    cell.centerImageView.image = [self getImageFromURL:_centerImages[row]];
     
     return cell;
 }
@@ -164,7 +167,7 @@
 /*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
+    if (editingStyle == UITableViewCellEditingStyleDelete)
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
