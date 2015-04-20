@@ -103,22 +103,22 @@
                        [regionsArray[13] objectForKey:@"name"],
                        [regionsArray[14] objectForKey:@"name"]];
     
-    _centerImages = @[[moviesArray[0] objectForKey:@"image"],
-                      [moviesArray[1] objectForKey:@"image"],
-                      [moviesArray[2] objectForKey:@"image"],
-                      [moviesArray[3] objectForKey:@"image"],
-                      [moviesArray[4] objectForKey:@"image"],
-                      [moviesArray[5] objectForKey:@"image"],
-                      [moviesArray[6] objectForKey:@"image"],
-                      [moviesArray[7] objectForKey:@"image"],
-                      [moviesArray[8] objectForKey:@"image"],
-                      [moviesArray[9] objectForKey:@"image"],
-                      [moviesArray[10] objectForKey:@"image"],
-                      [moviesArray[11] objectForKey:@"image"],
-                      [moviesArray[12] objectForKey:@"image"],
-                      [moviesArray[13] objectForKey:@"image"],
-                      [moviesArray[14] objectForKey:@"image"]];
-    
+    _centerImages = @[[self getImageFromURL:[moviesArray[0] objectForKey:@"image"]],
+                      [self getImageFromURL:[moviesArray[1] objectForKey:@"image"]],
+                      [self getImageFromURL:[moviesArray[2] objectForKey:@"image"]],
+                      [self getImageFromURL:[moviesArray[3] objectForKey:@"image"]],
+                      [self getImageFromURL:[moviesArray[4] objectForKey:@"image"]],
+                      [self getImageFromURL:[moviesArray[5] objectForKey:@"image"]],
+                      [self getImageFromURL:[moviesArray[6] objectForKey:@"image"]],
+                      [self getImageFromURL:[moviesArray[7] objectForKey:@"image"]],
+                      [self getImageFromURL:[moviesArray[8] objectForKey:@"image"]],
+                      [self getImageFromURL:[moviesArray[9] objectForKey:@"image"]],
+                      [self getImageFromURL:[moviesArray[10] objectForKey:@"image"]],
+                      [self getImageFromURL:[moviesArray[11] objectForKey:@"image"]],
+                      [self getImageFromURL:[moviesArray[12] objectForKey:@"image"]],
+                      [self getImageFromURL:[moviesArray[13] objectForKey:@"image"]],
+                      [self getImageFromURL:[moviesArray[14] objectForKey:@"image"]]];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -154,7 +154,7 @@
     long row = [indexPath row];
     cell.centerNameLabel.text = _centerNames[row];
     cell.centerRegionLabel.text = _centerRegions[row];
-    cell.centerImageView.image = [self getImageFromURL:_centerImages[row]];
+    cell.centerImageView.image = _centerImages[row];
     
     return cell;
 }

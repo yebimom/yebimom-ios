@@ -15,16 +15,10 @@
 
 @implementation CenterDetailViewController
 
-- (UIImage *)getImageFromURL:(NSString *)imageURLStr {
-    NSURL *imageURL = [NSURL URLWithString:imageURLStr];
-    NSData *imageDataFromURL = [NSData dataWithContentsOfURL:imageURL];
-    return [UIImage imageWithData:imageDataFromURL];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    _centerImageView.image = [self getImageFromURL:_centerDetail[0]];
+    _centerImageView.image = _centerDetail[0];
     _centerNameLabel.text = _centerDetail[1];
     _centerRegionLabel.text = _centerDetail[2];
 }
