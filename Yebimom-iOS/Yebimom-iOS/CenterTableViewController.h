@@ -10,6 +10,7 @@
 
 @interface CenterTableViewController : UITableViewController
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (nonatomic, strong) NSArray *centerNames;
 @property (nonatomic, strong) NSArray *centerImages;
 @property (nonatomic, strong) NSArray *centerRegions;

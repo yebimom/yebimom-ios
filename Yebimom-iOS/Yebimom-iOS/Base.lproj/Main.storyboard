@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c1y-4b-HuR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2Sj-vh-S7r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
@@ -49,13 +49,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Sjz-SM-ZGo">
-                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="1rQ-f2-jO1">
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="1rQ-f2-jO1"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="rtP-Yl-kGs">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="sidebarButton" destination="1rQ-f2-jO1" id="1zH-oI-Oew"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8N6-rd-lZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,6 +104,57 @@
             </objects>
             <point key="canvasLocation" x="1700" y="144"/>
         </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="YJW-xf-QKr">
+            <objects>
+                <viewController id="2Sj-vh-S7r" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kj9-wD-a1v"/>
+                        <viewControllerLayoutGuide type="bottom" id="TTE-u9-4tL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kSx-g1-eX8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="ahC-5n-ISB" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="hJH-HX-rXR"/>
+                        <segue destination="c1y-4b-HuR" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="lsi-Cu-xjm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Klp-WN-aTT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-602" y="-676"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="RWg-Wf-q4Q">
+            <objects>
+                <tableViewController id="ahC-5n-ISB" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VDn-Zg-GH9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="26I-AD-hyp">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="26I-AD-hyp" id="Wor-Hb-Hsr">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ahC-5n-ISB" id="dvB-eu-z98"/>
+                            <outlet property="delegate" destination="ahC-5n-ISB" id="ogL-dI-MkG"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="ONF-Bs-DTS" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="0sY-cK-E6Z"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nrb-gW-n1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188" y="-676"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="b9T-sX-ovl">
             <objects>
@@ -123,4 +175,10 @@
             <point key="canvasLocation" x="188" y="142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu" width="22" height="22"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="0sY-cK-E6Z"/>
+    </inferredMetricsTieBreakers>
 </document>
