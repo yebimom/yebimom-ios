@@ -9,6 +9,7 @@
 #import "CenterTableViewController.h"
 #import "CenterTableViewCell.h"
 #import "CenterDetailViewController.h"
+#import "SWRevealViewController.h"
 
 @interface CenterTableViewController ()
 
@@ -45,7 +46,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+    }
+    
     NSString *regionsURL = @"http://dev.yebimom.com/api/regions/";
     NSData *responseData = [[NSData alloc] initWithData:[self requests:regionsURL]];
     NSArray* regionsArray = [self getJsonArrayFromResponse:responseData];
