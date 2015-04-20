@@ -192,6 +192,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="mTq-mh-z1k" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="67j-R7-FTy"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yU4-oi-Etx">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -236,6 +239,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nrb-gW-n1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="188" y="-676"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zvx-qG-uPe">
+            <objects>
+                <viewController id="mTq-mh-z1k" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZJl-sC-yMw"/>
+                        <viewControllerLayoutGuide type="bottom" id="GvF-KK-TuU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="16M-yN-azg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W99-3G-Gyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000" y="-676"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b9T-sX-ovl">
