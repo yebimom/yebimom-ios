@@ -240,10 +240,10 @@
             </objects>
             <point key="canvasLocation" x="188" y="-676"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="zvx-qG-uPe">
             <objects>
-                <viewController id="mTq-mh-z1k" sceneMemberID="viewController">
+                <viewController id="mTq-mh-z1k" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZJl-sC-yMw"/>
                         <viewControllerLayoutGuide type="bottom" id="GvF-KK-TuU"/>
