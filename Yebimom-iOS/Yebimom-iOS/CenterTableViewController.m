@@ -53,6 +53,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // NSMuableArray initialization
+    _centerNames = [[NSMutableArray alloc] init];
+    _centerRegions = [[NSMutableArray alloc] init];
+    _centerImages = [[NSMutableArray alloc] init];
+    
+    // Sidebar button configuration
     SWRevealViewController *revealViewController = [self revealViewController];
     
     [revealViewController tapGestureRecognizer];
@@ -63,62 +69,17 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
     }
     
-    NSString *regionsURL = @"http://dev.yebimom.com/api/regions/";
-    NSData *responseData = [[NSData alloc] initWithData:[self requests:regionsURL]];
-    NSArray* regionsArray = [self getJsonArrayFromResponse:responseData];
+    // Get data from API server
+    NSString *centersURL = @"http://yebimom.com/api/centers/";
+    NSData *responseData = [[NSData alloc] initWithData:[self requests:centersURL]];
+    NSArray* centersArray = [self getJsonArrayFromResponse:responseData];
     
-    NSString *moviesURL = @"http://api.androidhive.info/json/movies.json";
-    responseData = [[NSData alloc] initWithData:[self requests:moviesURL]];
-    NSArray* moviesArray = [self getJsonArrayFromResponse:responseData];
+    for(int i=0 ; i<[centersArray count] ; i++) {
+        [_centerImages addObject:[self getImageFromURL:@"http://img.etoday.co.kr/pto_db/2013/05/20130531093321_305736_400_283.jpg"]];
+        [_centerNames addObject:[centersArray[i] objectForKey:@"name"]];
+        [_centerRegions addObject:[centersArray[i] objectForKey:@"address"]];
+    }
     
-    _centerNames = @[[moviesArray[0] objectForKey:@"title"],
-                     [moviesArray[1] objectForKey:@"title"],
-                     [moviesArray[2] objectForKey:@"title"],
-                     [moviesArray[3] objectForKey:@"title"],
-                     [moviesArray[4] objectForKey:@"title"],
-                     [moviesArray[5] objectForKey:@"title"],
-                     [moviesArray[6] objectForKey:@"title"],
-                     [moviesArray[7] objectForKey:@"title"],
-                     [moviesArray[8] objectForKey:@"title"],
-                     [moviesArray[9] objectForKey:@"title"],
-                     [moviesArray[10] objectForKey:@"title"],
-                     [moviesArray[11] objectForKey:@"title"],
-                     [moviesArray[12] objectForKey:@"title"],
-                     [moviesArray[13] objectForKey:@"title"],
-                     [moviesArray[14] objectForKey:@"title"]];
-    
-    _centerRegions = @[[regionsArray[0] objectForKey:@"name"],
-                       [regionsArray[1] objectForKey:@"name"],
-                       [regionsArray[2] objectForKey:@"name"],
-                       [regionsArray[3] objectForKey:@"name"],
-                       [regionsArray[4] objectForKey:@"name"],
-                       [regionsArray[5] objectForKey:@"name"],
-                       [regionsArray[6] objectForKey:@"name"],
-                       [regionsArray[7] objectForKey:@"name"],
-                       [regionsArray[8] objectForKey:@"name"],
-                       [regionsArray[9] objectForKey:@"name"],
-                       [regionsArray[10] objectForKey:@"name"],
-                       [regionsArray[11] objectForKey:@"name"],
-                       [regionsArray[12] objectForKey:@"name"],
-                       [regionsArray[13] objectForKey:@"name"],
-                       [regionsArray[14] objectForKey:@"name"]];
-    
-    _centerImages = @[[self getImageFromURL:[moviesArray[0] objectForKey:@"image"]],
-                      [self getImageFromURL:[moviesArray[1] objectForKey:@"image"]],
-                      [self getImageFromURL:[moviesArray[2] objectForKey:@"image"]],
-                      [self getImageFromURL:[moviesArray[3] objectForKey:@"image"]],
-                      [self getImageFromURL:[moviesArray[4] objectForKey:@"image"]],
-                      [self getImageFromURL:[moviesArray[5] objectForKey:@"image"]],
-                      [self getImageFromURL:[moviesArray[6] objectForKey:@"image"]],
-                      [self getImageFromURL:[moviesArray[7] objectForKey:@"image"]],
-                      [self getImageFromURL:[moviesArray[8] objectForKey:@"image"]],
-                      [self getImageFromURL:[moviesArray[9] objectForKey:@"image"]],
-                      [self getImageFromURL:[moviesArray[10] objectForKey:@"image"]],
-                      [self getImageFromURL:[moviesArray[11] objectForKey:@"image"]],
-                      [self getImageFromURL:[moviesArray[12] objectForKey:@"image"]],
-                      [self getImageFromURL:[moviesArray[13] objectForKey:@"image"]],
-                      [self getImageFromURL:[moviesArray[14] objectForKey:@"image"]]];
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
