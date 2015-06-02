@@ -7,64 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D90F04A31AE5337C00BF02AF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90F04A21AE5337C00BF02AF /* LoginViewController.m */; };
-		D936697D1AE27281000BBD1B /* CenterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D936697C1AE27281000BBD1B /* CenterDetailViewController.m */; };
-		D944CE771ADEEFC1005879D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D944CE761ADEEFC1005879D1 /* main.m */; };
-		D944CE7A1ADEEFC1005879D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D944CE791ADEEFC1005879D1 /* AppDelegate.m */; };
-		D944CE801ADEEFC1005879D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D944CE7E1ADEEFC1005879D1 /* Main.storyboard */; };
-		D944CE851ADEEFC1005879D1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D944CE831ADEEFC1005879D1 /* LaunchScreen.xib */; };
-		D944CE911ADEEFC1005879D1 /* Yebimom_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D944CE901ADEEFC1005879D1 /* Yebimom_iOSTests.m */; };
-		D9973FBC1AE4C79B000576C2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9973FBB1AE4C79B000576C2 /* SWRevealViewController.m */; };
-		D9973FC01AE4C88C000576C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9973FBF1AE4C88C000576C2 /* Images.xcassets */; };
-		D9AE7FAD1ADFA7F400DBD974 /* CenterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9AE7FAC1ADFA7F400DBD974 /* CenterTableViewController.m */; };
-		D9AE7FB01ADFA97600DBD974 /* CenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9AE7FAF1ADFA97600DBD974 /* CenterTableViewCell.m */; };
-		D9AE7FB41ADFCCD000DBD974 /* miz-center.png in Resources */ = {isa = PBXBuildFile; fileRef = D9AE7FB31ADFCCD000DBD974 /* miz-center.png */; };
+		D9A331EE1B1D74A8005E2FD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A331ED1B1D74A8005E2FD1 /* AppDelegate.swift */; };
+		D9A331F01B1D74A8005E2FD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A331EF1B1D74A8005E2FD1 /* ViewController.swift */; };
+		D9A331F31B1D74A8005E2FD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A331F11B1D74A8005E2FD1 /* Main.storyboard */; };
+		D9A331F51B1D74A8005E2FD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A331F41B1D74A8005E2FD1 /* Images.xcassets */; };
+		D9A331F81B1D74A8005E2FD1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9A331F61B1D74A8005E2FD1 /* LaunchScreen.xib */; };
+		D9A332041B1D74A8005E2FD1 /* Yebimom_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A332031B1D74A8005E2FD1 /* Yebimom_iOSTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D944CE8B1ADEEFC1005879D1 /* PBXContainerItemProxy */ = {
+		D9A331FE1B1D74A8005E2FD1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D944CE691ADEEFC1005879D1 /* Project object */;
+			containerPortal = D9A331E01B1D74A8005E2FD1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D944CE701ADEEFC1005879D1;
+			remoteGlobalIDString = D9A331E71B1D74A8005E2FD1;
 			remoteInfo = "Yebimom-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D90F04A11AE5337C00BF02AF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		D90F04A21AE5337C00BF02AF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		D936697B1AE27281000BBD1B /* CenterDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterDetailViewController.h; sourceTree = "<group>"; };
-		D936697C1AE27281000BBD1B /* CenterDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterDetailViewController.m; sourceTree = "<group>"; };
-		D944CE711ADEEFC1005879D1 /* Yebimom-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yebimom-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D944CE751ADEEFC1005879D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D944CE761ADEEFC1005879D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D944CE781ADEEFC1005879D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D944CE791ADEEFC1005879D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D944CE7F1ADEEFC1005879D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D944CE841ADEEFC1005879D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		D944CE8A1ADEEFC1005879D1 /* Yebimom-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yebimom-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D944CE8F1ADEEFC1005879D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D944CE901ADEEFC1005879D1 /* Yebimom_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Yebimom_iOSTests.m; sourceTree = "<group>"; };
-		D9973FBA1AE4C79B000576C2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		D9973FBB1AE4C79B000576C2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		D9973FBF1AE4C88C000576C2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D9AE7FAB1ADFA7F400DBD974 /* CenterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterTableViewController.h; sourceTree = "<group>"; };
-		D9AE7FAC1ADFA7F400DBD974 /* CenterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterTableViewController.m; sourceTree = "<group>"; };
-		D9AE7FAE1ADFA97600DBD974 /* CenterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterTableViewCell.h; sourceTree = "<group>"; };
-		D9AE7FAF1ADFA97600DBD974 /* CenterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterTableViewCell.m; sourceTree = "<group>"; };
-		D9AE7FB31ADFCCD000DBD974 /* miz-center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "miz-center.png"; sourceTree = "<group>"; };
+		D9A331E81B1D74A8005E2FD1 /* Yebimom-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yebimom-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9A331EC1B1D74A8005E2FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9A331ED1B1D74A8005E2FD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D9A331EF1B1D74A8005E2FD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D9A331F21B1D74A8005E2FD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D9A331F41B1D74A8005E2FD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D9A331F71B1D74A8005E2FD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D9A331FD1B1D74A8005E2FD1 /* Yebimom-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yebimom-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9A332021B1D74A8005E2FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9A332031B1D74A8005E2FD1 /* Yebimom_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yebimom_iOSTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D944CE6E1ADEEFC1005879D1 /* Frameworks */ = {
+		D9A331E51B1D74A8005E2FD1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D944CE871ADEEFC1005879D1 /* Frameworks */ = {
+		D9A331FA1B1D74A8005E2FD1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,92 +56,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D944CE681ADEEFC1005879D1 = {
+		D9A331DF1B1D74A8005E2FD1 = {
 			isa = PBXGroup;
 			children = (
-				D944CE731ADEEFC1005879D1 /* Yebimom-iOS */,
-				D944CE8D1ADEEFC1005879D1 /* Yebimom-iOSTests */,
-				D944CE721ADEEFC1005879D1 /* Products */,
+				D9A331EA1B1D74A8005E2FD1 /* Yebimom-iOS */,
+				D9A332001B1D74A8005E2FD1 /* Yebimom-iOSTests */,
+				D9A331E91B1D74A8005E2FD1 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D944CE721ADEEFC1005879D1 /* Products */ = {
+		D9A331E91B1D74A8005E2FD1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D944CE711ADEEFC1005879D1 /* Yebimom-iOS.app */,
-				D944CE8A1ADEEFC1005879D1 /* Yebimom-iOSTests.xctest */,
+				D9A331E81B1D74A8005E2FD1 /* Yebimom-iOS.app */,
+				D9A331FD1B1D74A8005E2FD1 /* Yebimom-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D944CE731ADEEFC1005879D1 /* Yebimom-iOS */ = {
+		D9A331EA1B1D74A8005E2FD1 /* Yebimom-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D9973FB91AE4C79B000576C2 /* SWRevealViewController */,
-				D9AE7FAE1ADFA97600DBD974 /* CenterTableViewCell.h */,
-				D9AE7FAF1ADFA97600DBD974 /* CenterTableViewCell.m */,
-				D936697B1AE27281000BBD1B /* CenterDetailViewController.h */,
-				D936697C1AE27281000BBD1B /* CenterDetailViewController.m */,
-				D9AE7FAB1ADFA7F400DBD974 /* CenterTableViewController.h */,
-				D9AE7FAC1ADFA7F400DBD974 /* CenterTableViewController.m */,
-				D90F04A11AE5337C00BF02AF /* LoginViewController.h */,
-				D90F04A21AE5337C00BF02AF /* LoginViewController.m */,
-				D944CE781ADEEFC1005879D1 /* AppDelegate.h */,
-				D944CE791ADEEFC1005879D1 /* AppDelegate.m */,
-				D944CE7E1ADEEFC1005879D1 /* Main.storyboard */,
-				D944CE831ADEEFC1005879D1 /* LaunchScreen.xib */,
-				D944CE741ADEEFC1005879D1 /* Supporting Files */,
+				D9A331ED1B1D74A8005E2FD1 /* AppDelegate.swift */,
+				D9A331EF1B1D74A8005E2FD1 /* ViewController.swift */,
+				D9A331F11B1D74A8005E2FD1 /* Main.storyboard */,
+				D9A331F41B1D74A8005E2FD1 /* Images.xcassets */,
+				D9A331F61B1D74A8005E2FD1 /* LaunchScreen.xib */,
+				D9A331EB1B1D74A8005E2FD1 /* Supporting Files */,
 			);
 			path = "Yebimom-iOS";
 			sourceTree = "<group>";
 		};
-		D944CE741ADEEFC1005879D1 /* Supporting Files */ = {
+		D9A331EB1B1D74A8005E2FD1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D9973FBF1AE4C88C000576C2 /* Images.xcassets */,
-				D9AE7FB31ADFCCD000DBD974 /* miz-center.png */,
-				D944CE751ADEEFC1005879D1 /* Info.plist */,
-				D944CE761ADEEFC1005879D1 /* main.m */,
+				D9A331EC1B1D74A8005E2FD1 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D944CE8D1ADEEFC1005879D1 /* Yebimom-iOSTests */ = {
+		D9A332001B1D74A8005E2FD1 /* Yebimom-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				D944CE901ADEEFC1005879D1 /* Yebimom_iOSTests.m */,
-				D944CE8E1ADEEFC1005879D1 /* Supporting Files */,
+				D9A332031B1D74A8005E2FD1 /* Yebimom_iOSTests.swift */,
+				D9A332011B1D74A8005E2FD1 /* Supporting Files */,
 			);
 			path = "Yebimom-iOSTests";
 			sourceTree = "<group>";
 		};
-		D944CE8E1ADEEFC1005879D1 /* Supporting Files */ = {
+		D9A332011B1D74A8005E2FD1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D944CE8F1ADEEFC1005879D1 /* Info.plist */,
+				D9A332021B1D74A8005E2FD1 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D9973FB91AE4C79B000576C2 /* SWRevealViewController */ = {
-			isa = PBXGroup;
-			children = (
-				D9973FBA1AE4C79B000576C2 /* SWRevealViewController.h */,
-				D9973FBB1AE4C79B000576C2 /* SWRevealViewController.m */,
-			);
-			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D944CE701ADEEFC1005879D1 /* Yebimom-iOS */ = {
+		D9A331E71B1D74A8005E2FD1 /* Yebimom-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D944CE941ADEEFC1005879D1 /* Build configuration list for PBXNativeTarget "Yebimom-iOS" */;
+			buildConfigurationList = D9A332071B1D74A8005E2FD1 /* Build configuration list for PBXNativeTarget "Yebimom-iOS" */;
 			buildPhases = (
-				D944CE6D1ADEEFC1005879D1 /* Sources */,
-				D944CE6E1ADEEFC1005879D1 /* Frameworks */,
-				D944CE6F1ADEEFC1005879D1 /* Resources */,
+				D9A331E41B1D74A8005E2FD1 /* Sources */,
+				D9A331E51B1D74A8005E2FD1 /* Frameworks */,
+				D9A331E61B1D74A8005E2FD1 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -167,46 +129,46 @@
 			);
 			name = "Yebimom-iOS";
 			productName = "Yebimom-iOS";
-			productReference = D944CE711ADEEFC1005879D1 /* Yebimom-iOS.app */;
+			productReference = D9A331E81B1D74A8005E2FD1 /* Yebimom-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D944CE891ADEEFC1005879D1 /* Yebimom-iOSTests */ = {
+		D9A331FC1B1D74A8005E2FD1 /* Yebimom-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D944CE971ADEEFC1005879D1 /* Build configuration list for PBXNativeTarget "Yebimom-iOSTests" */;
+			buildConfigurationList = D9A3320A1B1D74A8005E2FD1 /* Build configuration list for PBXNativeTarget "Yebimom-iOSTests" */;
 			buildPhases = (
-				D944CE861ADEEFC1005879D1 /* Sources */,
-				D944CE871ADEEFC1005879D1 /* Frameworks */,
-				D944CE881ADEEFC1005879D1 /* Resources */,
+				D9A331F91B1D74A8005E2FD1 /* Sources */,
+				D9A331FA1B1D74A8005E2FD1 /* Frameworks */,
+				D9A331FB1B1D74A8005E2FD1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D944CE8C1ADEEFC1005879D1 /* PBXTargetDependency */,
+				D9A331FF1B1D74A8005E2FD1 /* PBXTargetDependency */,
 			);
 			name = "Yebimom-iOSTests";
 			productName = "Yebimom-iOSTests";
-			productReference = D944CE8A1ADEEFC1005879D1 /* Yebimom-iOSTests.xctest */;
+			productReference = D9A331FD1B1D74A8005E2FD1 /* Yebimom-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D944CE691ADEEFC1005879D1 /* Project object */ = {
+		D9A331E01B1D74A8005E2FD1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = wikibootup;
 				TargetAttributes = {
-					D944CE701ADEEFC1005879D1 = {
-						CreatedOnToolsVersion = 6.3;
+					D9A331E71B1D74A8005E2FD1 = {
+						CreatedOnToolsVersion = 6.3.2;
 					};
-					D944CE891ADEEFC1005879D1 = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = D944CE701ADEEFC1005879D1;
+					D9A331FC1B1D74A8005E2FD1 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = D9A331E71B1D74A8005E2FD1;
 					};
 				};
 			};
-			buildConfigurationList = D944CE6C1ADEEFC1005879D1 /* Build configuration list for PBXProject "Yebimom-iOS" */;
+			buildConfigurationList = D9A331E31B1D74A8005E2FD1 /* Build configuration list for PBXProject "Yebimom-iOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -214,30 +176,29 @@
 				en,
 				Base,
 			);
-			mainGroup = D944CE681ADEEFC1005879D1;
-			productRefGroup = D944CE721ADEEFC1005879D1 /* Products */;
+			mainGroup = D9A331DF1B1D74A8005E2FD1;
+			productRefGroup = D9A331E91B1D74A8005E2FD1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D944CE701ADEEFC1005879D1 /* Yebimom-iOS */,
-				D944CE891ADEEFC1005879D1 /* Yebimom-iOSTests */,
+				D9A331E71B1D74A8005E2FD1 /* Yebimom-iOS */,
+				D9A331FC1B1D74A8005E2FD1 /* Yebimom-iOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D944CE6F1ADEEFC1005879D1 /* Resources */ = {
+		D9A331E61B1D74A8005E2FD1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D944CE801ADEEFC1005879D1 /* Main.storyboard in Resources */,
-				D9973FC01AE4C88C000576C2 /* Images.xcassets in Resources */,
-				D944CE851ADEEFC1005879D1 /* LaunchScreen.xib in Resources */,
-				D9AE7FB41ADFCCD000DBD974 /* miz-center.png in Resources */,
+				D9A331F31B1D74A8005E2FD1 /* Main.storyboard in Resources */,
+				D9A331F81B1D74A8005E2FD1 /* LaunchScreen.xib in Resources */,
+				D9A331F51B1D74A8005E2FD1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D944CE881ADEEFC1005879D1 /* Resources */ = {
+		D9A331FB1B1D74A8005E2FD1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -247,51 +208,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D944CE6D1ADEEFC1005879D1 /* Sources */ = {
+		D9A331E41B1D74A8005E2FD1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9AE7FB01ADFA97600DBD974 /* CenterTableViewCell.m in Sources */,
-				D944CE7A1ADEEFC1005879D1 /* AppDelegate.m in Sources */,
-				D9AE7FAD1ADFA7F400DBD974 /* CenterTableViewController.m in Sources */,
-				D936697D1AE27281000BBD1B /* CenterDetailViewController.m in Sources */,
-				D90F04A31AE5337C00BF02AF /* LoginViewController.m in Sources */,
-				D944CE771ADEEFC1005879D1 /* main.m in Sources */,
-				D9973FBC1AE4C79B000576C2 /* SWRevealViewController.m in Sources */,
+				D9A331F01B1D74A8005E2FD1 /* ViewController.swift in Sources */,
+				D9A331EE1B1D74A8005E2FD1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D944CE861ADEEFC1005879D1 /* Sources */ = {
+		D9A331F91B1D74A8005E2FD1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D944CE911ADEEFC1005879D1 /* Yebimom_iOSTests.m in Sources */,
+				D9A332041B1D74A8005E2FD1 /* Yebimom_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D944CE8C1ADEEFC1005879D1 /* PBXTargetDependency */ = {
+		D9A331FF1B1D74A8005E2FD1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D944CE701ADEEFC1005879D1 /* Yebimom-iOS */;
-			targetProxy = D944CE8B1ADEEFC1005879D1 /* PBXContainerItemProxy */;
+			target = D9A331E71B1D74A8005E2FD1 /* Yebimom-iOS */;
+			targetProxy = D9A331FE1B1D74A8005E2FD1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D944CE7E1ADEEFC1005879D1 /* Main.storyboard */ = {
+		D9A331F11B1D74A8005E2FD1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D944CE7F1ADEEFC1005879D1 /* Base */,
+				D9A331F21B1D74A8005E2FD1 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		D944CE831ADEEFC1005879D1 /* LaunchScreen.xib */ = {
+		D9A331F61B1D74A8005E2FD1 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D944CE841ADEEFC1005879D1 /* Base */,
+				D9A331F71B1D74A8005E2FD1 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -299,7 +255,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D944CE921ADEEFC1005879D1 /* Debug */ = {
+		D9A332051B1D74A8005E2FD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -339,11 +295,12 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		D944CE931ADEEFC1005879D1 /* Release */ = {
+		D9A332061B1D74A8005E2FD1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -381,7 +338,7 @@
 			};
 			name = Release;
 		};
-		D944CE951ADEEFC1005879D1 /* Debug */ = {
+		D9A332081B1D74A8005E2FD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -391,7 +348,7 @@
 			};
 			name = Debug;
 		};
-		D944CE961ADEEFC1005879D1 /* Release */ = {
+		D9A332091B1D74A8005E2FD1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -401,7 +358,7 @@
 			};
 			name = Release;
 		};
-		D944CE981ADEEFC1005879D1 /* Debug */ = {
+		D9A3320B1B1D74A8005E2FD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -420,7 +377,7 @@
 			};
 			name = Debug;
 		};
-		D944CE991ADEEFC1005879D1 /* Release */ = {
+		D9A3320C1B1D74A8005E2FD1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -438,34 +395,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D944CE6C1ADEEFC1005879D1 /* Build configuration list for PBXProject "Yebimom-iOS" */ = {
+		D9A331E31B1D74A8005E2FD1 /* Build configuration list for PBXProject "Yebimom-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D944CE921ADEEFC1005879D1 /* Debug */,
-				D944CE931ADEEFC1005879D1 /* Release */,
+				D9A332051B1D74A8005E2FD1 /* Debug */,
+				D9A332061B1D74A8005E2FD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D944CE941ADEEFC1005879D1 /* Build configuration list for PBXNativeTarget "Yebimom-iOS" */ = {
+		D9A332071B1D74A8005E2FD1 /* Build configuration list for PBXNativeTarget "Yebimom-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D944CE951ADEEFC1005879D1 /* Debug */,
-				D944CE961ADEEFC1005879D1 /* Release */,
+				D9A332081B1D74A8005E2FD1 /* Debug */,
+				D9A332091B1D74A8005E2FD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		D944CE971ADEEFC1005879D1 /* Build configuration list for PBXNativeTarget "Yebimom-iOSTests" */ = {
+		D9A3320A1B1D74A8005E2FD1 /* Build configuration list for PBXNativeTarget "Yebimom-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D944CE981ADEEFC1005879D1 /* Debug */,
-				D944CE991ADEEFC1005879D1 /* Release */,
+				D9A3320B1B1D74A8005E2FD1 /* Debug */,
+				D9A3320C1B1D74A8005E2FD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D944CE691ADEEFC1005879D1 /* Project object */;
+	rootObject = D9A331E01B1D74A8005E2FD1 /* Project object */;
 }
