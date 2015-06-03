@@ -33,16 +33,45 @@
         <scene sceneID="1d2-fN-I90">
             <objects>
                 <tableViewController id="eO0-mK-8cW" customClass="MainTableViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8d4-vc-S5K">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="307" sectionHeaderHeight="22" sectionFooterHeight="22" id="8d4-vc-S5K">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nSS-3z-sgS">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryTableCell" rowHeight="240" id="nSS-3z-sgS" customClass="CategoryTableViewCell" customModule="Yebimom_iOS" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nSS-3z-sgS" id="18s-Nm-sq8">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BqA-A5-p7q">
+                                            <rect key="frame" x="0.0" y="-1" width="600" height="239.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="240" id="CdU-Ne-B42"/>
+                                                <constraint firstAttribute="width" constant="600" id="SYu-YE-G14"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="산후조리원" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTJ-43-aXE">
+                                            <rect key="frame" x="263" y="108" width="74" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="INFO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4J-Nw-YBv">
+                                            <rect key="frame" x="211" y="80" width="179" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="GTJ-43-aXE" firstAttribute="centerX" secondItem="I4J-Nw-YBv" secondAttribute="centerX" constant="-0.5" id="5B3-Yb-Y7E"/>
+                                        <constraint firstAttribute="centerX" secondItem="I4J-Nw-YBv" secondAttribute="centerX" id="VQf-mA-WHv"/>
+                                        <constraint firstAttribute="centerY" secondItem="GTJ-43-aXE" secondAttribute="centerY" id="soN-le-m7n"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryInfoLabel" destination="I4J-Nw-YBv" id="1Vt-bX-3Lx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
