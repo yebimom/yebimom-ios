@@ -10,6 +10,8 @@ import UIKit
 
 class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     
+    var categoryInformations = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

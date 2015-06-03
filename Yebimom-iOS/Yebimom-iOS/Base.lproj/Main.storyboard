@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ysi-wW-NIx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -33,16 +34,50 @@
         <scene sceneID="1d2-fN-I90">
             <objects>
                 <tableViewController id="eO0-mK-8cW" customClass="MainTableViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8d4-vc-S5K">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="307" sectionHeaderHeight="22" sectionFooterHeight="22" id="8d4-vc-S5K">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryTableCell" id="nSS-3z-sgS" customClass="CategoryTableViewCell" customModule="Yebimom_iOS" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryTableCell" rowHeight="240" id="nSS-3z-sgS" customClass="CategoryTableViewCell" customModule="Yebimom_iOS" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nSS-3z-sgS" id="18s-Nm-sq8">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BqA-A5-p7q">
+                                            <rect key="frame" x="0.0" y="-1" width="600" height="239.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="240" id="CdU-Ne-B42"/>
+                                                <constraint firstAttribute="width" constant="600" id="SYu-YE-G14"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="INFO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4J-Nw-YBv">
+                                            <rect key="frame" x="279" y="58" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="산후조리원" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTJ-43-aXE">
+                                            <rect key="frame" x="263" y="108" width="74" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerX" secondItem="BqA-A5-p7q" secondAttribute="centerX" id="Jir-gf-LF0"/>
+                                        <constraint firstItem="I4J-Nw-YBv" firstAttribute="top" secondItem="18s-Nm-sq8" secondAttribute="topMargin" constant="50" id="R9F-pn-bt3"/>
+                                        <constraint firstAttribute="centerY" secondItem="GTJ-43-aXE" secondAttribute="centerY" id="TN1-Wo-avd"/>
+                                        <constraint firstAttribute="centerX" secondItem="GTJ-43-aXE" secondAttribute="centerX" id="aox-kG-Gog"/>
+                                        <constraint firstItem="GTJ-43-aXE" firstAttribute="top" secondItem="I4J-Nw-YBv" secondAttribute="bottom" constant="29" id="gpQ-zi-odn"/>
+                                        <constraint firstAttribute="centerY" secondItem="BqA-A5-p7q" secondAttribute="centerY" id="lPV-wa-HHh"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="I4J-Nw-YBv" secondAttribute="trailing" constant="271" id="lrC-EN-ZOc"/>
+                                        <constraint firstItem="I4J-Nw-YBv" firstAttribute="leading" secondItem="18s-Nm-sq8" secondAttribute="leadingMargin" constant="271" id="zeB-AD-JJo"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryInfoLabel" destination="I4J-Nw-YBv" id="1Vt-bX-3Lx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
