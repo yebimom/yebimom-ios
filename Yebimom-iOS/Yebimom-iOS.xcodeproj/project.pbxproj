@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D998E2F61B1EC8E000E4AB0B /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F41B1EC8E000E4AB0B /* ENSideMenu.swift */; };
+		D998E2F71B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F51B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift */; };
+		D998E2F91B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F81B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift */; };
+		D998E2FE1B1ECA6E00E4AB0B /* ENSideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2FD1B1ECA6E00E4AB0B /* ENSideMenuTableViewController.swift */; };
 		D9A331EE1B1D74A8005E2FD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A331ED1B1D74A8005E2FD1 /* AppDelegate.swift */; };
 		D9A331F01B1D74A8005E2FD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A331EF1B1D74A8005E2FD1 /* ViewController.swift */; };
 		D9A331F31B1D74A8005E2FD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A331F11B1D74A8005E2FD1 /* Main.storyboard */; };
@@ -26,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D998E2F41B1EC8E000E4AB0B /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
+		D998E2F51B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
+		D998E2F81B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSwiftSideMenuNavViewController.swift; sourceTree = "<group>"; };
+		D998E2FD1B1ECA6E00E4AB0B /* ENSideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuTableViewController.swift; sourceTree = "<group>"; };
 		D9A331E81B1D74A8005E2FD1 /* Yebimom-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yebimom-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A331EC1B1D74A8005E2FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9A331ED1B1D74A8005E2FD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +64,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D998E2F21B1EC89B00E4AB0B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				D998E2F31B1EC8A300E4AB0B /* ENSwiftSideMenu */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		D998E2F31B1EC8A300E4AB0B /* ENSwiftSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D998E2F41B1EC8E000E4AB0B /* ENSideMenu.swift */,
+				D998E2F51B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift */,
+			);
+			name = ENSwiftSideMenu;
+			sourceTree = "<group>";
+		};
+		D998E2FA1B1EC9A200E4AB0B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D9A331EF1B1D74A8005E2FD1 /* ViewController.swift */,
+				D998E2F81B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift */,
+				D998E2FD1B1ECA6E00E4AB0B /* ENSideMenuTableViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D998E2FB1B1EC9B700E4AB0B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D9A331F11B1D74A8005E2FD1 /* Main.storyboard */,
+				D9A331F61B1D74A8005E2FD1 /* LaunchScreen.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		D998E2FC1B1EC9C900E4AB0B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D9A331F41B1D74A8005E2FD1 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		D9A331DF1B1D74A8005E2FD1 = {
 			isa = PBXGroup;
 			children = (
@@ -77,11 +129,11 @@
 		D9A331EA1B1D74A8005E2FD1 /* Yebimom-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D998E2FC1B1EC9C900E4AB0B /* Resources */,
+				D998E2FB1B1EC9B700E4AB0B /* UI */,
+				D998E2FA1B1EC9A200E4AB0B /* Controller */,
+				D998E2F21B1EC89B00E4AB0B /* Library */,
 				D9A331ED1B1D74A8005E2FD1 /* AppDelegate.swift */,
-				D9A331EF1B1D74A8005E2FD1 /* ViewController.swift */,
-				D9A331F11B1D74A8005E2FD1 /* Main.storyboard */,
-				D9A331F41B1D74A8005E2FD1 /* Images.xcassets */,
-				D9A331F61B1D74A8005E2FD1 /* LaunchScreen.xib */,
 				D9A331EB1B1D74A8005E2FD1 /* Supporting Files */,
 			);
 			path = "Yebimom-iOS";
@@ -212,7 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D998E2F71B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift in Sources */,
+				D998E2F61B1EC8E000E4AB0B /* ENSideMenu.swift in Sources */,
+				D998E2FE1B1ECA6E00E4AB0B /* ENSideMenuTableViewController.swift in Sources */,
 				D9A331F01B1D74A8005E2FD1 /* ViewController.swift in Sources */,
+				D998E2F91B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift in Sources */,
 				D9A331EE1B1D74A8005E2FD1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +467,7 @@
 				D9A332091B1D74A8005E2FD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D9A3320A1B1D74A8005E2FD1 /* Build configuration list for PBXNativeTarget "Yebimom-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +476,7 @@
 				D9A3320C1B1D74A8005E2FD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
