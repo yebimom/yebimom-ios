@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     
@@ -16,6 +17,14 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         super.viewDidLoad()
         
         self.sideMenuController()?.sideMenu?.delegate = self
+        
+        let categoryURL = NSURL(string:"https://yebimom.com/api/categories/")
+        var categoryJsonData = JSON(data: NSData(contentsOfURL: categoryURL!)!)
+        
+        for (key: String, subJsonData: JSON)in categoryJsonData {
+            categoryInformations.append(subJsonData["name"].string!)
+        }
+        
     }
 
     @IBAction func menuENSide(sender: UIBarButtonItem) {
@@ -32,24 +41,25 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return categoryInformations.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("CategoryTableCell", forIndexPath: indexPath) as! CategoryTableViewCell
+        
+        var row = indexPath.row
 
-        // Configure the cell...
+        cell.categoryInfoLabel.text = categoryInformations[row]
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
