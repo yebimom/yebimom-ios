@@ -8,18 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ENSideMenuDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.sideMenuController()?.sideMenu?.delegate = self
     }
 
+    @IBAction func menuENSide(sender: UIBarButtonItem) {
+        toggleSideMenuView()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 

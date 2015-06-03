@@ -82,7 +82,7 @@ class ENSideMenuTableViewController: UITableViewController {
         var destViewController : UIViewController
         switch (indexPath.row) {
         case 0:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController") as! UIViewController
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Main") as! UIViewController
             break
         case 1:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("List")as! UIViewController
