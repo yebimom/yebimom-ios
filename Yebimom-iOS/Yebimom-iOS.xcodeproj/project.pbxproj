@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57A8FE17F112A4A5BE67C586 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57266FA5BD13D0F98EC891BA /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D998E2F61B1EC8E000E4AB0B /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F41B1EC8E000E4AB0B /* ENSideMenu.swift */; };
 		D998E2F71B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F51B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift */; };
 		D998E2F91B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F81B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57266FA5BD13D0F98EC891BA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D998E2F41B1EC8E000E4AB0B /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
 		D998E2F51B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
 		D998E2F81B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSwiftSideMenuNavViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +48,8 @@
 		D9A331FD1B1D74A8005E2FD1 /* Yebimom-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yebimom-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A332021B1D74A8005E2FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9A332031B1D74A8005E2FD1 /* Yebimom_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yebimom_iOSTests.swift; sourceTree = "<group>"; };
+		EE85F1E416213D26275F6D1E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F18C3D6DDBC750FBE81DF760 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57A8FE17F112A4A5BE67C586 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EBABEF8FA419D31B64C84C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F18C3D6DDBC750FBE81DF760 /* Pods.debug.xcconfig */,
+				EE85F1E416213D26275F6D1E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2B1F4971E14135E73E6C5D59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57266FA5BD13D0F98EC891BA /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D998E2F21B1EC89B00E4AB0B /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +154,8 @@
 				D9A331EA1B1D74A8005E2FD1 /* Yebimom-iOS */,
 				D9A332001B1D74A8005E2FD1 /* Yebimom-iOSTests */,
 				D9A331E91B1D74A8005E2FD1 /* Products */,
+				0EBABEF8FA419D31B64C84C7 /* Pods */,
+				2B1F4971E14135E73E6C5D59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9A332071B1D74A8005E2FD1 /* Build configuration list for PBXNativeTarget "Yebimom-iOS" */;
 			buildPhases = (
+				F5D2016A4727425D976DF302 /* Check Pods Manifest.lock */,
 				D9A331E41B1D74A8005E2FD1 /* Sources */,
 				D9A331E51B1D74A8005E2FD1 /* Frameworks */,
 				D9A331E61B1D74A8005E2FD1 /* Resources */,
+				1F5093F25963F5AE80256F5E /* Embed Pods Frameworks */,
+				99169D255160639EC89F976B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -277,6 +304,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F5093F25963F5AE80256F5E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99169D255160639EC89F976B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5D2016A4727425D976DF302 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D9A331E41B1D74A8005E2FD1 /* Sources */ = {
@@ -416,6 +491,7 @@
 		};
 		D9A332081B1D74A8005E2FD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F18C3D6DDBC750FBE81DF760 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Yebimom-iOS/Info.plist";
@@ -426,6 +502,7 @@
 		};
 		D9A332091B1D74A8005E2FD1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE85F1E416213D26275F6D1E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Yebimom-iOS/Info.plist";
