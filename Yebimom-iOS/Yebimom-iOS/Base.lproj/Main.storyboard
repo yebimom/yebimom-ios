@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ysi-wW-NIx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -61,6 +63,9 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                <rect key="frame" x="111" y="68" width="179" height="21"/>
+                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -85,11 +90,277 @@
                                 <action selector="menuENSide:" destination="eO0-mK-8cW" id="yhY-zz-18X"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="icon_user_mother" id="ALe-Xo-dX7">
+                            <connections>
+                                <segue destination="YUm-T2-MrP" kind="show" id="acS-2F-BmK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="to7-pr-c71" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="574" y="578"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rgY-9j-59t">
+            <objects>
+                <viewController id="YUm-T2-MrP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vHT-RP-po6"/>
+                        <viewControllerLayoutGuide type="bottom" id="nqc-lZ-z7F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G0b-rQ-Cjy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chy-rW-saS">
+                                <rect key="frame" x="226" y="355" width="148" height="30"/>
+                                <state key="normal" title="페이스북으로 로그인하기">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oE-2I-vJT">
+                                <rect key="frame" x="157" y="407" width="39" height="30"/>
+                                <state key="normal" title="회원가입">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="157" y="407" width="52" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="heQ-uc-Zgb" kind="show" id="lbd-un-G9Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXk-oW-FEd">
+                                <rect key="frame" x="226" y="285" width="148" height="30"/>
+                                <state key="normal" title="카카오톡으로 로그인하기">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lca-qQ-uPj">
+                                <rect key="frame" x="369" y="431" width="46" height="30"/>
+                                <state key="normal" title="로그인">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="222" y="407" width="39" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="ibu-8l-OxG" kind="show" id="I3i-9x-ovm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="MXk-oW-FEd" secondAttribute="centerY" id="1kF-dZ-e0r"/>
+                            <constraint firstItem="chy-rW-saS" firstAttribute="top" secondItem="MXk-oW-FEd" secondAttribute="bottom" constant="10" id="CEl-zp-WRc"/>
+                            <constraint firstItem="lca-qQ-uPj" firstAttribute="top" secondItem="chy-rW-saS" secondAttribute="bottom" constant="35" id="FSE-h0-OLk"/>
+                            <constraint firstAttribute="centerX" secondItem="chy-rW-saS" secondAttribute="centerX" id="RCU-RF-hdG"/>
+                            <constraint firstAttribute="centerX" secondItem="MXk-oW-FEd" secondAttribute="centerX" id="U06-Mb-7Bw"/>
+                            <constraint firstItem="3oE-2I-vJT" firstAttribute="top" secondItem="chy-rW-saS" secondAttribute="bottom" constant="35" id="VeU-Ze-wft"/>
+                            <constraint firstItem="3oE-2I-vJT" firstAttribute="leading" secondItem="G0b-rQ-Cjy" secondAttribute="leadingMargin" constant="85" id="WFN-e0-cBC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lca-qQ-uPj" secondAttribute="trailing" constant="85" id="zUK-bI-yER"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VeU-Ze-wft"/>
+                                <exclude reference="WFN-e0-cBC"/>
+                                <exclude reference="FSE-h0-OLk"/>
+                                <exclude reference="zUK-bI-yER"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="VeU-Ze-wft"/>
+                                <include reference="WFN-e0-cBC"/>
+                                <include reference="FSE-h0-OLk"/>
+                                <include reference="zUK-bI-yER"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mUy-Js-FQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1592" y="578"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1R5-ZZ-uKI">
+            <objects>
+                <viewController id="heQ-uc-Zgb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ANp-3t-beR"/>
+                        <viewControllerLayoutGuide type="bottom" id="exJ-8C-eTz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9IK-Bx-YCO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="okf-MD-vKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1206" y="1339"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="LXT-TE-6rJ">
+            <objects>
+                <viewController id="ibu-8l-OxG" customClass="LoginViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YfC-dh-x23"/>
+                        <viewControllerLayoutGuide type="bottom" id="zcb-H5-npK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ddw-KL-bq7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호를 잊으셨나요?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsA-4O-zgN">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원가입하러 가기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFd-3k-Goe">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8LS-Mh-bEF">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="5yU-4G-FkD"/>
+                                    <constraint firstAttribute="width" constant="368" id="xVB-7y-wAa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5yU-4G-FkD"/>
+                                        <exclude reference="xVB-7y-wAa"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5yU-4G-FkD"/>
+                                        <include reference="xVB-7y-wAa"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="passwordTextFieldReturn:" destination="ibu-8l-OxG" eventType="editingDidEnd" id="yB8-HF-XPO"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xr-hy-ONu">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="368" id="Z5N-ng-HdM"/>
+                                    <constraint firstAttribute="height" constant="45" id="s4e-Ut-sZd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="로그인">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Z5N-ng-HdM"/>
+                                        <exclude reference="s4e-Ut-sZd"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Z5N-ng-HdM"/>
+                                        <include reference="s4e-Ut-sZd"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ssb-D4-eE0">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="368" id="K74-bR-7Ej"/>
+                                    <constraint firstAttribute="height" constant="45" id="Wj2-CM-D3L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="K74-bR-7Ej"/>
+                                        <exclude reference="Wj2-CM-D3L"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="K74-bR-7Ej"/>
+                                        <include reference="Wj2-CM-D3L"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="emailTextFieldReturn:" destination="ibu-8l-OxG" eventType="editingDidEnd" id="A0m-Sm-oTW"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8LS-Mh-bEF" firstAttribute="top" secondItem="Ssb-D4-eE0" secondAttribute="bottom" constant="10" id="1cf-Tf-HTQ"/>
+                            <constraint firstItem="UsA-4O-zgN" firstAttribute="leading" secondItem="ddw-KL-bq7" secondAttribute="leadingMargin" id="KJ6-nW-Oup"/>
+                            <constraint firstItem="UsA-4O-zgN" firstAttribute="top" secondItem="YfC-dh-x23" secondAttribute="bottom" constant="11" id="PyM-IE-Apw"/>
+                            <constraint firstAttribute="centerX" secondItem="8LS-Mh-bEF" secondAttribute="centerX" id="RON-GV-Y8o"/>
+                            <constraint firstItem="Ssb-D4-eE0" firstAttribute="top" secondItem="UsA-4O-zgN" secondAttribute="bottom" constant="50" id="gKa-Xj-SMn"/>
+                            <constraint firstAttribute="centerX" secondItem="6Xr-hy-ONu" secondAttribute="centerX" id="lMq-KI-jbf"/>
+                            <constraint firstItem="6Xr-hy-ONu" firstAttribute="top" secondItem="8LS-Mh-bEF" secondAttribute="bottom" constant="20" id="sA9-5y-ywZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YFd-3k-Goe" secondAttribute="trailing" id="v0b-JC-sAs"/>
+                            <constraint firstItem="YFd-3k-Goe" firstAttribute="top" secondItem="YfC-dh-x23" secondAttribute="bottom" constant="11" id="xu3-51-Qe1"/>
+                            <constraint firstAttribute="centerX" secondItem="Ssb-D4-eE0" secondAttribute="centerX" id="yaT-kH-bta"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="UsA-4O-zgN"/>
+                                <exclude reference="YFd-3k-Goe"/>
+                                <exclude reference="8LS-Mh-bEF"/>
+                                <exclude reference="6Xr-hy-ONu"/>
+                                <exclude reference="Ssb-D4-eE0"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="KJ6-nW-Oup"/>
+                                <exclude reference="PyM-IE-Apw"/>
+                                <exclude reference="gKa-Xj-SMn"/>
+                                <exclude reference="yaT-kH-bta"/>
+                                <exclude reference="v0b-JC-sAs"/>
+                                <exclude reference="xu3-51-Qe1"/>
+                                <exclude reference="1cf-Tf-HTQ"/>
+                                <exclude reference="RON-GV-Y8o"/>
+                                <exclude reference="lMq-KI-jbf"/>
+                                <exclude reference="sA9-5y-ywZ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="UsA-4O-zgN"/>
+                                <include reference="YFd-3k-Goe"/>
+                                <include reference="8LS-Mh-bEF"/>
+                                <include reference="6Xr-hy-ONu"/>
+                                <include reference="Ssb-D4-eE0"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="KJ6-nW-Oup"/>
+                                <include reference="PyM-IE-Apw"/>
+                                <include reference="gKa-Xj-SMn"/>
+                                <include reference="yaT-kH-bta"/>
+                                <include reference="v0b-JC-sAs"/>
+                                <include reference="xu3-51-Qe1"/>
+                                <include reference="1cf-Tf-HTQ"/>
+                                <include reference="RON-GV-Y8o"/>
+                                <include reference="lMq-KI-jbf"/>
+                                <include reference="sA9-5y-ywZ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="Ssb-D4-eE0" id="kIN-SA-BMm"/>
+                        <outlet property="passwordTextField" destination="8LS-Mh-bEF" id="XPx-8I-2Zt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C8R-yD-jcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2068.5" y="1339"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zhw-KJ-nt8">
@@ -164,5 +435,6 @@
     </scenes>
     <resources>
         <image name="icon_menu" width="18" height="12"/>
+        <image name="icon_user_mother" width="16" height="16"/>
     </resources>
 </document>
