@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
@@ -19,15 +20,25 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func emailTextFieldReturn(sender: UITextField) {
+    @IBAction func userNameTextFieldReturn(sender: UITextField) {
         sender.resignFirstResponder()
     }
     @IBAction func passwordTextFieldReturn(sender: UITextField) {
         sender.resignFirstResponder()
     }
+    @IBAction func loginTry(sender: UIButton) {
+        var loginAPIURL: String = "https://yebimom.com/api/login/"
+        let parameters = [
+            "username": [userNameTextField.text],
+            "password": [passwordTextField.text]]
+        
+        /* TODO: 1. Try extension Alamofire class for handling response out of closure (add return value)
+                 2. Get JWT value
+        */
+    }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        emailTextField.endEditing(true)
+        userNameTextField.endEditing(true)
         passwordTextField.endEditing(true)
     }
     
