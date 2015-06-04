@@ -201,10 +201,10 @@
             </objects>
             <point key="canvasLocation" x="1206" y="1339"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="LXT-TE-6rJ">
             <objects>
-                <viewController id="ibu-8l-OxG" sceneMemberID="viewController">
+                <viewController id="ibu-8l-OxG" customClass="LoginViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YfC-dh-x23"/>
                         <viewControllerLayoutGuide type="bottom" id="zcb-H5-npK"/>
@@ -245,6 +245,9 @@
                                         <include reference="xVB-7y-wAa"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="passwordTextFieldReturn:" destination="ibu-8l-OxG" eventType="editingDidEnd" id="yB8-HF-XPO"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xr-hy-ONu">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -289,6 +292,9 @@
                                         <include reference="Wj2-CM-D3L"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="emailTextFieldReturn:" destination="ibu-8l-OxG" eventType="editingDidEnd" id="A0m-Sm-oTW"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -347,6 +353,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="Ssb-D4-eE0" id="kIN-SA-BMm"/>
+                        <outlet property="passwordTextField" destination="8LS-Mh-bEF" id="XPx-8I-2Zt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8R-yD-jcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
