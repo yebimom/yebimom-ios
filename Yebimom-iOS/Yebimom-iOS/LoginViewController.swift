@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class LoginViewController: UIViewController {
 
@@ -29,12 +30,30 @@ class LoginViewController: UIViewController {
     @IBAction func loginTry(sender: UIButton) {
         var loginAPIURL: String = "https://yebimom.com/api/login/"
         let parameters = [
-            "username": [userNameTextField.text],
-            "password": [passwordTextField.text]]
+            "username": userNameTextField.text,
+            "password": passwordTextField.text]
         
-        /* TODO: 1. Try extension Alamofire class for handling response out of closure (add return value)
-                 2. Get JWT value
+        let request = Alamofire.request(.POST, loginAPIURL, parameters: parameters, encoding: .JSON).responseJSON { (req, res, json, error) in
+            if(error != nil) {
+                NSLog("Error: \(error)")
+                println("request: " + req.debugDescription)
+                println("response: " + res.debugDescription)
+            }
+            else {
+                var json = JSON(json!)
+                if json["token"] == nil {
+                    println("Token not arrived")
+                    println(res?.debugDescription)
+                }
+            }
+        }
+        /* If private service requested, token will be used like following statement
+        request.responseJSON{ (req, res, json, error) in
+            var json = JSON(json!)
+            println(json["token"])
+        }
         */
+        
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
