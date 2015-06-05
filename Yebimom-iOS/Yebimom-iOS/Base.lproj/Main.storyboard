@@ -232,7 +232,7 @@
                                     <constraint firstAttribute="width" constant="368" id="xVB-7y-wAa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="5yU-4G-FkD"/>
@@ -271,8 +271,11 @@
                                         <include reference="s4e-Ut-sZd"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="loginTry:" destination="ibu-8l-OxG" eventType="touchUpInside" id="fN5-qF-APZ"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ssb-D4-eE0">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사용자 명" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ssb-D4-eE0">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="368" id="K74-bR-7Ej"/>
@@ -293,7 +296,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="emailTextFieldReturn:" destination="ibu-8l-OxG" eventType="editingDidEnd" id="A0m-Sm-oTW"/>
+                                    <action selector="userNameTextFieldReturn:" destination="ibu-8l-OxG" eventType="editingDidEnd" id="Bvi-E6-rJ6"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -319,14 +322,14 @@
                                 <exclude reference="Ssb-D4-eE0"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="KJ6-nW-Oup"/>
-                                <exclude reference="PyM-IE-Apw"/>
-                                <exclude reference="gKa-Xj-SMn"/>
-                                <exclude reference="yaT-kH-bta"/>
-                                <exclude reference="v0b-JC-sAs"/>
-                                <exclude reference="xu3-51-Qe1"/>
                                 <exclude reference="1cf-Tf-HTQ"/>
                                 <exclude reference="RON-GV-Y8o"/>
+                                <exclude reference="gKa-Xj-SMn"/>
+                                <exclude reference="yaT-kH-bta"/>
+                                <exclude reference="KJ6-nW-Oup"/>
+                                <exclude reference="PyM-IE-Apw"/>
+                                <exclude reference="v0b-JC-sAs"/>
+                                <exclude reference="xu3-51-Qe1"/>
                                 <exclude reference="lMq-KI-jbf"/>
                                 <exclude reference="sA9-5y-ywZ"/>
                             </mask>
@@ -340,22 +343,22 @@
                                 <include reference="Ssb-D4-eE0"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="KJ6-nW-Oup"/>
-                                <include reference="PyM-IE-Apw"/>
-                                <include reference="gKa-Xj-SMn"/>
-                                <include reference="yaT-kH-bta"/>
-                                <include reference="v0b-JC-sAs"/>
-                                <include reference="xu3-51-Qe1"/>
                                 <include reference="1cf-Tf-HTQ"/>
                                 <include reference="RON-GV-Y8o"/>
+                                <include reference="gKa-Xj-SMn"/>
+                                <include reference="yaT-kH-bta"/>
+                                <include reference="KJ6-nW-Oup"/>
+                                <include reference="PyM-IE-Apw"/>
+                                <include reference="v0b-JC-sAs"/>
+                                <include reference="xu3-51-Qe1"/>
                                 <include reference="lMq-KI-jbf"/>
                                 <include reference="sA9-5y-ywZ"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="Ssb-D4-eE0" id="kIN-SA-BMm"/>
                         <outlet property="passwordTextField" destination="8LS-Mh-bEF" id="XPx-8I-2Zt"/>
+                        <outlet property="userNameTextField" destination="Ssb-D4-eE0" id="pAt-qS-iQa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8R-yD-jcl" userLabel="First Responder" sceneMemberID="firstResponder"/>

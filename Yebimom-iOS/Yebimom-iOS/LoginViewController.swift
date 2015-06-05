@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
@@ -19,15 +21,43 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func emailTextFieldReturn(sender: UITextField) {
+    @IBAction func userNameTextFieldReturn(sender: UITextField) {
         sender.resignFirstResponder()
     }
     @IBAction func passwordTextFieldReturn(sender: UITextField) {
         sender.resignFirstResponder()
     }
+    @IBAction func loginTry(sender: UIButton) {
+        var loginAPIURL: String = "https://yebimom.com/api/login/"
+        let parameters = [
+            "username": userNameTextField.text,
+            "password": passwordTextField.text]
+        
+        let request = Alamofire.request(.POST, loginAPIURL, parameters: parameters, encoding: .JSON).responseJSON { (req, res, json, error) in
+            if(error != nil) {
+                NSLog("Error: \(error)")
+                println("request: " + req.debugDescription)
+                println("response: " + res.debugDescription)
+            }
+            else {
+                var json = JSON(json!)
+                if json["token"] == nil {
+                    println("Token not arrived")
+                    println(res?.debugDescription)
+                }
+            }
+        }
+        /* If private service requested, token will be used like following statement
+        request.responseJSON{ (req, res, json, error) in
+            var json = JSON(json!)
+            println(json["token"])
+        }
+        */
+        
+    }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        emailTextField.endEditing(true)
+        userNameTextField.endEditing(true)
         passwordTextField.endEditing(true)
     }
     

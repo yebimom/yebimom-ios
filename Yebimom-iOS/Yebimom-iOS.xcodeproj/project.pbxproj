@@ -93,6 +93,7 @@
 		D998E2F21B1EC89B00E4AB0B /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				D998E3761B20BCB600E4AB0B /* Networking */,
 				D998E2F31B1EC8A300E4AB0B /* ENSwiftSideMenu */,
 			);
 			name = Library;
@@ -149,6 +150,13 @@
 				D998E33E1B1F4DB500E4AB0B /* CategoryTableViewCell.swift */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		D998E3761B20BCB600E4AB0B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		D9A331DF1B1D74A8005E2FD1 = {
