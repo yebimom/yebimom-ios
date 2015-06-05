@@ -1,47 +1,25 @@
 //
-//  MainTableViewController.swift
+//  EventPageTableViewController.swift
 //  Yebimom-iOS
 //
-//  Created by wikibootup on 6/3/15.
+//  Created by wikibootup on 6/5/15.
 //  Copyright (c) 2015 wikibootup. All rights reserved.
 //
 
 import UIKit
-import SwiftyJSON
 
-class MainTableViewController: UITableViewController, ENSideMenuDelegate {
-    
-    var categoryInformations = [String]()
-    var numberOfEvents: Int = 0
-    
+class EventPageTableViewController: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.sideMenuController()?.sideMenu?.delegate = self
-        
-        //categories cell
-        let categoryURL = NSURL(string:"https://yebimom.com/api/categories/")
-        var categoryJsonData = JSON(data: NSData(contentsOfURL: categoryURL!)!)
-        
-        for (key: String, subJsonData: JSON)in categoryJsonData {
-            categoryInformations.append(subJsonData["name"].string!)
-        }
-        
-        // events cell
-        let eventURL = NSURL(string:"https://yebimom.com/api/events/")
-        
-        
-        
-        /* temporary error from server API */
-        //var eventJsonData = JSON(data: NSData(contentsOfURL: eventURL!)!)
-        //numberOfEvents = eventJsonData.count
-        numberOfEvents = 0
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    @IBAction func menuENSide(sender: UIBarButtonItem) {
-        toggleSideMenuView()
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,39 +30,24 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 2
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch(section) {
-            case 0:
-                return 1
-            case 1:
-                return categoryInformations.count
-            default:
-                return 0
-        }
+        // #warning Incomplete method implementation.
+        // Return the number of rows in the section.
+        return 0
     }
 
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        switch(indexPath.section) {
-            case 0:
-                let cell = tableView.dequeueReusableCellWithIdentifier("EventTableCell", forIndexPath: indexPath) as! EventTableViewCell
-                cell.numberOfEventsLabel.text = "\(numberOfEvents) 건"
-                return cell
-            case 1:
-                let cell = tableView.dequeueReusableCellWithIdentifier("CategoryTableCell", forIndexPath: indexPath) as! CategoryTableViewCell
-                cell.categoryInfoLabel.text = categoryInformations[indexPath.row]
-                return cell
-            default:
-                let cell: UITableViewCell! = nil
-                return cell
-        }
-        
-        let cell: UITableViewCell! = nil
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+
+        // Configure the cell...
+
         return cell
     }
-
+    */
 
     /*
     // Override to support conditional editing of the table view.

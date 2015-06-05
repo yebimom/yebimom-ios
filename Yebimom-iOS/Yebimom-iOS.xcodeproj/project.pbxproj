@@ -22,6 +22,8 @@
 		D9A331F51B1D74A8005E2FD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A331F41B1D74A8005E2FD1 /* Images.xcassets */; };
 		D9A331F81B1D74A8005E2FD1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9A331F61B1D74A8005E2FD1 /* LaunchScreen.xib */; };
 		D9A332041B1D74A8005E2FD1 /* Yebimom_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A332031B1D74A8005E2FD1 /* Yebimom_iOSTests.swift */; };
+		D9E659931B21E93B001CA293 /* EventPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E659921B21E93B001CA293 /* EventPageTableViewController.swift */; };
+		D9E659951B21E962001CA293 /* EventPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E659941B21E962001CA293 /* EventPageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		D9A331FD1B1D74A8005E2FD1 /* Yebimom-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yebimom-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A332021B1D74A8005E2FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9A332031B1D74A8005E2FD1 /* Yebimom_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yebimom_iOSTests.swift; sourceTree = "<group>"; };
+		D9E659921B21E93B001CA293 /* EventPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageTableViewController.swift; sourceTree = "<group>"; };
+		D9E659941B21E962001CA293 /* EventPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageTableViewCell.swift; sourceTree = "<group>"; };
 		EE85F1E416213D26275F6D1E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F18C3D6DDBC750FBE81DF760 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +123,7 @@
 				D998E3061B1F108600E4AB0B /* MainTableViewController.swift */,
 				D998E3721B2086C900E4AB0B /* LoginViewController.swift */,
 				D998E37E1B219E9F00E4AB0B /* SignupViewController.swift */,
+				D9E659921B21E93B001CA293 /* EventPageTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 			children = (
 				D998E33E1B1F4DB500E4AB0B /* CategoryTableViewCell.swift */,
 				D998E3831B21B65000E4AB0B /* EventTableViewCell.swift */,
+				D9E659941B21E962001CA293 /* EventPageTableViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -376,9 +382,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D998E37F1B219E9F00E4AB0B /* SignupViewController.swift in Sources */,
+				D9E659951B21E962001CA293 /* EventPageTableViewCell.swift in Sources */,
 				D998E2F71B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift in Sources */,
 				D998E2F61B1EC8E000E4AB0B /* ENSideMenu.swift in Sources */,
 				D998E2FE1B1ECA6E00E4AB0B /* ENSideMenuTableViewController.swift in Sources */,
+				D9E659931B21E93B001CA293 /* EventPageTableViewController.swift in Sources */,
 				D998E2F91B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift in Sources */,
 				D998E3731B2086C900E4AB0B /* LoginViewController.swift in Sources */,
 				D9A331EE1B1D74A8005E2FD1 /* AppDelegate.swift in Sources */,
