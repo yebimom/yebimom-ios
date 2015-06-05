@@ -183,10 +183,10 @@
             </objects>
             <point key="canvasLocation" x="1592" y="578"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup View Controller-->
         <scene sceneID="1R5-ZZ-uKI">
             <objects>
-                <viewController id="heQ-uc-Zgb" sceneMemberID="viewController">
+                <viewController id="heQ-uc-Zgb" customClass="SignupViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ANp-3t-beR"/>
                         <viewControllerLayoutGuide type="bottom" id="exJ-8C-eTz"/>
@@ -244,6 +244,9 @@
                                         <include reference="USj-L7-I0j"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="userNameTextFieldReturn:" destination="heQ-uc-Zgb" eventType="editingDidEnd" id="PLq-c1-JHm"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzl-d6-OF1">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -265,6 +268,9 @@
                                         <include reference="LLo-mj-ipQ"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="passwordTextFieldReturn:" destination="heQ-uc-Zgb" eventType="editingDidEnd" id="Wmm-yc-EQC"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 확인" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yoT-6j-2uC">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -273,7 +279,7 @@
                                     <constraint firstAttribute="height" constant="45" id="dX2-Gh-uJu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="QZh-uU-WbL"/>
@@ -286,6 +292,9 @@
                                         <include reference="dX2-Gh-uJu"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="passwordConfirmTextFieldReturn:" destination="heQ-uc-Zgb" eventType="editingDidEnd" id="KC2-4Y-m8v"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcU-Xp-i3Y">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -309,6 +318,9 @@
                                         <include reference="XzS-oz-pMT"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="signupTry:" destination="heQ-uc-Zgb" eventType="touchUpInside" id="lo0-ir-CTM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -333,16 +345,16 @@
                                 <exclude reference="OcU-Xp-i3Y"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="HYI-Gi-wOK"/>
-                                <exclude reference="Pfk-MY-v3i"/>
                                 <exclude reference="xRe-B8-CEV"/>
                                 <exclude reference="zBZ-xf-9jE"/>
+                                <exclude reference="HYI-Gi-wOK"/>
+                                <exclude reference="Pfk-MY-v3i"/>
                                 <exclude reference="efB-sL-cpj"/>
                                 <exclude reference="gd9-FO-Rba"/>
-                                <exclude reference="44R-iy-6Z6"/>
-                                <exclude reference="EdQ-KI-8Y8"/>
                                 <exclude reference="A1D-Wd-UhU"/>
                                 <exclude reference="woR-Mz-Ymk"/>
+                                <exclude reference="44R-iy-6Z6"/>
+                                <exclude reference="EdQ-KI-8Y8"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -354,19 +366,24 @@
                                 <include reference="OcU-Xp-i3Y"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="HYI-Gi-wOK"/>
-                                <include reference="Pfk-MY-v3i"/>
                                 <include reference="xRe-B8-CEV"/>
                                 <include reference="zBZ-xf-9jE"/>
+                                <include reference="HYI-Gi-wOK"/>
+                                <include reference="Pfk-MY-v3i"/>
                                 <include reference="efB-sL-cpj"/>
                                 <include reference="gd9-FO-Rba"/>
-                                <include reference="44R-iy-6Z6"/>
-                                <include reference="EdQ-KI-8Y8"/>
                                 <include reference="A1D-Wd-UhU"/>
                                 <include reference="woR-Mz-Ymk"/>
+                                <include reference="44R-iy-6Z6"/>
+                                <include reference="EdQ-KI-8Y8"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="passwordConfirmTextField" destination="yoT-6j-2uC" id="zmw-Dd-r50"/>
+                        <outlet property="passwordTextField" destination="bzl-d6-OF1" id="V6G-YR-zON"/>
+                        <outlet property="userNameTextField" destination="yVD-GE-j0e" id="4eA-1l-S0E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okf-MD-vKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -530,14 +547,14 @@
                                 <exclude reference="R3h-Ts-DbR"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Mms-qj-X1r"/>
-                                <exclude reference="PJW-Au-SJB"/>
-                                <exclude reference="F6R-mH-b34"/>
-                                <exclude reference="yaT-kH-bta"/>
                                 <exclude reference="1cf-Tf-HTQ"/>
                                 <exclude reference="RON-GV-Y8o"/>
+                                <exclude reference="F6R-mH-b34"/>
+                                <exclude reference="yaT-kH-bta"/>
                                 <exclude reference="lMq-KI-jbf"/>
                                 <exclude reference="sA9-5y-ywZ"/>
+                                <exclude reference="Mms-qj-X1r"/>
+                                <exclude reference="PJW-Au-SJB"/>
                                 <exclude reference="Nmf-9W-crD"/>
                                 <exclude reference="yVM-74-HDd"/>
                             </mask>
@@ -551,14 +568,14 @@
                                 <include reference="R3h-Ts-DbR"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Mms-qj-X1r"/>
-                                <include reference="PJW-Au-SJB"/>
-                                <include reference="F6R-mH-b34"/>
-                                <include reference="yaT-kH-bta"/>
                                 <include reference="1cf-Tf-HTQ"/>
                                 <include reference="RON-GV-Y8o"/>
+                                <include reference="F6R-mH-b34"/>
+                                <include reference="yaT-kH-bta"/>
                                 <include reference="lMq-KI-jbf"/>
                                 <include reference="sA9-5y-ywZ"/>
+                                <include reference="Mms-qj-X1r"/>
+                                <include reference="PJW-Au-SJB"/>
                                 <include reference="Nmf-9W-crD"/>
                                 <include reference="yVM-74-HDd"/>
                             </mask>
