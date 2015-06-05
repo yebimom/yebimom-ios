@@ -274,14 +274,75 @@
             <objects>
                 <tableViewController id="nDW-Qv-1zx" customClass="EventPageTableViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OyY-uo-jTa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="L3C-Jn-MwX" customClass="EventPageTableViewCell" customModule="Yebimom_iOS" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventPageTableCell" rowHeight="240" id="L3C-Jn-MwX" customClass="EventPageTableViewCell" customModule="Yebimom_iOS" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L3C-Jn-MwX" id="AsQ-bm-AKw">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="85F-jk-XCO">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="400" id="ewC-Ka-pLp"/>
+                                                <constraint firstAttribute="height" constant="239.5" id="xrK-ka-Nnr"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="ewC-Ka-pLp"/>
+                                                    <exclude reference="xrK-ka-Nnr"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="ewC-Ka-pLp"/>
+                                                    <include reference="xrK-ka-Nnr"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이벤트 셀 표시용 임시 레이블 : 추후에 이미지로 대체" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58s-jO-4qd">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="58s-jO-4qd" secondAttribute="centerY" id="76K-y1-vxc"/>
+                                        <constraint firstAttribute="centerX" secondItem="58s-jO-4qd" secondAttribute="centerX" id="7Nc-NG-7cM"/>
+                                        <constraint firstAttribute="centerY" secondItem="85F-jk-XCO" secondAttribute="centerY" id="IaD-OH-7QU"/>
+                                        <constraint firstAttribute="centerX" secondItem="85F-jk-XCO" secondAttribute="centerX" id="rWb-CY-w4Y"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="85F-jk-XCO"/>
+                                            <exclude reference="58s-jO-4qd"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="IaD-OH-7QU"/>
+                                            <exclude reference="rWb-CY-w4Y"/>
+                                            <exclude reference="76K-y1-vxc"/>
+                                            <exclude reference="7Nc-NG-7cM"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="85F-jk-XCO"/>
+                                            <include reference="58s-jO-4qd"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="IaD-OH-7QU"/>
+                                            <include reference="rWb-CY-w4Y"/>
+                                            <include reference="76K-y1-vxc"/>
+                                            <include reference="7Nc-NG-7cM"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="eventImage" destination="85F-jk-XCO" id="4Og-mh-dHj"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
