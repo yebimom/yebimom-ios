@@ -40,6 +40,69 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventTableCell" rowHeight="240" id="RBb-W1-q19" customClass="EventTableViewCell" customModule="Yebimom_iOS" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RBb-W1-q19" id="IuM-lj-crS">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g47-fA-eNQ">
+                                            <rect key="frame" x="0.0" y="-1" width="600" height="239.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="240" id="RcO-4t-zlQ"/>
+                                                <constraint firstAttribute="width" constant="600" id="t9P-Ax-UHo"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예비맘" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ret-a7-zbc">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="178" y="55" width="77" height="36"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="특별 이벤트" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWn-rj-Hch">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="161" y="108" width="79" height="21"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="qWn-rj-Hch" secondAttribute="centerY" id="0TC-b0-I0u"/>
+                                        <constraint firstAttribute="centerX" secondItem="qWn-rj-Hch" secondAttribute="centerX" id="Dor-fw-bFX"/>
+                                        <constraint firstItem="qWn-rj-Hch" firstAttribute="top" secondItem="ret-a7-zbc" secondAttribute="bottom" constant="20" id="LGA-T8-kJA"/>
+                                        <constraint firstAttribute="centerX" secondItem="ret-a7-zbc" secondAttribute="centerX" id="Ymg-DN-Q9u"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="ret-a7-zbc"/>
+                                            <exclude reference="qWn-rj-Hch"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="Ymg-DN-Q9u"/>
+                                            <exclude reference="0TC-b0-I0u"/>
+                                            <exclude reference="Dor-fw-bFX"/>
+                                            <exclude reference="LGA-T8-kJA"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="ret-a7-zbc"/>
+                                            <include reference="qWn-rj-Hch"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="Ymg-DN-Q9u"/>
+                                            <include reference="0TC-b0-I0u"/>
+                                            <include reference="Dor-fw-bFX"/>
+                                            <include reference="LGA-T8-kJA"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryTableCell" rowHeight="240" id="nSS-3z-sgS" customClass="CategoryTableViewCell" customModule="Yebimom_iOS" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nSS-3z-sgS" id="18s-Nm-sq8">
@@ -63,7 +126,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <variation key="widthClass=compact" misplaced="YES">
                                                 <rect key="frame" x="111" y="68" width="179" height="21"/>
                                             </variation>
                                         </label>
@@ -71,8 +134,19 @@
                                     <constraints>
                                         <constraint firstItem="GTJ-43-aXE" firstAttribute="centerX" secondItem="I4J-Nw-YBv" secondAttribute="centerX" constant="-0.5" id="5B3-Yb-Y7E"/>
                                         <constraint firstAttribute="centerX" secondItem="I4J-Nw-YBv" secondAttribute="centerX" id="VQf-mA-WHv"/>
+                                        <constraint firstItem="GTJ-43-aXE" firstAttribute="top" secondItem="I4J-Nw-YBv" secondAttribute="bottom" constant="20.5" id="dwm-5K-Lxj"/>
                                         <constraint firstAttribute="centerY" secondItem="GTJ-43-aXE" secondAttribute="centerY" id="soN-le-m7n"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="dwm-5K-Lxj"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=compact">
+                                        <mask key="constraints">
+                                            <include reference="dwm-5K-Lxj"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="categoryInfoLabel" destination="I4J-Nw-YBv" id="1Vt-bX-3Lx"/>
@@ -99,7 +173,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="to7-pr-c71" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="574" y="578"/>
+            <point key="canvasLocation" x="573" y="578"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rgY-9j-59t">

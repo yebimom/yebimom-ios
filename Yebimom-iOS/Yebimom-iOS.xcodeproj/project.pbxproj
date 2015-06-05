@@ -16,6 +16,7 @@
 		D998E33F1B1F4DB500E4AB0B /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E33E1B1F4DB500E4AB0B /* CategoryTableViewCell.swift */; };
 		D998E3731B2086C900E4AB0B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E3721B2086C900E4AB0B /* LoginViewController.swift */; };
 		D998E37F1B219E9F00E4AB0B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E37E1B219E9F00E4AB0B /* SignupViewController.swift */; };
+		D998E3841B21B65000E4AB0B /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E3831B21B65000E4AB0B /* EventTableViewCell.swift */; };
 		D9A331EE1B1D74A8005E2FD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A331ED1B1D74A8005E2FD1 /* AppDelegate.swift */; };
 		D9A331F31B1D74A8005E2FD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A331F11B1D74A8005E2FD1 /* Main.storyboard */; };
 		D9A331F51B1D74A8005E2FD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A331F41B1D74A8005E2FD1 /* Images.xcassets */; };
@@ -43,6 +44,7 @@
 		D998E33E1B1F4DB500E4AB0B /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		D998E3721B2086C900E4AB0B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D998E37E1B219E9F00E4AB0B /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		D998E3831B21B65000E4AB0B /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		D9A331E81B1D74A8005E2FD1 /* Yebimom-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yebimom-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A331EC1B1D74A8005E2FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9A331ED1B1D74A8005E2FD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				D998E33E1B1F4DB500E4AB0B /* CategoryTableViewCell.swift */,
+				D998E3831B21B65000E4AB0B /* EventTableViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				D998E3731B2086C900E4AB0B /* LoginViewController.swift in Sources */,
 				D9A331EE1B1D74A8005E2FD1 /* AppDelegate.swift in Sources */,
 				D998E3071B1F108600E4AB0B /* MainTableViewController.swift in Sources */,
+				D998E3841B21B65000E4AB0B /* EventTableViewCell.swift in Sources */,
 				D998E33F1B1F4DB500E4AB0B /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

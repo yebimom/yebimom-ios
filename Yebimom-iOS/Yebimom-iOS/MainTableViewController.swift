@@ -41,22 +41,36 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 1
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return categoryInformations.count
+        switch(section) {
+            case 0:
+                return 1
+            case 1:
+                return categoryInformations.count
+            default:
+                return 0
+        }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CategoryTableCell", forIndexPath: indexPath) as! CategoryTableViewCell
+        switch(indexPath.section) {
+            case 0:
+                let cell = tableView.dequeueReusableCellWithIdentifier("EventTableCell", forIndexPath: indexPath) as! EventTableViewCell
+                //                cell.categoryInfoLabel.text = categoryInformations[indexPath.row]
+                return cell
+            case 1:
+                let cell = tableView.dequeueReusableCellWithIdentifier("CategoryTableCell", forIndexPath: indexPath) as! CategoryTableViewCell
+                cell.categoryInfoLabel.text = categoryInformations[indexPath.row]
+                return cell
+            default:
+                let cell: UITableViewCell! = nil
+                return cell
+        }
         
-        var row = indexPath.row
-
-        cell.categoryInfoLabel.text = categoryInformations[row]
-
+        let cell: UITableViewCell! = nil
         return cell
     }
 
