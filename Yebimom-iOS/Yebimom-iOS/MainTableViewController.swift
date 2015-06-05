@@ -17,6 +17,8 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.rowHeight = 300
+        
         self.sideMenuController()?.sideMenu?.delegate = self
         
         //categories cell

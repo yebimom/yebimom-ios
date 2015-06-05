@@ -13,7 +13,7 @@ class EventPageTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.rowHeight = 240
+        tableView.rowHeight = 300
     }
 
     override func didReceiveMemoryWarning() {
