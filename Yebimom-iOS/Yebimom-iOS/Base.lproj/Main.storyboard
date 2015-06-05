@@ -52,7 +52,7 @@
                                                 <constraint firstAttribute="width" constant="600" id="t9P-Ax-UHo"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예비맘" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ret-a7-zbc">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예비맘" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ret-a7-zbc">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -61,7 +61,16 @@
                                                 <rect key="frame" x="178" y="55" width="77" height="36"/>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="특별 이벤트" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWn-rj-Hch">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="n건" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DH7-Ga-mEz">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="185" y="157" width="42" height="21"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="특별 이벤트" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWn-rj-Hch">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -73,13 +82,16 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="centerY" secondItem="qWn-rj-Hch" secondAttribute="centerY" id="0TC-b0-I0u"/>
+                                        <constraint firstAttribute="centerX" secondItem="DH7-Ga-mEz" secondAttribute="centerX" id="Cvq-eC-2ND"/>
                                         <constraint firstAttribute="centerX" secondItem="qWn-rj-Hch" secondAttribute="centerX" id="Dor-fw-bFX"/>
+                                        <constraint firstItem="DH7-Ga-mEz" firstAttribute="top" secondItem="qWn-rj-Hch" secondAttribute="bottom" constant="10" id="E8h-jK-UdO"/>
                                         <constraint firstItem="qWn-rj-Hch" firstAttribute="top" secondItem="ret-a7-zbc" secondAttribute="bottom" constant="20" id="LGA-T8-kJA"/>
                                         <constraint firstAttribute="centerX" secondItem="ret-a7-zbc" secondAttribute="centerX" id="Ymg-DN-Q9u"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
                                             <exclude reference="ret-a7-zbc"/>
+                                            <exclude reference="DH7-Ga-mEz"/>
                                             <exclude reference="qWn-rj-Hch"/>
                                         </mask>
                                         <mask key="constraints">
@@ -87,11 +99,14 @@
                                             <exclude reference="0TC-b0-I0u"/>
                                             <exclude reference="Dor-fw-bFX"/>
                                             <exclude reference="LGA-T8-kJA"/>
+                                            <exclude reference="Cvq-eC-2ND"/>
+                                            <exclude reference="E8h-jK-UdO"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
                                         <mask key="subviews">
                                             <include reference="ret-a7-zbc"/>
+                                            <include reference="DH7-Ga-mEz"/>
                                             <include reference="qWn-rj-Hch"/>
                                         </mask>
                                         <mask key="constraints">
@@ -99,9 +114,14 @@
                                             <include reference="0TC-b0-I0u"/>
                                             <include reference="Dor-fw-bFX"/>
                                             <include reference="LGA-T8-kJA"/>
+                                            <include reference="Cvq-eC-2ND"/>
+                                            <include reference="E8h-jK-UdO"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="numberOfEventsLabel" destination="DH7-Ga-mEz" id="E6U-V5-bRP"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryTableCell" rowHeight="240" id="nSS-3z-sgS" customClass="CategoryTableViewCell" customModule="Yebimom_iOS" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -115,7 +135,7 @@
                                                 <constraint firstAttribute="width" constant="600" id="SYu-YE-G14"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="산후조리원" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTJ-43-aXE">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="산후조리원" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTJ-43-aXE">
                                             <rect key="frame" x="263" y="108" width="74" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>

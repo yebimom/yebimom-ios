@@ -12,12 +12,14 @@ import SwiftyJSON
 class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     
     var categoryInformations = [String]()
+    var numberOfEvents: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.sideMenuController()?.sideMenu?.delegate = self
         
+        //categories cell
         let categoryURL = NSURL(string:"https://yebimom.com/api/categories/")
         var categoryJsonData = JSON(data: NSData(contentsOfURL: categoryURL!)!)
         
@@ -25,6 +27,10 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
             categoryInformations.append(subJsonData["name"].string!)
         }
         
+        // events cell
+        let eventURL = NSURL(string:"https://yebimom.com/api/events/")
+        var eventJsonData = JSON(data: NSData(contentsOfURL: eventURL!)!)
+        numberOfEvents = eventJsonData.count
     }
 
     @IBAction func menuENSide(sender: UIBarButtonItem) {
@@ -59,7 +65,7 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         switch(indexPath.section) {
             case 0:
                 let cell = tableView.dequeueReusableCellWithIdentifier("EventTableCell", forIndexPath: indexPath) as! EventTableViewCell
-                //                cell.categoryInfoLabel.text = categoryInformations[indexPath.row]
+                cell.numberOfEventsLabel.text = "\(numberOfEvents) 건"
                 return cell
             case 1:
                 let cell = tableView.dequeueReusableCellWithIdentifier("CategoryTableCell", forIndexPath: indexPath) as! CategoryTableViewCell
