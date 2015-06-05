@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_Alamofire 2
 #define COCOAPODS_VERSION_PATCH_Alamofire 2
 
+// SwiftTryCatch
+#define COCOAPODS_POD_AVAILABLE_SwiftTryCatch
+#define COCOAPODS_VERSION_MAJOR_SwiftTryCatch 0
+#define COCOAPODS_VERSION_MINOR_SwiftTryCatch 0
+#define COCOAPODS_VERSION_PATCH_SwiftTryCatch 1
+
 // SwiftyJSON
 #define COCOAPODS_POD_AVAILABLE_SwiftyJSON
 #define COCOAPODS_VERSION_MAJOR_SwiftyJSON 2
