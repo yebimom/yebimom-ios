@@ -29,7 +29,7 @@ class CategoryPageTableViewController: UITableViewController {
     
         let centersOfCategoryURL = NSURL(string:"https://yebimom.com/api/categories/" + categorySlug!)
         var centersOfCategoryJsonData = JSON(data: NSData(contentsOfURL: centersOfCategoryURL!)!)
-        
+      
         for (key: String, subJsonData: JSON)in centersOfCategoryJsonData {
             centerNames.append(subJsonData["name"].string!)
             centerAddress.append(subJsonData["address"].string!)
