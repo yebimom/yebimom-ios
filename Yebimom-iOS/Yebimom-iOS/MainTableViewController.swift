@@ -13,7 +13,9 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     
     var categoryNames = [String]()
     var cetegorySlugs = [String]()
-    var numberOfEvents: Int = 0
+    
+    var numOfEvents: Int = 0
+    var numOfCentersOfCategory = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,18 +31,15 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         for (key: String, subJsonData: JSON)in categoryJsonData {
             categoryNames.append(subJsonData["name"].string!)
             cetegorySlugs.append(subJsonData["slug"].string!)
-            println(subJsonData)
         }
         
+        /* api error : need fix */
         // events cell
-        let eventURL = NSURL(string:"https://yebimom.com/api/events/")
-        
-        
-        
-        /* temporary error from server API */
+        //let eventURL = NSURL(string:"https://yebimom.com/api/events/")
         //var eventJsonData = JSON(data: NSData(contentsOfURL: eventURL!)!)
-        //numberOfEvents = eventJsonData.count
-        numberOfEvents = 0
+        //numOfEvents = eventJsonData.count
+        numOfEvents = 0
+        
     }
 
     @IBAction func menuENSide(sender: UIBarButtonItem) {
@@ -75,7 +74,7 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         switch(indexPath.section) {
             case 0:
                 let cell = tableView.dequeueReusableCellWithIdentifier("EventTableCell", forIndexPath: indexPath) as! EventTableViewCell
-                cell.numberOfEventsLabel.text = "\(numberOfEvents) 건"
+                    cell.numOfEventsLabel.text = "\(numOfEvents) 건"
                 return cell
             case 1:
                 let cell = tableView.dequeueReusableCellWithIdentifier("CategoryTableCell", forIndexPath: indexPath) as! CategoryTableViewCell

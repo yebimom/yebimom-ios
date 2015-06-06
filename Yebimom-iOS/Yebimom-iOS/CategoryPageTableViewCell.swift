@@ -10,6 +10,10 @@ import UIKit
 
 class CategoryPageTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var centerNameLabel: UILabel!
+    @IBOutlet weak var centerAddressLabel: UILabel!
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
