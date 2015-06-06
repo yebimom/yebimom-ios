@@ -142,26 +142,48 @@
                                                 <rect key="frame" x="111" y="68" width="179" height="21"/>
                                             </variation>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="n곳" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4N-eX-61a">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="188" y="137" width="25" height="21"/>
+                                            </variation>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="GTJ-43-aXE" firstAttribute="centerX" secondItem="I4J-Nw-YBv" secondAttribute="centerX" constant="-0.5" id="5B3-Yb-Y7E"/>
+                                        <constraint firstAttribute="centerX" secondItem="d4N-eX-61a" secondAttribute="centerX" id="AeS-c9-G44"/>
+                                        <constraint firstItem="d4N-eX-61a" firstAttribute="top" secondItem="GTJ-43-aXE" secondAttribute="bottom" constant="10" id="Ave-Ey-L8D"/>
                                         <constraint firstAttribute="centerX" secondItem="I4J-Nw-YBv" secondAttribute="centerX" id="VQf-mA-WHv"/>
                                         <constraint firstItem="GTJ-43-aXE" firstAttribute="top" secondItem="I4J-Nw-YBv" secondAttribute="bottom" constant="20.5" id="dwm-5K-Lxj"/>
                                         <constraint firstAttribute="centerY" secondItem="GTJ-43-aXE" secondAttribute="centerY" id="soN-le-m7n"/>
                                     </constraints>
                                     <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="d4N-eX-61a"/>
+                                        </mask>
                                         <mask key="constraints">
                                             <exclude reference="dwm-5K-Lxj"/>
+                                            <exclude reference="AeS-c9-G44"/>
+                                            <exclude reference="Ave-Ey-L8D"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="d4N-eX-61a"/>
+                                        </mask>
                                         <mask key="constraints">
                                             <include reference="dwm-5K-Lxj"/>
+                                            <include reference="AeS-c9-G44"/>
+                                            <include reference="Ave-Ey-L8D"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="categoryNameLabel" destination="I4J-Nw-YBv" id="MbO-Zs-why"/>
+                                    <outlet property="numOfCentersOfCategoryLabel" destination="d4N-eX-61a" id="1BO-cQ-MKt"/>
                                     <segue destination="RXA-mg-BlP" kind="show" identifier="ShowCategoryPage" id="xoo-Ic-CSn"/>
                                 </connections>
                             </tableViewCell>

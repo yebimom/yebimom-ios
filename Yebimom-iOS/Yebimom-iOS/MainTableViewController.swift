@@ -14,9 +14,9 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     
     var categoryNames = [String]()
     var cetegorySlugs = [String]()
+    var numOfCentersOfCategory = [Int]()
     
     var numOfEvents: Int = 0
-    var numOfCentersOfCategory = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,19 +33,22 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         //categories cell
         let categoryURL = NSURL(string:"https://yebimom.com/api/categories/")
         var categoryJsonData = JSON(data: NSData(contentsOfURL: categoryURL!)!)
+        let centersOfCategoryURL = NSURL(string:"https://yebimom.com/api/categories/")
         
         for (key: String, subJsonData: JSON)in categoryJsonData {
             categoryNames.append(subJsonData["name"].string!)
             cetegorySlugs.append(subJsonData["slug"].string!)
+            
+            let centersOfCategoryURL = NSURL(string:"https://yebimom.com/api/categories/" + subJsonData["slug"].string!)
+            var centersOfCategoryJsonData = JSON(data: NSData(contentsOfURL: centersOfCategoryURL!)!)
+            numOfCentersOfCategory.append(centersOfCategoryJsonData.count)
         }
         
-        /* api error : need fix */
         // events cell
-        //let eventURL = NSURL(string:"https://yebimom.com/api/events/")
-        //var eventJsonData = JSON(data: NSData(contentsOfURL: eventURL!)!)
-        //numOfEvents = eventJsonData.count
-        numOfEvents = 0
-        
+        let eventURL = NSURL(string:"https://yebimom.com/api/events/")
+        var eventJsonData = JSON(data: NSData(contentsOfURL: eventURL!)!)
+        numOfEvents = eventJsonData.count
+
         self.removeAllOverlays()
     }
 
@@ -86,12 +89,13 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
             case 1:
                 let cell = tableView.dequeueReusableCellWithIdentifier("CategoryTableCell", forIndexPath: indexPath) as! CategoryTableViewCell
                 cell.categoryNameLabel.text = categoryNames[indexPath.row]
+                cell.numOfCentersOfCategoryLabel.text = "\(numOfCentersOfCategory[indexPath.row]) 곳"
                 return cell
             default:
                 let cell: UITableViewCell! = nil
                 return cell
         }
-        
+
         let cell: UITableViewCell! = nil
         return cell
     }
