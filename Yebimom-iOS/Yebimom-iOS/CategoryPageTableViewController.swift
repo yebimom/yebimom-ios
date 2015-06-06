@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import SwiftOverlays
 
 class CategoryPageTableViewController: UITableViewController {
 
@@ -21,6 +22,10 @@ class CategoryPageTableViewController: UITableViewController {
         super.viewDidLoad()
 
         tableView.rowHeight = 340
+        
+        // when overlay, overlay sign will be shown
+        let text = "Please wait..."
+        self.showWaitOverlayWithText(text)
     
         let centersOfCategoryURL = NSURL(string:"https://yebimom.com/api/categories/" + categorySlug!)
         var centersOfCategoryJsonData = JSON(data: NSData(contentsOfURL: centersOfCategoryURL!)!)
@@ -29,6 +34,9 @@ class CategoryPageTableViewController: UITableViewController {
             centerNames.append(subJsonData["name"].string!)
             centerAddress.append(subJsonData["address"].string!)
         }
+        
+        
+        self.removeAllOverlays()
     }
 
     override func didReceiveMemoryWarning() {

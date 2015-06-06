@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import SwiftOverlays
 
 class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     
@@ -21,6 +22,11 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         super.viewDidLoad()
         
         tableView.rowHeight = 340
+        
+        // Wait overlay with text
+        let text = "Please wait..."
+        self.showWaitOverlayWithText(text)
+        
         
         self.sideMenuController()?.sideMenu?.delegate = self
         
@@ -40,6 +46,7 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         //numOfEvents = eventJsonData.count
         numOfEvents = 0
         
+        self.removeAllOverlays()
     }
 
     @IBAction func menuENSide(sender: UIBarButtonItem) {
