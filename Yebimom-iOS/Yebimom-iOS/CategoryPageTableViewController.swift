@@ -1,14 +1,17 @@
 //
-//  EventPageTableViewController.swift
+//  CategoryPageTableViewController.swift
 //  Yebimom-iOS
 //
-//  Created by wikibootup on 6/5/15.
+//  Created by wikibootup on 6/6/15.
 //  Copyright (c) 2015 wikibootup. All rights reserved.
 //
 
 import UIKit
 
-class EventPageTableViewController: UITableViewController {
+class CategoryPageTableViewController: UITableViewController {
+
+    var categoryName: String?
+    var categorySlug: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +35,15 @@ class EventPageTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 10
+        return 3
     }
 
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("EventPageTableCell", forIndexPath: indexPath) as! EventPageTableViewCell
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("CategoryPageTableCell", forIndexPath: indexPath) as! CategoryPageTableViewCell
+
+        // Configure the cell...
+
         return cell
     }
 

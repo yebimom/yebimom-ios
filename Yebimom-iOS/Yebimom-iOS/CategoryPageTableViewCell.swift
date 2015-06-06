@@ -1,17 +1,15 @@
 //
-//  CategoryTableViewCell.swift
+//  CategoryPageTableViewCell.swift
 //  Yebimom-iOS
 //
-//  Created by wikibootup on 6/3/15.
+//  Created by wikibootup on 6/6/15.
 //  Copyright (c) 2015 wikibootup. All rights reserved.
 //
 
 import UIKit
 
-class CategoryTableViewCell: UITableViewCell {
+class CategoryPageTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var categoryNameLabel: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

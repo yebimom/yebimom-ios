@@ -11,13 +11,14 @@ import SwiftyJSON
 
 class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     
-    var categoryInformations = [String]()
+    var categoryNames = [String]()
+    var cetegorySlugs = [String]()
     var numberOfEvents: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = 300
+        tableView.rowHeight = 340
         
         self.sideMenuController()?.sideMenu?.delegate = self
         
@@ -26,7 +27,9 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         var categoryJsonData = JSON(data: NSData(contentsOfURL: categoryURL!)!)
         
         for (key: String, subJsonData: JSON)in categoryJsonData {
-            categoryInformations.append(subJsonData["name"].string!)
+            categoryNames.append(subJsonData["name"].string!)
+            cetegorySlugs.append(subJsonData["slug"].string!)
+            println(subJsonData)
         }
         
         // events cell
@@ -62,7 +65,7 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
             case 0:
                 return 1
             case 1:
-                return categoryInformations.count
+                return categoryNames.count
             default:
                 return 0
         }
@@ -76,7 +79,7 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
                 return cell
             case 1:
                 let cell = tableView.dequeueReusableCellWithIdentifier("CategoryTableCell", forIndexPath: indexPath) as! CategoryTableViewCell
-                cell.categoryInfoLabel.text = categoryInformations[indexPath.row]
+                cell.categoryNameLabel.text = categoryNames[indexPath.row]
                 return cell
             default:
                 let cell: UITableViewCell! = nil
@@ -123,14 +126,14 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowCategoryPage" {
+            let categoryPageViewController = segue.destinationViewController as! CategoryPageTableViewController
+            
+            let indexPath = self.tableView.indexPathForSelectedRow()
+            categoryPageViewController.categoryName = categoryNames[indexPath!.row]
+            categoryPageViewController.categorySlug = cetegorySlugs[indexPath!.row]
+        }
+        
     }
-    */
-
 }
