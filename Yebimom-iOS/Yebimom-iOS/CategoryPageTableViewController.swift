@@ -1,19 +1,34 @@
 //
-//  EventPageTableViewController.swift
+//  CategoryPageTableViewController.swift
 //  Yebimom-iOS
 //
-//  Created by wikibootup on 6/5/15.
+//  Created by wikibootup on 6/6/15.
 //  Copyright (c) 2015 wikibootup. All rights reserved.
 //
 
 import UIKit
+import SwiftyJSON
 
-class EventPageTableViewController: UITableViewController {
+class CategoryPageTableViewController: UITableViewController {
+
+    var categoryName: String?
+    var categorySlug: String?
+    
+    var centerNames = [String]()
+    var centerAddress = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.rowHeight = 340
+    
+        let centersOfCategoryURL = NSURL(string:"https://yebimom.com/api/categories/" + categorySlug!)
+        var centersOfCategoryJsonData = JSON(data: NSData(contentsOfURL: centersOfCategoryURL!)!)
+        
+        for (key: String, subJsonData: JSON)in centersOfCategoryJsonData {
+            centerNames.append(subJsonData["name"].string!)
+            centerAddress.append(subJsonData["address"].string!)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,12 +47,16 @@ class EventPageTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 10
+        return centerNames.count
     }
 
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("EventPageTableCell", forIndexPath: indexPath) as! EventPageTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("CategoryPageTableCell", forIndexPath: indexPath) as! CategoryPageTableViewCell
         
+        cell.centerNameLabel.text = centerNames[indexPath.row]
+        cell.centerAddressLabel.text = centerAddress[indexPath.row]
+
         return cell
     }
 

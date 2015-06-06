@@ -11,13 +11,16 @@ import SwiftyJSON
 
 class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     
-    var categoryInformations = [String]()
-    var numberOfEvents: Int = 0
+    var categoryNames = [String]()
+    var cetegorySlugs = [String]()
+    
+    var numOfEvents: Int = 0
+    var numOfCentersOfCategory = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = 300
+        tableView.rowHeight = 340
         
         self.sideMenuController()?.sideMenu?.delegate = self
         
@@ -26,18 +29,17 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         var categoryJsonData = JSON(data: NSData(contentsOfURL: categoryURL!)!)
         
         for (key: String, subJsonData: JSON)in categoryJsonData {
-            categoryInformations.append(subJsonData["name"].string!)
+            categoryNames.append(subJsonData["name"].string!)
+            cetegorySlugs.append(subJsonData["slug"].string!)
         }
         
+        /* api error : need fix */
         // events cell
-        let eventURL = NSURL(string:"https://yebimom.com/api/events/")
-        
-        
-        
-        /* temporary error from server API */
+        //let eventURL = NSURL(string:"https://yebimom.com/api/events/")
         //var eventJsonData = JSON(data: NSData(contentsOfURL: eventURL!)!)
-        //numberOfEvents = eventJsonData.count
-        numberOfEvents = 0
+        //numOfEvents = eventJsonData.count
+        numOfEvents = 0
+        
     }
 
     @IBAction func menuENSide(sender: UIBarButtonItem) {
@@ -62,7 +64,7 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
             case 0:
                 return 1
             case 1:
-                return categoryInformations.count
+                return categoryNames.count
             default:
                 return 0
         }
@@ -72,11 +74,11 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         switch(indexPath.section) {
             case 0:
                 let cell = tableView.dequeueReusableCellWithIdentifier("EventTableCell", forIndexPath: indexPath) as! EventTableViewCell
-                cell.numberOfEventsLabel.text = "\(numberOfEvents) 건"
+                    cell.numOfEventsLabel.text = "\(numOfEvents) 건"
                 return cell
             case 1:
                 let cell = tableView.dequeueReusableCellWithIdentifier("CategoryTableCell", forIndexPath: indexPath) as! CategoryTableViewCell
-                cell.categoryInfoLabel.text = categoryInformations[indexPath.row]
+                cell.categoryNameLabel.text = categoryNames[indexPath.row]
                 return cell
             default:
                 let cell: UITableViewCell! = nil
@@ -123,14 +125,14 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowCategoryPage" {
+            let categoryPageViewController = segue.destinationViewController as! CategoryPageTableViewController
+            
+            let indexPath = self.tableView.indexPathForSelectedRow()
+            categoryPageViewController.categoryName = categoryNames[indexPath!.row]
+            categoryPageViewController.categorySlug = cetegorySlugs[indexPath!.row]
+        }
+        
     }
-    */
-
 }
