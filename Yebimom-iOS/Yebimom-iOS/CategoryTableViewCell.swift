@@ -12,6 +12,8 @@ class CategoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var categoryNameLabel: UILabel!
     
+    @IBOutlet weak var numOfCentersOfCategoryLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -89,12 +89,13 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
             case 1:
                 let cell = tableView.dequeueReusableCellWithIdentifier("CategoryTableCell", forIndexPath: indexPath) as! CategoryTableViewCell
                 cell.categoryNameLabel.text = categoryNames[indexPath.row]
+                cell.numOfCentersOfCategoryLabel.text = "\(numOfCentersOfCategory[indexPath.row]) 곳"
                 return cell
             default:
                 let cell: UITableViewCell! = nil
                 return cell
         }
-        
+
         let cell: UITableViewCell! = nil
         return cell
     }
