@@ -275,6 +275,7 @@
             <objects>
                 <tableViewController id="RXA-mg-BlP" customClass="CategoryPageTableViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QBM-d0-KUY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -295,8 +296,7 @@
                                                     <exclude reference="iMc-0p-SOo"/>
                                                 </mask>
                                             </variation>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="227.5"/>
+                                            <variation key="widthClass=compact">
                                                 <mask key="constraints">
                                                     <include reference="2Dp-39-GbF"/>
                                                     <include reference="iMc-0p-SOo"/>
@@ -363,10 +363,10 @@
                                             <exclude reference="6Ot-HQ-1Ao"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="iXL-lV-SXV"/>
-                                            <exclude reference="dYD-Gj-Tqj"/>
                                             <exclude reference="KV8-sE-bTl"/>
                                             <exclude reference="weR-DF-5m6"/>
+                                            <exclude reference="dYD-Gj-Tqj"/>
+                                            <exclude reference="iXL-lV-SXV"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
@@ -376,10 +376,10 @@
                                             <include reference="6Ot-HQ-1Ao"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="iXL-lV-SXV"/>
-                                            <include reference="dYD-Gj-Tqj"/>
                                             <include reference="KV8-sE-bTl"/>
                                             <include reference="weR-DF-5m6"/>
+                                            <include reference="dYD-Gj-Tqj"/>
+                                            <include reference="iXL-lV-SXV"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>

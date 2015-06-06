@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_Alamofire 2
 #define COCOAPODS_VERSION_PATCH_Alamofire 2
 
+// SwiftOverlays
+#define COCOAPODS_POD_AVAILABLE_SwiftOverlays
+#define COCOAPODS_VERSION_MAJOR_SwiftOverlays 0
+#define COCOAPODS_VERSION_MINOR_SwiftOverlays 11
+#define COCOAPODS_VERSION_PATCH_SwiftOverlays 0
+
 // SwiftTryCatch
 #define COCOAPODS_POD_AVAILABLE_SwiftTryCatch
 #define COCOAPODS_VERSION_MAJOR_SwiftTryCatch 0

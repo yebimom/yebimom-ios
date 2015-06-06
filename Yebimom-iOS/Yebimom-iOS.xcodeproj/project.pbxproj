@@ -123,12 +123,10 @@
 		D998E2FA1B1EC9A200E4AB0B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D9B745881B230A650080645D /* User */,
+				D9B745871B230A560080645D /* Main */,
+				D9B745861B230A460080645D /* Page */,
 				D998E3081B1F108E00E4AB0B /* Side-menu */,
-				D998E3061B1F108600E4AB0B /* MainTableViewController.swift */,
-				D998E3721B2086C900E4AB0B /* LoginViewController.swift */,
-				D998E37E1B219E9F00E4AB0B /* SignupViewController.swift */,
-				D9E659921B21E93B001CA293 /* EventPageTableViewController.swift */,
-				D9B745821B22E9760080645D /* CategoryPageTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -234,6 +232,32 @@
 				D9A332021B1D74A8005E2FD1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D9B745861B230A460080645D /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				D9E659921B21E93B001CA293 /* EventPageTableViewController.swift */,
+				D9B745821B22E9760080645D /* CategoryPageTableViewController.swift */,
+			);
+			name = Page;
+			sourceTree = "<group>";
+		};
+		D9B745871B230A560080645D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D998E3061B1F108600E4AB0B /* MainTableViewController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		D9B745881B230A650080645D /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D998E3721B2086C900E4AB0B /* LoginViewController.swift */,
+				D998E37E1B219E9F00E4AB0B /* SignupViewController.swift */,
+			);
+			name = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
