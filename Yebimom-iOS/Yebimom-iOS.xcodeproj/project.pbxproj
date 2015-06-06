@@ -24,6 +24,7 @@
 		D9A332041B1D74A8005E2FD1 /* Yebimom_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A332031B1D74A8005E2FD1 /* Yebimom_iOSTests.swift */; };
 		D9B745831B22E9760080645D /* CategoryPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B745821B22E9760080645D /* CategoryPageTableViewController.swift */; };
 		D9B745851B22E9850080645D /* CategoryPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B745841B22E9850080645D /* CategoryPageTableViewCell.swift */; };
+		D9B7458D1B234FC50080645D /* CenterOfCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B7458C1B234FC50080645D /* CenterOfCategoryViewController.swift */; };
 		D9E659931B21E93B001CA293 /* EventPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E659921B21E93B001CA293 /* EventPageTableViewController.swift */; };
 		D9E659951B21E962001CA293 /* EventPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E659941B21E962001CA293 /* EventPageTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		D9A332031B1D74A8005E2FD1 /* Yebimom_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yebimom_iOSTests.swift; sourceTree = "<group>"; };
 		D9B745821B22E9760080645D /* CategoryPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPageTableViewController.swift; sourceTree = "<group>"; };
 		D9B745841B22E9850080645D /* CategoryPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPageTableViewCell.swift; sourceTree = "<group>"; };
+		D9B7458C1B234FC50080645D /* CenterOfCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterOfCategoryViewController.swift; sourceTree = "<group>"; };
 		D9E659921B21E93B001CA293 /* EventPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageTableViewController.swift; sourceTree = "<group>"; };
 		D9E659941B21E962001CA293 /* EventPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageTableViewCell.swift; sourceTree = "<group>"; };
 		EE85F1E416213D26275F6D1E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		D998E2FA1B1EC9A200E4AB0B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D9B745891B234F370080645D /* Detail */,
 				D9B745881B230A650080645D /* User */,
 				D9B745871B230A560080645D /* Main */,
 				D9B745861B230A460080645D /* Page */,
@@ -258,6 +261,14 @@
 				D998E37E1B219E9F00E4AB0B /* SignupViewController.swift */,
 			);
 			name = User;
+			sourceTree = "<group>";
+		};
+		D9B745891B234F370080645D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D9B7458C1B234FC50080645D /* CenterOfCategoryViewController.swift */,
+			);
+			name = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,6 +434,7 @@
 				D998E3731B2086C900E4AB0B /* LoginViewController.swift in Sources */,
 				D9A331EE1B1D74A8005E2FD1 /* AppDelegate.swift in Sources */,
 				D998E3071B1F108600E4AB0B /* MainTableViewController.swift in Sources */,
+				D9B7458D1B234FC50080645D /* CenterOfCategoryViewController.swift in Sources */,
 				D998E3841B21B65000E4AB0B /* EventTableViewCell.swift in Sources */,
 				D998E33F1B1F4DB500E4AB0B /* CategoryTableViewCell.swift in Sources */,
 			);
