@@ -450,7 +450,7 @@
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e7W-83-XTo">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                        <variation key="widthClass=compact" ambiguous="YES">
                                                             <rect key="frame" x="0.0" y="0.0" width="400" height="250"/>
                                                         </variation>
                                                     </imageView>
@@ -492,44 +492,89 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzC-ge-cUv" userLabel="Info View">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uL-tq-3Ez">
-                                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                        <state key="normal" title="Button">
-                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <variation key="widthClass=compact" ambiguous="YES">
-                                                            <rect key="frame" x="177" y="155" width="46" height="30"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="oo한 이름을 가진" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swD-PO-iYG">
+                                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="350" id="Iny-P3-N2z"/>
+                                                            <constraint firstAttribute="height" constant="30" id="ZWO-Gd-qNw"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="Iny-P3-N2z"/>
+                                                                <exclude reference="ZWO-Gd-qNw"/>
+                                                            </mask>
                                                         </variation>
-                                                    </button>
+                                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="26" y="8" width="334" height="31"/>
+                                                            <mask key="constraints">
+                                                                <include reference="Iny-P3-N2z"/>
+                                                                <include reference="ZWO-Gd-qNw"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="산후조리원" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqq-UX-G7y">
+                                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="BA5-nS-sI2"/>
+                                                            <constraint firstAttribute="height" constant="21" id="c0s-3j-V85"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="BA5-nS-sI2"/>
+                                                                <exclude reference="c0s-3j-V85"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="156" y="55" width="88" height="21"/>
+                                                            <mask key="constraints">
+                                                                <include reference="BA5-nS-sI2"/>
+                                                                <include reference="c0s-3j-V85"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="340" id="6Sk-U2-tqt"/>
-                                                    <constraint firstAttribute="centerY" secondItem="0uL-tq-3Ez" secondAttribute="centerY" id="j27-XJ-FBu"/>
-                                                    <constraint firstAttribute="centerX" secondItem="0uL-tq-3Ez" secondAttribute="centerX" id="oZC-Kz-xz3"/>
+                                                    <constraint firstItem="swD-PO-iYG" firstAttribute="top" secondItem="hzC-ge-cUv" secondAttribute="top" constant="5" id="R1J-tA-RPV"/>
+                                                    <constraint firstItem="uqq-UX-G7y" firstAttribute="top" secondItem="swD-PO-iYG" secondAttribute="bottom" constant="14" id="dzp-YU-pbh"/>
+                                                    <constraint firstAttribute="centerX" secondItem="uqq-UX-G7y" secondAttribute="centerX" id="eAn-j6-Aah"/>
                                                     <constraint firstAttribute="width" constant="400" id="u8z-Th-Xye"/>
+                                                    <constraint firstAttribute="centerX" secondItem="swD-PO-iYG" secondAttribute="centerX" id="w3X-R7-BA1"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="subviews">
-                                                        <exclude reference="0uL-tq-3Ez"/>
+                                                        <exclude reference="swD-PO-iYG"/>
+                                                        <exclude reference="uqq-UX-G7y"/>
                                                     </mask>
                                                     <mask key="constraints">
                                                         <exclude reference="6Sk-U2-tqt"/>
                                                         <exclude reference="u8z-Th-Xye"/>
-                                                        <exclude reference="j27-XJ-FBu"/>
-                                                        <exclude reference="oZC-Kz-xz3"/>
+                                                        <exclude reference="R1J-tA-RPV"/>
+                                                        <exclude reference="w3X-R7-BA1"/>
+                                                        <exclude reference="dzp-YU-pbh"/>
+                                                        <exclude reference="eAn-j6-Aah"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="318" width="400" height="340"/>
                                                     <mask key="subviews">
-                                                        <include reference="0uL-tq-3Ez"/>
+                                                        <include reference="swD-PO-iYG"/>
+                                                        <include reference="uqq-UX-G7y"/>
                                                     </mask>
                                                     <mask key="constraints">
                                                         <include reference="6Sk-U2-tqt"/>
                                                         <include reference="u8z-Th-Xye"/>
-                                                        <include reference="j27-XJ-FBu"/>
-                                                        <include reference="oZC-Kz-xz3"/>
+                                                        <include reference="R1J-tA-RPV"/>
+                                                        <include reference="w3X-R7-BA1"/>
+                                                        <include reference="dzp-YU-pbh"/>
+                                                        <include reference="eAn-j6-Aah"/>
                                                     </mask>
                                                 </variation>
                                             </view>
