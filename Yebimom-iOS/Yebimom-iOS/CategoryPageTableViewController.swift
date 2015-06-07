@@ -103,14 +103,12 @@ class CategoryPageTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowCenterDetail" {
+            let detailViewController = segue.destinationViewController as! CenterOfCategoryViewController
+            let indexPath = self.tableView.indexPathForSelectedRow()
+            detailViewController.centerName = centerNames[indexPath!.row]
+        }
     }
-    */
-
 }
+
