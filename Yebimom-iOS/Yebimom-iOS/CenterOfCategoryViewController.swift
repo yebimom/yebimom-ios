@@ -9,10 +9,15 @@
 import UIKit
 
 class CenterOfCategoryViewController: UIViewController {
+
+    var centerName: String?
+    
+    @IBOutlet weak var centerNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        centerNameLabel.text = centerName
     }
 
     override func didReceiveMemoryWarning() {
