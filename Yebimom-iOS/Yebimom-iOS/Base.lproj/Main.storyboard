@@ -545,7 +545,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
-                                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <variation key="widthClass=compact" misplaced="YES">
                                                             <rect key="frame" x="122" y="118" width="171.5" height="41"/>
                                                         </variation>
                                                     </label>
@@ -553,25 +553,65 @@
                                                         <rect key="frame" x="0.0" y="-2" width="150" height="2"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                                            <rect key="frame" x="42" y="8" width="350" height="2"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="350" id="Bsf-82-P8D"/>
+                                                        </constraints>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="Bsf-82-P8D"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="25" y="8" width="350" height="2"/>
+                                                            <mask key="constraints">
+                                                                <include reference="Bsf-82-P8D"/>
+                                                            </mask>
                                                         </variation>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yIc-Aq-bBG" userLabel="hr 태그 역할">
                                                         <rect key="frame" x="0.0" y="-2" width="150" height="2"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                                            <rect key="frame" x="38" y="274" width="350" height="2"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="350" id="Cs1-a8-Q90"/>
+                                                        </constraints>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="Cs1-a8-Q90"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="25" y="298" width="350" height="2"/>
+                                                            <mask key="constraints">
+                                                                <include reference="Cs1-a8-Q90"/>
+                                                            </mask>
                                                         </variation>
                                                     </progressView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="yIc-Aq-bBG" secondAttribute="bottom" constant="5" id="Npl-wH-5H1"/>
+                                                    <constraint firstAttribute="height" constant="300" id="c2Q-BV-QDj"/>
+                                                    <constraint firstItem="PW7-CJ-09F" firstAttribute="top" secondItem="Rgh-hX-n29" secondAttribute="top" constant="5" id="clj-vE-Pmi"/>
+                                                    <constraint firstAttribute="centerX" secondItem="yIc-Aq-bBG" secondAttribute="centerX" id="fwz-gq-hOY"/>
+                                                    <constraint firstAttribute="centerY" secondItem="Ddp-41-DNW" secondAttribute="centerY" id="kXA-Fu-taQ"/>
+                                                    <constraint firstAttribute="centerX" secondItem="PW7-CJ-09F" secondAttribute="centerX" id="ueK-uZ-sZS"/>
+                                                    <constraint firstAttribute="centerX" secondItem="Ddp-41-DNW" secondAttribute="centerX" id="ydy-Js-NxU"/>
+                                                </constraints>
                                                 <variation key="default">
                                                     <mask key="subviews">
                                                         <exclude reference="Ddp-41-DNW"/>
                                                         <exclude reference="PW7-CJ-09F"/>
                                                         <exclude reference="yIc-Aq-bBG"/>
+                                                    </mask>
+                                                    <mask key="constraints">
+                                                        <exclude reference="c2Q-BV-QDj"/>
+                                                        <exclude reference="clj-vE-Pmi"/>
+                                                        <exclude reference="ueK-uZ-sZS"/>
+                                                        <exclude reference="kXA-Fu-taQ"/>
+                                                        <exclude reference="ydy-Js-NxU"/>
+                                                        <exclude reference="Npl-wH-5H1"/>
+                                                        <exclude reference="fwz-gq-hOY"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="widthClass=compact" misplaced="YES">
@@ -580,6 +620,15 @@
                                                         <include reference="Ddp-41-DNW"/>
                                                         <include reference="PW7-CJ-09F"/>
                                                         <include reference="yIc-Aq-bBG"/>
+                                                    </mask>
+                                                    <mask key="constraints">
+                                                        <include reference="c2Q-BV-QDj"/>
+                                                        <include reference="clj-vE-Pmi"/>
+                                                        <include reference="ueK-uZ-sZS"/>
+                                                        <include reference="kXA-Fu-taQ"/>
+                                                        <include reference="ydy-Js-NxU"/>
+                                                        <include reference="Npl-wH-5H1"/>
+                                                        <include reference="fwz-gq-hOY"/>
                                                     </mask>
                                                 </variation>
                                             </view>
@@ -622,7 +671,8 @@
                                                 <exclude reference="uNt-9z-XuJ"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact">
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="1320"/>
                                             <mask key="subviews">
                                                 <include reference="uiJ-LS-YsE"/>
                                                 <include reference="hzC-ge-cUv"/>
