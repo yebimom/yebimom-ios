@@ -55,6 +55,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     // println(jsonData.valueForKey("token"))
                     if(token != nil) {
                         loginSuccess(username)
+                        self.performSegueWithIdentifier("ShowMain", sender: self)
                     }
                     else {
                         tokenAbsentAlert()
