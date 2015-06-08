@@ -436,7 +436,7 @@
                         <viewControllerLayoutGuide type="bottom" id="QYt-tU-Jmy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9Qb-tF-jrp">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="1320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9l-JI-Xae">
@@ -623,18 +623,12 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
-                                                        <variation key="widthClass=compact" misplaced="YES">
-                                                            <rect key="frame" x="179" y="27" width="49" height="21"/>
-                                                        </variation>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHb-3g-y3L">
                                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                         <state key="normal" title="전부 보기">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="widthClass=compact" misplaced="YES">
-                                                            <rect key="frame" x="172" y="392" width="57" height="30"/>
-                                                        </variation>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -704,22 +698,21 @@
                                                 <exclude reference="WJX-Gh-sMC"/>
                                                 <exclude reference="pMy-Sa-9ml"/>
                                                 <exclude reference="syC-Il-qBT"/>
-                                                <exclude reference="8yZ-X9-SIR"/>
-                                                <exclude reference="9UR-GP-7hL"/>
-                                                <exclude reference="rQd-Z1-9lA"/>
-                                                <exclude reference="slh-us-Gu8"/>
+                                                <exclude reference="BbN-B1-XzR"/>
+                                                <exclude reference="bGc-zu-hUJ"/>
+                                                <exclude reference="p8j-ij-Ysh"/>
                                                 <exclude reference="2GM-ra-5AC"/>
                                                 <exclude reference="D1t-ca-RSx"/>
                                                 <exclude reference="ZQE-7W-W7i"/>
                                                 <exclude reference="rKH-gJ-S4Y"/>
                                                 <exclude reference="uNt-9z-XuJ"/>
-                                                <exclude reference="BbN-B1-XzR"/>
-                                                <exclude reference="bGc-zu-hUJ"/>
-                                                <exclude reference="p8j-ij-Ysh"/>
+                                                <exclude reference="8yZ-X9-SIR"/>
+                                                <exclude reference="9UR-GP-7hL"/>
+                                                <exclude reference="rQd-Z1-9lA"/>
+                                                <exclude reference="slh-us-Gu8"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="400" height="2000"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="subviews">
                                                 <include reference="uiJ-LS-YsE"/>
                                                 <include reference="hzC-ge-cUv"/>
@@ -731,18 +724,18 @@
                                                 <include reference="WJX-Gh-sMC"/>
                                                 <include reference="pMy-Sa-9ml"/>
                                                 <include reference="syC-Il-qBT"/>
-                                                <include reference="8yZ-X9-SIR"/>
-                                                <include reference="9UR-GP-7hL"/>
-                                                <include reference="rQd-Z1-9lA"/>
-                                                <include reference="slh-us-Gu8"/>
+                                                <include reference="BbN-B1-XzR"/>
+                                                <include reference="bGc-zu-hUJ"/>
+                                                <include reference="p8j-ij-Ysh"/>
                                                 <include reference="2GM-ra-5AC"/>
                                                 <include reference="D1t-ca-RSx"/>
                                                 <include reference="ZQE-7W-W7i"/>
                                                 <include reference="rKH-gJ-S4Y"/>
                                                 <include reference="uNt-9z-XuJ"/>
-                                                <include reference="BbN-B1-XzR"/>
-                                                <include reference="bGc-zu-hUJ"/>
-                                                <include reference="p8j-ij-Ysh"/>
+                                                <include reference="8yZ-X9-SIR"/>
+                                                <include reference="9UR-GP-7hL"/>
+                                                <include reference="rQd-Z1-9lA"/>
+                                                <include reference="slh-us-Gu8"/>
                                             </mask>
                                         </variation>
                                     </view>
