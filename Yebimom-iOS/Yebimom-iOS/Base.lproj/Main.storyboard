@@ -261,7 +261,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="icon_user_mother" id="ALe-Xo-dX7">
                             <connections>
-                                <segue destination="YUm-T2-MrP" kind="show" id="acS-2F-BmK"/>
+                                <segue destination="YUm-T2-MrP" kind="show" identifier="ShowLoginAndRegister" id="acS-2F-BmK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -314,7 +314,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="heQ-uc-Zgb" kind="show" id="lbd-un-G9Y"/>
+                                    <segue destination="heQ-uc-Zgb" kind="show" identifier="ShowRegister" id="lbd-un-G9Y"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXk-oW-FEd">
@@ -345,7 +345,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="ibu-8l-OxG" kind="show" id="I3i-9x-ovm"/>
+                                    <segue destination="ibu-8l-OxG" kind="show" identifier="ShowLogin" id="I3i-9x-ovm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1392,11 +1392,12 @@
                     <connections>
                         <outlet property="passwordTextField" destination="8LS-Mh-bEF" id="XPx-8I-2Zt"/>
                         <outlet property="userNameTextField" destination="Ssb-D4-eE0" id="pAt-qS-iQa"/>
+                        <segue destination="eO0-mK-8cW" kind="show" identifier="ShowMain" id="Yy0-qG-tqW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8R-yD-jcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="823.5" y="2330"/>
+            <point key="canvasLocation" x="691.5" y="2378"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zhw-KJ-nt8">
@@ -1475,6 +1476,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="I3i-9x-ovm"/>
-        <segue reference="lbd-un-G9Y"/>
+        <segue reference="Yy0-qG-tqW"/>
+        <segue reference="eoo-oY-ast"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -21,12 +21,9 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = 340
-        
         // Wait overlay with text
         let text = "Please wait..."
         self.showWaitOverlayWithText(text)
-        
         
         self.sideMenuController()?.sideMenu?.delegate = self
         
@@ -51,6 +48,14 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
 
         self.removeAllOverlays()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        
+        let session:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        let isLoggedIn:Int = session.integerForKey("ISLOGGEDIN") as Int
+    }
+
 
     @IBAction func menuENSide(sender: UIBarButtonItem) {
         toggleSideMenuView()
