@@ -15,7 +15,7 @@ class ENSideMenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sideMenuList = ["Main", "List", "Help", "Settings"]
+        sideMenuList = ["Main", "Login or Register", "Help", "Settings"]
         
         // Customize apperance of table view
         tableView.contentInset = UIEdgeInsetsMake(64.0, 0, 0, 0) //
@@ -85,7 +85,7 @@ class ENSideMenuTableViewController: UITableViewController {
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Main") as! UIViewController
             break
         case 1:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("List")as! UIViewController
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginOrRegister")as! UIViewController
             break
         case 2:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Help")as! UIViewController

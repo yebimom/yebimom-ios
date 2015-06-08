@@ -11,7 +11,7 @@ import UIKit
 class ENSwiftSideMenuNavViewController: ENSideMenuNavigationController, ENSideMenuDelegate {
         override func viewDidLoad() {
             super.viewDidLoad()
-            sideMenu = ENSideMenu(sourceView: self.view, menuViewController: ENSideMenuTableViewController(), menuPosition: .Left)
+            sideMenu = ENSideMenu(sourceView: self.view, menuViewController: ENSideMenuTableViewController(), menuPosition: .Right)
             
             // Swipe set, default true
             // sideMenu?.allowLeftSwipe = false

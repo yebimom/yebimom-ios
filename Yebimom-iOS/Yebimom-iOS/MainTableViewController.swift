@@ -49,6 +49,10 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         self.removeAllOverlays()
     }
     
+    @IBAction func sideMenuInfo(sender: UIBarButtonItem) {
+        toggleSideMenuView()
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         
