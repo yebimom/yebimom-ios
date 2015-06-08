@@ -64,11 +64,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     incorrectUserInfoAlert()
                 }
                 else {
-                    connectionFailure()
+                    connectionFailure(reponseError)
                 }
             }
             else {
-                
+                connectionFailure(reponseError)
             }
         }
     }
@@ -77,10 +77,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if ( username.isEqualToString("") || password.isEqualToString("") ) {
             
             var alertView:UIAlertView = UIAlertView()
-            alertView.title = "Sign in Failed!"
+            alertView.title = "로그인 실패"
             alertView.message = "Please enter Username and Password"
             alertView.delegate = self
-            alertView.addButtonWithTitle("OK")
+            alertView.addButtonWithTitle("확인")
             alertView.show()
             
             return true
@@ -115,10 +115,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func tokenAbsentAlert() {
         var error_msg:NSString = "JWT 토큰을 받아오는데 실패하였습니다. 관리자에게 문의해주세요."
         var alertView:UIAlertView = UIAlertView()
-        alertView.title = "Sign in Failed!"
+        alertView.title = "로그인 실패"
         alertView.message = error_msg as String
         alertView.delegate = self
-        alertView.addButtonWithTitle("OK")
+        alertView.addButtonWithTitle("확인")
         alertView.show()
     }
     
@@ -134,19 +134,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func incorrectUserInfoAlert() {
         var alertView:UIAlertView = UIAlertView()
         alertView.title = "로그인 실패"
-        alertView.message = "입력하신 회원정보가 존재하지 않거나 틀리게 입력하였습니다"
+        alertView.message = "입력하신 회원정보가 존재하지 않거나\n 다른 정보가 입력되었습니다"
         alertView.delegate = self
-        alertView.addButtonWithTitle("OK")
+        alertView.addButtonWithTitle("확인")
         alertView.show()
         
     }
     
-    func connectionFailure() {
+    func connectionFailure(reponseError: NSError?) {
         var alertView:UIAlertView = UIAlertView()
-        alertView.title = "Sign in Failed!"
-        alertView.message = "Connection Failed"
+        alertView.title = "로그인 실패"
+        if((reponseError) != nil) {
+            alertView.message = reponseError?.localizedDescription
+        }
+        else {
+            alertView.message = "Connection Failed"
+        }
         alertView.delegate = self
-        alertView.addButtonWithTitle("OK")
+        alertView.addButtonWithTitle("확인")
         alertView.show()
     }
     
