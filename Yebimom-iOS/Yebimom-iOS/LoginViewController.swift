@@ -51,70 +51,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 // NSLog("Response code: %ld", res.statusCode);
                 if (res.statusCode >= 200 && res.statusCode < 300)
                 {
-                    var responseData:NSString  = NSString(data:urlData!, encoding:NSUTF8StringEncoding)!
-                    // NSLog("Response ==> %@", responseData);
-                    
-                    var error: NSError?
-                    let jsonData:NSDictionary = NSJSONSerialization.JSONObjectWithData(urlData!, options:NSJSONReadingOptions.MutableContainers , error: &error) as! NSDictionary
-
-                    var token: AnyObject? = jsonData.valueForKey("token")
+                    var token: AnyObject? = getTokenFromResponseData(urlData!)
                     // println(jsonData.valueForKey("token"))
                     if(token != nil) {
-                        
+                        loginSuccess(username)
                     }
                     else {
-                        tokenAbsentAlert(jsonData)
+                        tokenAbsentAlert()
                     }
-                    /*
-                    
-                    let jsonData:NSDictionary = NSJSONSerialization.JSONObjectWithData(urlData!, options:NSJSONReadingOptions.MutableContainers , error: &error) as! NSDictionary
-                    
-                    
-                    let success:NSInteger = jsonData.valueForKey("success") as! NSInteger
-                    
-                    //[jsonData[@"success"] integerValue];
-                    
-                    NSLog("Success: %ld", success);
-*/
                 }
-            }
-        }
-        /*
-        if ( username.isEqualToString("") || password.isEqualToString("") ) {
-            
-            var alertView:UIAlertView = UIAlertView()
-            alertView.title = "Sign in Failed!"
-            alertView.message = "Please enter Username and Password"
-            alertView.delegate = self
-            alertView.addButtonWithTitle("OK")
-            alertView.show()
-        }
-        */
-        
-        
-        /*
-        let request = Alamofire.request(.POST, loginAPIURL, parameters: parameters, encoding: .JSON).responseJSON { (req, res, json, error) in
-            if(error != nil) {
-                NSLog("Error: \(error)")
-                println("request: " + req.debugDescription)
-                println("response: " + res.debugDescription)
+                else if(res.statusCode == 400) {
+                    incorrectUserInfoAlert()
+                }
+                else {
+                    connectionFailure()
+                }
             }
             else {
-                var json = JSON(json!)
-                if json["token"] == nil {
-                    println("Token not arrived")
-                    println(res?.debugDescription)
-                }
+                
             }
         }
-*/
-        /* If private service requested, token will be used like following statement
-        request.responseJSON{ (req, res, json, error) in
-            var json = JSON(json!)
-            println(json["token"])
-        }
-        */
-        
     }
     
     func blankInfoCheckAndAlert(username: NSString, password: NSString) -> Bool {
@@ -146,18 +102,49 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return request
     }
     
-    
-    func tokenAbsentAlert(jsonData: NSDictionary) {
-        var error_msg:NSString
+    func getTokenFromResponseData(urlData: NSData) -> AnyObject {
+        var responseData:NSString  = NSString(data:urlData, encoding:NSUTF8StringEncoding)!
+        // NSLog("Response ==> %@", responseData);
         
-        if jsonData["error_message"] as? NSString != nil {
-            error_msg = jsonData["error_message"] as! NSString
-        } else {
-            error_msg = "JWT 토큰을 받아오는데 실패하였습니다. 관리자에게 문의해주세요."
-        }
+        var error: NSError?
+        let jsonData:NSDictionary = NSJSONSerialization.JSONObjectWithData(urlData, options:NSJSONReadingOptions.MutableContainers , error: &error) as! NSDictionary
+        
+        return jsonData.valueForKey("token")!
+    }
+    
+    func tokenAbsentAlert() {
+        var error_msg:NSString = "JWT 토큰을 받아오는데 실패하였습니다. 관리자에게 문의해주세요."
         var alertView:UIAlertView = UIAlertView()
         alertView.title = "Sign in Failed!"
         alertView.message = error_msg as String
+        alertView.delegate = self
+        alertView.addButtonWithTitle("OK")
+        alertView.show()
+    }
+    
+    func loginSuccess(username: NSString) {
+        // NSLog("Login SUCCESS");
+        var session:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        session.setObject(username, forKey: "USERNAME")
+        session.setInteger(1, forKey: "ISLOGGEDIN")
+        session.synchronize()
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func incorrectUserInfoAlert() {
+        var alertView:UIAlertView = UIAlertView()
+        alertView.title = "로그인 실패"
+        alertView.message = "입력하신 회원정보가 존재하지 않거나 틀리게 입력하였습니다"
+        alertView.delegate = self
+        alertView.addButtonWithTitle("OK")
+        alertView.show()
+        
+    }
+    
+    func connectionFailure() {
+        var alertView:UIAlertView = UIAlertView()
+        alertView.title = "Sign in Failed!"
+        alertView.message = "Connection Failed"
         alertView.delegate = self
         alertView.addButtonWithTitle("OK")
         alertView.show()
