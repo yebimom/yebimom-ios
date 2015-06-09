@@ -1016,7 +1016,7 @@
         <!--Signup View Controller-->
         <scene sceneID="1R5-ZZ-uKI">
             <objects>
-                <viewController id="heQ-uc-Zgb" customClass="SignupViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterBoard" id="heQ-uc-Zgb" customClass="SignupViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ANp-3t-beR"/>
                         <viewControllerLayoutGuide type="bottom" id="exJ-8C-eTz"/>
@@ -1050,9 +1050,6 @@
                                         <include reference="gdE-19-VUt"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <segue destination="ibu-8l-OxG" kind="show" id="EtR-88-toc"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사용자 명" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yVD-GE-j0e">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -1328,7 +1325,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="heQ-uc-Zgb" kind="show" id="eoo-oY-ast"/>
+                                    <action selector="showRegisterViewButton:" destination="ibu-8l-OxG" eventType="touchUpInside" id="sjf-sK-Lw5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3h-Ts-DbR">
@@ -1498,8 +1495,6 @@
         <image name="icon_user_mother" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="t1X-9c-mwX"/>
-        <segue reference="I3i-9x-ovm"/>
-        <segue reference="lbd-un-G9Y"/>
+        <segue reference="Yy0-qG-tqW"/>
     </inferredMetricsTieBreakers>
 </document>
