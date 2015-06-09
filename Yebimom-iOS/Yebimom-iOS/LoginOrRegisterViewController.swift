@@ -32,28 +32,6 @@ class LoginOrRegisterViewController: UIViewController {
         self.presentViewController(destViewController, animated: false, completion: nil)
     }
     
-    func addLeftNavItemOnView (iconName: String?)
-    {
-        // hide default navigation bar button item
-        // self.navigationItem.leftBarButtonItem = nil;
-        // self.navigationItem.hidesBackButton = true;
-        
-        let buttonBack: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
-        buttonBack.frame = CGRectMake(0, 0, 40, 40)
-        buttonBack.setImage(UIImage(named: iconName!), forState: UIControlState.Normal)
-        buttonBack.addTarget(self, action: "leftNavButtonClick:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        var leftBarButtonItem: UIBarButtonItem = UIBarButtonItem(customView: buttonBack)
-        
-        self.navigationItem.setLeftBarButtonItem(leftBarButtonItem, animated: false)
-    }
-    
-    func leftNavButtonClick(sender:UIButton!) {
-        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MainBoard") as! UIViewController
-
-        self.presentViewController(destViewController, animated: false, completion: nil)
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
