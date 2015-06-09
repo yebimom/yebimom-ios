@@ -277,11 +277,11 @@
                         <viewControllerLayoutGuide type="bottom" id="nqc-lZ-z7F"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="G0b-rQ-Cjy">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="770"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chy-rW-saS">
-                                <rect key="frame" x="126" y="355" width="148" height="30"/>
+                                <rect key="frame" x="226" y="355" width="148" height="30"/>
                                 <state key="normal" title="페이스북으로 로그인하기">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -318,7 +318,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXk-oW-FEd">
-                                <rect key="frame" x="126" y="370" width="148" height="30"/>
+                                <rect key="frame" x="226" y="285" width="148" height="30"/>
                                 <state key="normal" title="카카오톡으로 로그인하기">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -388,7 +388,7 @@
             <objects>
                 <tableViewController id="RXA-mg-BlP" customClass="CategoryPageTableViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QBM-d0-KUY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="770"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1001,7 +1001,7 @@
                         <viewControllerLayoutGuide type="bottom" id="exJ-8C-eTz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9IK-Bx-YCO">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="770"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkr-en-F6D">
@@ -1207,7 +1207,7 @@
                         <viewControllerLayoutGuide type="bottom" id="zcb-H5-npK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ddw-KL-bq7">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="770"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8LS-Mh-bEF">
@@ -1476,7 +1476,7 @@
         <image name="icon_user_mother" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Yy0-qG-tqW"/>
+        <segue reference="Jsc-jA-A1b"/>
         <segue reference="I3i-9x-ovm"/>
         <segue reference="lbd-un-G9Y"/>
     </inferredMetricsTieBreakers>

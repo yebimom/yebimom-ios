@@ -26,7 +26,8 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         self.showWaitOverlayWithText(text)
         
         self.sideMenuController()?.sideMenu?.delegate = self
-        
+        self.sideMenuController()?.sideMenu?.allowLeftSwipe = false
+
         //categories cell
         let categoryURL = NSURL(string:"https://yebimom.com/api/categories/")
         var categoryJsonData = JSON(data: NSData(contentsOfURL: categoryURL!)!)
@@ -45,7 +46,18 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         let eventURL = NSURL(string:"https://yebimom.com/api/events/")
         var eventJsonData = JSON(data: NSData(contentsOfURL: eventURL!)!)
         numOfEvents = eventJsonData.count
-
+        
+/*
+        // TRY 1 : Activate TouchesBegan
+        // 2 : touch style change : delay or touble tap
+        // for conflict menu close and clicking cell
+        
+        if(isSideMenuOpen()) {
+            let tapGesture = UITapGestureRecognizer(target: self, action: Selector("hideSideMenuView"))
+            tapGesture.cancelsTouchesInView = true
+            tableView.addGestureRecognizer(tapGesture)
+        }
+*/
         self.removeAllOverlays()
     }
     
@@ -59,8 +71,7 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         let session:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         let isLoggedIn:Int = session.integerForKey("ISLOGGEDIN") as Int
     }
-
-
+    
     @IBAction func menuENSide(sender: UIBarButtonItem) {
         toggleSideMenuView()
     }
