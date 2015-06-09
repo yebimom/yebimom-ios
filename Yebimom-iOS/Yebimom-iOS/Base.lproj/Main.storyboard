@@ -257,7 +257,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="search" id="hbb-3P-57m"/>
                         <barButtonItem key="rightBarButtonItem" image="icon_user_mother" id="ALe-Xo-dX7">
                             <connections>
-                                <action selector="sideMenuInfo:" destination="eO0-mK-8cW" id="lyV-ch-o2N"/>
+                                <action selector="sideMenuInfo:" destination="eO0-mK-8cW" id="WRa-X3-xhr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -268,10 +268,10 @@
             </objects>
             <point key="canvasLocation" x="-1275" y="484"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Or Register View Controller-->
         <scene sceneID="rgY-9j-59t">
             <objects>
-                <viewController storyboardIdentifier="LoginOrRegister" id="YUm-T2-MrP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginOrRegister" id="YUm-T2-MrP" customClass="LoginOrRegisterViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vHT-RP-po6"/>
                         <viewControllerLayoutGuide type="bottom" id="nqc-lZ-z7F"/>
@@ -349,6 +349,21 @@
                                     <segue destination="ibu-8l-OxG" kind="show" identifier="ShowLogin" id="I3i-9x-ovm"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9UZ-23-vlL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem id="6OO-72-1Sr">
+                                        <barButtonItem key="leftBarButtonItem" image="icon_back" id="Vuf-Es-LYM">
+                                            <connections>
+                                                <segue destination="eO0-mK-8cW" kind="show" id="t1X-9c-mwX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="20" width="400" height="44"/>
+                                </variation>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -362,6 +377,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="lca-qQ-uPj" secondAttribute="trailing" constant="85" id="zUK-bI-yER"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="9UZ-23-vlL"/>
+                            </mask>
                             <mask key="constraints">
                                 <exclude reference="VeU-Ze-wft"/>
                                 <exclude reference="WFN-e0-cBC"/>
@@ -370,6 +388,9 @@
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="9UZ-23-vlL"/>
+                            </mask>
                             <mask key="constraints">
                                 <include reference="VeU-Ze-wft"/>
                                 <include reference="WFN-e0-cBC"/>
@@ -1468,15 +1489,16 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZk-6b-Ym2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-118" y="-260"/>
+            <point key="canvasLocation" x="-1288.5" y="-456"/>
         </scene>
     </scenes>
     <resources>
+        <image name="icon_back" width="16" height="16"/>
         <image name="icon_menu" width="18" height="12"/>
         <image name="icon_user_mother" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jsc-jA-A1b"/>
+        <segue reference="t1X-9c-mwX"/>
         <segue reference="I3i-9x-ovm"/>
         <segue reference="lbd-un-G9Y"/>
     </inferredMetricsTieBreakers>

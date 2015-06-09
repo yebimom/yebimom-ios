@@ -13,7 +13,7 @@ class LoginOrRegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBarHidden = true
     }
 
     override func didReceiveMemoryWarning() {
