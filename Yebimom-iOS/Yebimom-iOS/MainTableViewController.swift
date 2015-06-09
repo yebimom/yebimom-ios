@@ -11,7 +11,7 @@ import SwiftyJSON
 import SwiftOverlays
 
 class MainTableViewController: UITableViewController, ENSideMenuDelegate {
-    
+
     var categoryNames = [String]()
     var cetegorySlugs = [String]()
     var numOfCentersOfCategory = [Int]()
@@ -47,21 +47,31 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         var eventJsonData = JSON(data: NSData(contentsOfURL: eventURL!)!)
         numOfEvents = eventJsonData.count
         
-/*
-        // TRY 1 : Activate TouchesBegan
-        // 2 : touch style change : delay or touble tap
-        // for conflict menu close and clicking cell
-        
-        if(isSideMenuOpen()) {
-            let tapGesture = UITapGestureRecognizer(target: self, action: Selector("hideSideMenuView"))
-            tapGesture.cancelsTouchesInView = true
-            tableView.addGestureRecognizer(tapGesture)
-        }
-*/
         self.removeAllOverlays()
     }
     
+    func blurEffect() {
+        var blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        var blurEffectView = UIVisualEffectView(effect: blurEffect)
+        var screen: UIScreen?
+        var sideMenuWidth = self.sideMenuController()?.sideMenu?.menuWidth
+        var blurEffectwidth = UIScreen.mainScreen().applicationFrame.size.width - sideMenuWidth!
+        var blurEffectheight = UIScreen.mainScreen().applicationFrame.size.height
+        
+        
+        
+        blurEffectView.frame = CGRectMake(0, 0, blurEffectwidth, blurEffectheight)
+        self.view.addSubview(blurEffectView)
+    }
+    
     @IBAction func sideMenuInfo(sender: UIBarButtonItem) {
+        toggleSideMenuView()
+        if(isSideMenuOpen()) {
+            self.blurEffect()
+        }
+    }
+
+    @IBAction func menuENSide(sender: UIBarButtonItem) {
         toggleSideMenuView()
     }
     
@@ -72,9 +82,6 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         let isLoggedIn:Int = session.integerForKey("ISLOGGEDIN") as Int
     }
     
-    @IBAction func menuENSide(sender: UIBarButtonItem) {
-        toggleSideMenuView()
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
