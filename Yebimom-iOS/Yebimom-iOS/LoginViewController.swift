@@ -25,12 +25,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func showMainView(sender: UIBarButtonItem) {
+        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MainBoard") as! UIViewController
+        
+        self.presentViewController(destViewController, animated: false, completion: nil)
+    }
+    
+    @IBAction func showRegisterView(sender: UIButton) {
+        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RegisterBoard") as! UIViewController
+        self.presentViewController(destViewController, animated: false, completion: nil)
+    }
+    
     @IBAction func userNameTextFieldReturn(sender: UITextField) {
         sender.resignFirstResponder()
     }
+    
     @IBAction func passwordTextFieldReturn(sender: UITextField) {
         sender.resignFirstResponder()
     }
+    
     @IBAction func loginTry(sender: UIButton) {
         // var loginAPIURL: String = "https://yebimom.com/api/login/"
         var username:NSString = userNameTextField.text

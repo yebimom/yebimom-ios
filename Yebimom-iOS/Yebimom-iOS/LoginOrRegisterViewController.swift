@@ -16,6 +16,22 @@ class LoginOrRegisterViewController: UIViewController {
         navigationController?.navigationBarHidden = true
     }
 
+    @IBAction func showMainView(sender: UIBarButtonItem) {
+        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MainBoard") as! UIViewController
+        
+        self.presentViewController(destViewController, animated: false, completion: nil)
+    }
+    
+    @IBAction func showRegisterView(sender: UIButton) {
+        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RegisterBoard") as! UIViewController
+        self.presentViewController(destViewController, animated: false, completion: nil)
+    }
+    
+    @IBAction func showLoginView(sender: UIButton) {
+        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginBoard") as! UIViewController
+        self.presentViewController(destViewController, animated: false, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
