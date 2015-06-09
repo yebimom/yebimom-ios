@@ -35,7 +35,7 @@
         <scene sceneID="1d2-fN-I90">
             <objects>
                 <tableViewController id="eO0-mK-8cW" customClass="MainTableViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="307" sectionHeaderHeight="22" sectionFooterHeight="22" id="8d4-vc-S5K">
+                    <tableView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="307" sectionHeaderHeight="22" sectionFooterHeight="22" id="8d4-vc-S5K">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="770"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -257,7 +257,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="search" id="hbb-3P-57m"/>
                         <barButtonItem key="rightBarButtonItem" image="icon_user_mother" id="ALe-Xo-dX7">
                             <connections>
-                                <action selector="sideMenuInfo:" destination="eO0-mK-8cW" id="lyV-ch-o2N"/>
+                                <action selector="sideMenuInfo:" destination="eO0-mK-8cW" id="WRa-X3-xhr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -268,20 +268,20 @@
             </objects>
             <point key="canvasLocation" x="-1275" y="484"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Or Register View Controller-->
         <scene sceneID="rgY-9j-59t">
             <objects>
-                <viewController storyboardIdentifier="LoginOrRegister" id="YUm-T2-MrP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginOrRegister" id="YUm-T2-MrP" customClass="LoginOrRegisterViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vHT-RP-po6"/>
                         <viewControllerLayoutGuide type="bottom" id="nqc-lZ-z7F"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="G0b-rQ-Cjy">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="770"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chy-rW-saS">
-                                <rect key="frame" x="126" y="355" width="148" height="30"/>
+                                <rect key="frame" x="226" y="355" width="148" height="30"/>
                                 <state key="normal" title="페이스북으로 로그인하기">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -318,7 +318,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXk-oW-FEd">
-                                <rect key="frame" x="126" y="370" width="148" height="30"/>
+                                <rect key="frame" x="226" y="285" width="148" height="30"/>
                                 <state key="normal" title="카카오톡으로 로그인하기">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -349,6 +349,21 @@
                                     <segue destination="ibu-8l-OxG" kind="show" identifier="ShowLogin" id="I3i-9x-ovm"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9UZ-23-vlL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem id="6OO-72-1Sr">
+                                        <barButtonItem key="leftBarButtonItem" image="icon_back" id="Vuf-Es-LYM">
+                                            <connections>
+                                                <segue destination="eO0-mK-8cW" kind="show" id="t1X-9c-mwX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="20" width="400" height="44"/>
+                                </variation>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -362,6 +377,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="lca-qQ-uPj" secondAttribute="trailing" constant="85" id="zUK-bI-yER"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="9UZ-23-vlL"/>
+                            </mask>
                             <mask key="constraints">
                                 <exclude reference="VeU-Ze-wft"/>
                                 <exclude reference="WFN-e0-cBC"/>
@@ -370,6 +388,9 @@
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="9UZ-23-vlL"/>
+                            </mask>
                             <mask key="constraints">
                                 <include reference="VeU-Ze-wft"/>
                                 <include reference="WFN-e0-cBC"/>
@@ -388,7 +409,7 @@
             <objects>
                 <tableViewController id="RXA-mg-BlP" customClass="CategoryPageTableViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QBM-d0-KUY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="770"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1001,7 +1022,7 @@
                         <viewControllerLayoutGuide type="bottom" id="exJ-8C-eTz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9IK-Bx-YCO">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="770"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkr-en-F6D">
@@ -1207,7 +1228,7 @@
                         <viewControllerLayoutGuide type="bottom" id="zcb-H5-npK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ddw-KL-bq7">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="770"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8LS-Mh-bEF">
@@ -1468,15 +1489,16 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZk-6b-Ym2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-118" y="-260"/>
+            <point key="canvasLocation" x="-1288.5" y="-456"/>
         </scene>
     </scenes>
     <resources>
+        <image name="icon_back" width="16" height="16"/>
         <image name="icon_menu" width="18" height="12"/>
         <image name="icon_user_mother" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Yy0-qG-tqW"/>
+        <segue reference="t1X-9c-mwX"/>
         <segue reference="I3i-9x-ovm"/>
         <segue reference="lbd-un-G9Y"/>
     </inferredMetricsTieBreakers>

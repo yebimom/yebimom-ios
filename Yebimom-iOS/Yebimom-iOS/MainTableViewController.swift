@@ -11,7 +11,7 @@ import SwiftyJSON
 import SwiftOverlays
 
 class MainTableViewController: UITableViewController, ENSideMenuDelegate {
-    
+
     var categoryNames = [String]()
     var cetegorySlugs = [String]()
     var numOfCentersOfCategory = [Int]()
@@ -20,12 +20,15 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Wait overlay with text
         let text = "Please wait..."
-        self.showWaitOverlayWithText(text)
+        showWaitOverlayWithText(text)
         
-        self.sideMenuController()?.sideMenu?.delegate = self
+        sideMenuController()?.sideMenu?.delegate = self
+        
+        // This app use Custom swipe
+        sideMenuController()?.sideMenu?.allowLeftSwipe = false
+        sideMenuController()?.sideMenu?.allowRightSwipe = false
         
         //categories cell
         let categoryURL = NSURL(string:"https://yebimom.com/api/categories/")
@@ -45,8 +48,27 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         let eventURL = NSURL(string:"https://yebimom.com/api/events/")
         var eventJsonData = JSON(data: NSData(contentsOfURL: eventURL!)!)
         numOfEvents = eventJsonData.count
+        
+        removeAllOverlays()
+    }
+    
+    override func hideSideMenuView() {
+        sideMenuController()?.sideMenu?.hideSideMenu()
+        view.userInteractionEnabled = true
+    }
 
-        self.removeAllOverlays()
+    override func showSideMenuView() {
+        sideMenuController()?.sideMenu?.showSideMenu()
+        view.userInteractionEnabled = false
+    }
+    
+    override func toggleSideMenuView () {
+        if(isSideMenuOpen()) {
+            hideSideMenuView()
+        }
+        else {
+            showSideMenuView()
+        }
     }
     
     @IBAction func sideMenuInfo(sender: UIBarButtonItem) {
@@ -59,11 +81,7 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         let session:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         let isLoggedIn:Int = session.integerForKey("ISLOGGEDIN") as Int
     }
-
-
-    @IBAction func menuENSide(sender: UIBarButtonItem) {
-        toggleSideMenuView()
-    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
