@@ -50,25 +50,8 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         self.removeAllOverlays()
     }
     
-    func blurEffect() {
-        var blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
-        var blurEffectView = UIVisualEffectView(effect: blurEffect)
-        var screen: UIScreen?
-        var sideMenuWidth = self.sideMenuController()?.sideMenu?.menuWidth
-        var blurEffectwidth = UIScreen.mainScreen().applicationFrame.size.width - sideMenuWidth!
-        var blurEffectheight = UIScreen.mainScreen().applicationFrame.size.height
-        
-        
-        
-        blurEffectView.frame = CGRectMake(0, 0, blurEffectwidth, blurEffectheight)
-        self.view.addSubview(blurEffectView)
-    }
-    
     @IBAction func sideMenuInfo(sender: UIBarButtonItem) {
         toggleSideMenuView()
-        if(isSideMenuOpen()) {
-            self.blurEffect()
-        }
     }
 
     @IBAction func menuENSide(sender: UIBarButtonItem) {
