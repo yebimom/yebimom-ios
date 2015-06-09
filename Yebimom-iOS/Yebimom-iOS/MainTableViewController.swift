@@ -20,14 +20,16 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Wait overlay with text
         let text = "Please wait..."
-        self.showWaitOverlayWithText(text)
+        showWaitOverlayWithText(text)
         
-        self.sideMenuController()?.sideMenu?.delegate = self
-        self.sideMenuController()?.sideMenu?.allowLeftSwipe = false
-
+        sideMenuController()?.sideMenu?.delegate = self
+        
+        // This app use Custom swipe
+        sideMenuController()?.sideMenu?.allowLeftSwipe = false
+        sideMenuController()?.sideMenu?.allowRightSwipe = false
+        
         //categories cell
         let categoryURL = NSURL(string:"https://yebimom.com/api/categories/")
         var categoryJsonData = JSON(data: NSData(contentsOfURL: categoryURL!)!)
@@ -47,14 +49,29 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         var eventJsonData = JSON(data: NSData(contentsOfURL: eventURL!)!)
         numOfEvents = eventJsonData.count
         
-        self.removeAllOverlays()
+        removeAllOverlays()
+    }
+    
+    override func hideSideMenuView() {
+        sideMenuController()?.sideMenu?.hideSideMenu()
+        view.userInteractionEnabled = true
+    }
+
+    override func showSideMenuView() {
+        sideMenuController()?.sideMenu?.showSideMenu()
+        view.userInteractionEnabled = false
+    }
+    
+    override func toggleSideMenuView () {
+        if(isSideMenuOpen()) {
+            hideSideMenuView()
+        }
+        else {
+            showSideMenuView()
+        }
     }
     
     @IBAction func sideMenuInfo(sender: UIBarButtonItem) {
-        toggleSideMenuView()
-    }
-
-    @IBAction func menuENSide(sender: UIBarButtonItem) {
         toggleSideMenuView()
     }
     
