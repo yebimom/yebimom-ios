@@ -25,7 +25,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func showRegisterViewButton(sender: UIButton) {
+    @IBAction func showRegisterView(sender: UIButton) {
         var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RegisterBoard") as! UIViewController
         self.presentViewController(destViewController, animated: false, completion: nil)
     }

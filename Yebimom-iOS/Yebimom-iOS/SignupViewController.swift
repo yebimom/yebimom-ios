@@ -19,6 +19,11 @@ class SignupViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func showLoginView(sender: UIButton) {
+        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginBoard") as! UIViewController
+        self.presentViewController(destViewController, animated: false, completion: nil)
+    }
+    
     @IBAction func userNameTextFieldReturn(sender: UITextField) {
         sender.resignFirstResponder()
     }

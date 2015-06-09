@@ -34,7 +34,7 @@
         <!--Main Table View Controller-->
         <scene sceneID="1d2-fN-I90">
             <objects>
-                <tableViewController id="eO0-mK-8cW" customClass="MainTableViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MainBoard" id="eO0-mK-8cW" customClass="MainTableViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="307" sectionHeaderHeight="22" sectionFooterHeight="22" id="8d4-vc-S5K">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="770"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -314,7 +314,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="heQ-uc-Zgb" kind="show" identifier="ShowRegister" id="lbd-un-G9Y"/>
+                                    <action selector="showRegisterView:" destination="YUm-T2-MrP" eventType="touchUpInside" id="wvS-7i-LLH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXk-oW-FEd">
@@ -346,23 +346,20 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="ibu-8l-OxG" kind="show" identifier="ShowLogin" id="I3i-9x-ovm"/>
+                                    <action selector="showLoginView:" destination="YUm-T2-MrP" eventType="touchUpInside" id="yXA-Pd-EZR"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9UZ-23-vlL">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTs-5H-8vY">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
-                                    <navigationItem id="6OO-72-1Sr">
-                                        <barButtonItem key="leftBarButtonItem" image="icon_back" id="Vuf-Es-LYM">
+                                    <navigationItem id="wKp-Q8-pGR">
+                                        <barButtonItem key="leftBarButtonItem" image="icon_back" id="zGK-TG-SvX">
                                             <connections>
-                                                <segue destination="eO0-mK-8cW" kind="show" id="t1X-9c-mwX"/>
+                                                <action selector="showMainView:" destination="YUm-T2-MrP" id="pm5-Lw-arb"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="20" width="400" height="44"/>
-                                </variation>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -370,17 +367,23 @@
                             <constraint firstAttribute="centerY" secondItem="MXk-oW-FEd" secondAttribute="centerY" id="1kF-dZ-e0r"/>
                             <constraint firstItem="chy-rW-saS" firstAttribute="top" secondItem="MXk-oW-FEd" secondAttribute="bottom" constant="10" id="CEl-zp-WRc"/>
                             <constraint firstItem="lca-qQ-uPj" firstAttribute="top" secondItem="chy-rW-saS" secondAttribute="bottom" constant="35" id="FSE-h0-OLk"/>
+                            <constraint firstItem="YTs-5H-8vY" firstAttribute="top" secondItem="vHT-RP-po6" secondAttribute="bottom" id="I68-5K-IvU"/>
                             <constraint firstAttribute="centerX" secondItem="chy-rW-saS" secondAttribute="centerX" id="RCU-RF-hdG"/>
                             <constraint firstAttribute="centerX" secondItem="MXk-oW-FEd" secondAttribute="centerX" id="U06-Mb-7Bw"/>
                             <constraint firstItem="3oE-2I-vJT" firstAttribute="top" secondItem="chy-rW-saS" secondAttribute="bottom" constant="35" id="VeU-Ze-wft"/>
                             <constraint firstItem="3oE-2I-vJT" firstAttribute="leading" secondItem="G0b-rQ-Cjy" secondAttribute="leadingMargin" constant="85" id="WFN-e0-cBC"/>
+                            <constraint firstItem="YTs-5H-8vY" firstAttribute="leading" secondItem="G0b-rQ-Cjy" secondAttribute="leading" id="kjI-40-IS5"/>
+                            <constraint firstAttribute="trailing" secondItem="YTs-5H-8vY" secondAttribute="trailing" id="por-PF-KLd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lca-qQ-uPj" secondAttribute="trailing" constant="85" id="zUK-bI-yER"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="9UZ-23-vlL"/>
+                                <exclude reference="YTs-5H-8vY"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="I68-5K-IvU"/>
+                                <exclude reference="kjI-40-IS5"/>
+                                <exclude reference="por-PF-KLd"/>
                                 <exclude reference="VeU-Ze-wft"/>
                                 <exclude reference="WFN-e0-cBC"/>
                                 <exclude reference="FSE-h0-OLk"/>
@@ -389,9 +392,12 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="9UZ-23-vlL"/>
+                                <include reference="YTs-5H-8vY"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="I68-5K-IvU"/>
+                                <include reference="kjI-40-IS5"/>
+                                <include reference="por-PF-KLd"/>
                                 <include reference="VeU-Ze-wft"/>
                                 <include reference="WFN-e0-cBC"/>
                                 <include reference="FSE-h0-OLk"/>
@@ -1050,6 +1056,9 @@
                                         <include reference="gdE-19-VUt"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="showLoginView:" destination="heQ-uc-Zgb" eventType="touchUpInside" id="VxE-T2-jCZ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사용자 명" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yVD-GE-j0e">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -1219,7 +1228,7 @@
         <!--Login View Controller-->
         <scene sceneID="LXT-TE-6rJ">
             <objects>
-                <viewController id="ibu-8l-OxG" customClass="LoginViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginBoard" id="ibu-8l-OxG" customClass="LoginViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YfC-dh-x23"/>
                         <viewControllerLayoutGuide type="bottom" id="zcb-H5-npK"/>
@@ -1325,7 +1334,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="showRegisterViewButton:" destination="ibu-8l-OxG" eventType="touchUpInside" id="sjf-sK-Lw5"/>
+                                    <action selector="showRegisterView:" destination="ibu-8l-OxG" eventType="touchUpInside" id="uw6-i6-uYs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3h-Ts-DbR">
