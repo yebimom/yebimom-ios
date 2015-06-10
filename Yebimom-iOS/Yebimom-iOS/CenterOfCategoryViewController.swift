@@ -7,17 +7,23 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class CenterOfCategoryViewController: UIViewController {
 
-    var centerName: String?
+    var centerHashID: String?
     
     @IBOutlet weak var centerNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        centerNameLabel.text = centerName
+        let centerDetailOfCategoryURL = NSURL(string:"https://yebimom.com/api/centers/" + centerHashID!)
+        var centerDetailOfCategoryJsonData = JSON(data: NSData(contentsOfURL: centerDetailOfCategoryURL!)!)
+        
+        centerNameLabel.text = centerDetailOfCategoryJsonData["name"].string
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
