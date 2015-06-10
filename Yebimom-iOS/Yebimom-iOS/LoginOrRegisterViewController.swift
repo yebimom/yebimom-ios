@@ -17,7 +17,7 @@ class LoginOrRegisterViewController: UIViewController {
     }
 
     @IBAction func showMainView(sender: UIBarButtonItem) {
-        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MainBoard") as! UIViewController
+        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SideMenuNavView") as! UIViewController
         
         self.presentViewController(destViewController, animated: false, completion: nil)
     }
