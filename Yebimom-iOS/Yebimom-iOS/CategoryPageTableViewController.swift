@@ -17,6 +17,7 @@ class CategoryPageTableViewController: UITableViewController {
     
     var centerNames = [String]()
     var centerAddress = [String]()
+    var centerHashID = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +30,11 @@ class CategoryPageTableViewController: UITableViewController {
     
         let centersOfCategoryURL = NSURL(string:"https://yebimom.com/api/categories/" + categorySlug!)
         var centersOfCategoryJsonData = JSON(data: NSData(contentsOfURL: centersOfCategoryURL!)!)
-      
+
         for (key: String, subJsonData: JSON)in centersOfCategoryJsonData {
             centerNames.append(subJsonData["name"].string!)
             centerAddress.append(subJsonData["address"].string!)
+            centerHashID.append(subJsonData["hash_id"].string!)
         }
         
         
@@ -107,7 +109,7 @@ class CategoryPageTableViewController: UITableViewController {
         if segue.identifier == "ShowCenterDetail" {
             let detailViewController = segue.destinationViewController as! CenterOfCategoryViewController
             let indexPath = self.tableView.indexPathForSelectedRow()
-            detailViewController.centerName = centerNames[indexPath!.row]
+            detailViewController.centerHashID = centerHashID[indexPath!.row]
         }
     }
 }
