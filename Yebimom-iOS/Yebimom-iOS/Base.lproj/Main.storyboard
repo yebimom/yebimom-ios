@@ -1263,8 +1263,7 @@
                                         <exclude reference="xVB-7y-wAa"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="181" width="368" height="45"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="5yU-4G-FkD"/>
                                         <include reference="xVB-7y-wAa"/>
@@ -1290,8 +1289,7 @@
                                         <exclude reference="s4e-Ut-sZd"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="246" width="368" height="45"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="Z5N-ng-HdM"/>
                                         <include reference="s4e-Ut-sZd"/>
@@ -1315,8 +1313,7 @@
                                         <exclude reference="Wj2-CM-D3L"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="126" width="368" height="45"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="K74-bR-7Ej"/>
                                         <include reference="Wj2-CM-D3L"/>
@@ -1342,8 +1339,7 @@
                                         <exclude reference="qLz-6I-ty3"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="257" y="76" width="130" height="30"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="6cT-V5-Wpu"/>
                                         <include reference="qLz-6I-ty3"/>
@@ -1369,8 +1365,7 @@
                                         <exclude reference="e7c-o2-dj4"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="76" width="165" height="30"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="9cp-9A-1vD"/>
                                         <include reference="e7c-o2-dj4"/>
@@ -1406,21 +1401,21 @@
                                 <exclude reference="R3h-Ts-DbR"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="CV1-Jr-gD5"/>
-                                <exclude reference="aj5-20-zLD"/>
-                                <exclude reference="dqx-pe-SZY"/>
+                                <exclude reference="1cf-Tf-HTQ"/>
+                                <exclude reference="RON-GV-Y8o"/>
+                                <exclude reference="F6R-mH-b34"/>
+                                <exclude reference="yaT-kH-bta"/>
+                                <exclude reference="lMq-KI-jbf"/>
+                                <exclude reference="sA9-5y-ywZ"/>
                                 <exclude reference="Mms-qj-X1r"/>
                                 <exclude reference="PJW-Au-SJB"/>
                                 <exclude reference="wjr-pi-y8w"/>
-                                <exclude reference="F6R-mH-b34"/>
-                                <exclude reference="yaT-kH-bta"/>
-                                <exclude reference="1cf-Tf-HTQ"/>
-                                <exclude reference="RON-GV-Y8o"/>
-                                <exclude reference="lMq-KI-jbf"/>
-                                <exclude reference="sA9-5y-ywZ"/>
                                 <exclude reference="Nmf-9W-crD"/>
                                 <exclude reference="Yl7-7O-G9t"/>
                                 <exclude reference="yVM-74-HDd"/>
+                                <exclude reference="CV1-Jr-gD5"/>
+                                <exclude reference="aj5-20-zLD"/>
+                                <exclude reference="dqx-pe-SZY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1433,21 +1428,21 @@
                                 <include reference="R3h-Ts-DbR"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="CV1-Jr-gD5"/>
-                                <include reference="aj5-20-zLD"/>
-                                <include reference="dqx-pe-SZY"/>
+                                <include reference="1cf-Tf-HTQ"/>
+                                <include reference="RON-GV-Y8o"/>
+                                <include reference="F6R-mH-b34"/>
+                                <include reference="yaT-kH-bta"/>
+                                <include reference="lMq-KI-jbf"/>
+                                <include reference="sA9-5y-ywZ"/>
                                 <exclude reference="Mms-qj-X1r"/>
                                 <include reference="PJW-Au-SJB"/>
                                 <include reference="wjr-pi-y8w"/>
-                                <include reference="F6R-mH-b34"/>
-                                <include reference="yaT-kH-bta"/>
-                                <include reference="1cf-Tf-HTQ"/>
-                                <include reference="RON-GV-Y8o"/>
-                                <include reference="lMq-KI-jbf"/>
-                                <include reference="sA9-5y-ywZ"/>
                                 <exclude reference="Nmf-9W-crD"/>
                                 <include reference="Yl7-7O-G9t"/>
                                 <include reference="yVM-74-HDd"/>
+                                <include reference="CV1-Jr-gD5"/>
+                                <include reference="aj5-20-zLD"/>
+                                <include reference="dqx-pe-SZY"/>
                             </mask>
                         </variation>
                     </view>
@@ -1517,7 +1512,7 @@
         <!--Swift Side Menu Nav View Controller-->
         <scene sceneID="pW5-U9-wIR">
             <objects>
-                <navigationController id="Ysi-wW-NIx" customClass="ENSwiftSideMenuNavViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SideMenuNavView" id="Ysi-wW-NIx" customClass="ENSwiftSideMenuNavViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wPg-jM-Q6n">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
