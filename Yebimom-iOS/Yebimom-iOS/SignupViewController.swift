@@ -19,6 +19,12 @@ class SignupViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func showMainView(sender: UIBarButtonItem) {
+        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SideMenuNavView") as! UIViewController
+        
+        self.presentViewController(destViewController, animated: false, completion: nil)
+    }
+    
     @IBAction func showLoginView(sender: UIButton) {
         var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginBoard") as! UIViewController
         self.presentViewController(destViewController, animated: false, completion: nil)
