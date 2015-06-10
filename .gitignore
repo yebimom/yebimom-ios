@@ -33,4 +33,7 @@ DerivedData
 # Carthage/Checkouts
 
 Carthage/Build
+
+# unused file
+.DS_Store
 # === #
