@@ -22,6 +22,7 @@
 		D9A331F51B1D74A8005E2FD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A331F41B1D74A8005E2FD1 /* Images.xcassets */; };
 		D9A331F81B1D74A8005E2FD1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9A331F61B1D74A8005E2FD1 /* LaunchScreen.xib */; };
 		D9A332041B1D74A8005E2FD1 /* Yebimom_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A332031B1D74A8005E2FD1 /* Yebimom_iOSTests.swift */; };
+		D9B4654E1B27E2F4001DE177 /* LoginOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B4654D1B27E2F4001DE177 /* LoginOrRegisterViewController.swift */; };
 		D9B745831B22E9760080645D /* CategoryPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B745821B22E9760080645D /* CategoryPageTableViewController.swift */; };
 		D9B745851B22E9850080645D /* CategoryPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B745841B22E9850080645D /* CategoryPageTableViewCell.swift */; };
 		D9B7458D1B234FC50080645D /* CenterOfCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B7458C1B234FC50080645D /* CenterOfCategoryViewController.swift */; };
@@ -59,6 +60,7 @@
 		D9A331FD1B1D74A8005E2FD1 /* Yebimom-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yebimom-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A332021B1D74A8005E2FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9A332031B1D74A8005E2FD1 /* Yebimom_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yebimom_iOSTests.swift; sourceTree = "<group>"; };
+		D9B4654D1B27E2F4001DE177 /* LoginOrRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOrRegisterViewController.swift; sourceTree = "<group>"; };
 		D9B745821B22E9760080645D /* CategoryPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPageTableViewController.swift; sourceTree = "<group>"; };
 		D9B745841B22E9850080645D /* CategoryPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPageTableViewCell.swift; sourceTree = "<group>"; };
 		D9B7458C1B234FC50080645D /* CenterOfCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterOfCategoryViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 		D9B745881B230A650080645D /* User */ = {
 			isa = PBXGroup;
 			children = (
+				D9B4654D1B27E2F4001DE177 /* LoginOrRegisterViewController.swift */,
 				D998E3721B2086C900E4AB0B /* LoginViewController.swift */,
 				D998E37E1B219E9F00E4AB0B /* SignupViewController.swift */,
 			);
@@ -434,6 +437,7 @@
 				D998E3731B2086C900E4AB0B /* LoginViewController.swift in Sources */,
 				D9A331EE1B1D74A8005E2FD1 /* AppDelegate.swift in Sources */,
 				D998E3071B1F108600E4AB0B /* MainTableViewController.swift in Sources */,
+				D9B4654E1B27E2F4001DE177 /* LoginOrRegisterViewController.swift in Sources */,
 				D9B7458D1B234FC50080645D /* CenterOfCategoryViewController.swift in Sources */,
 				D998E3841B21B65000E4AB0B /* EventTableViewCell.swift in Sources */,
 				D998E33F1B1F4DB500E4AB0B /* CategoryTableViewCell.swift in Sources */,
