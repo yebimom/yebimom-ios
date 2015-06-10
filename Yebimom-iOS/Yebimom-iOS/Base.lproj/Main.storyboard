@@ -241,7 +241,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="to7-pr-c71" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1275" y="484"/>
+            <point key="canvasLocation" x="-1288.5" y="283"/>
         </scene>
         <!--Login Or Register View Controller-->
         <scene sceneID="rgY-9j-59t">
@@ -383,7 +383,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUy-Js-FQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1165.5" y="634"/>
+            <point key="canvasLocation" x="165" y="1400"/>
         </scene>
         <!--Category Page Table View Controller-->
         <scene sceneID="i23-IT-WHl">
@@ -992,7 +992,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WDl-MP-jzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-261" y="1485"/>
+            <point key="canvasLocation" x="-555" y="1485"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="1R5-ZZ-uKI">
@@ -1198,7 +1198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okf-MD-vKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2658" y="634"/>
+            <point key="canvasLocation" x="165" y="2697"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="LXT-TE-6rJ">
@@ -1428,7 +1428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8R-yD-jcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1909.5" y="634"/>
+            <point key="canvasLocation" x="165" y="2045"/>
         </scene>
         <!--Swift Side Menu Nav View Controller-->
         <scene sceneID="pW5-U9-wIR">
