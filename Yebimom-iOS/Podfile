@@ -1,4 +1,5 @@
 platform :ios, '8.0'
+link_with 'Yebimom-iOS', 'Yebimom-iOSTests'
 use_frameworks!
 
 pod 'SwiftyJSON', '~> 2.2.0'
