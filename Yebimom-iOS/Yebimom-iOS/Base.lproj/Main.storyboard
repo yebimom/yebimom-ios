@@ -148,7 +148,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4J-Nw-YBv">
                                             <rect key="frame" x="211" y="80" width="179" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="75" id="lrk-uh-fxC"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="lrk-uh-fxC"/>
                                                 <constraint firstAttribute="height" constant="31" id="yBS-ng-oF4"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
