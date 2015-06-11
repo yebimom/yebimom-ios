@@ -20,14 +20,11 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func showMainView(sender: UIBarButtonItem) {
-        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SideMenuNavView") as! UIViewController
-        
-        self.presentViewController(destViewController, animated: false, completion: nil)
+        viewTransition("SideMenuNavView")
     }
     
     @IBAction func showLoginView(sender: UIButton) {
-        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginBoard") as! UIViewController
-        self.presentViewController(destViewController, animated: false, completion: nil)
+        viewTransition("LoginBoard")
     }
     
     @IBAction func userNameTextFieldReturn(sender: UITextField) {
@@ -41,6 +38,12 @@ class SignupViewController: UIViewController {
     }
 
     @IBAction func signupTry(sender: UIButton) {
+    }
+    
+    func viewTransition(storyboardID: String) {
+        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardID) as! UIViewController
+        
+        self.presentViewController(destViewController, animated: false, completion: nil)
     }
 
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {

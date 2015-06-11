@@ -17,18 +17,20 @@ class LoginOrRegisterViewController: UIViewController {
     }
 
     @IBAction func showMainView(sender: UIBarButtonItem) {
-        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SideMenuNavView") as! UIViewController
-        
-        self.presentViewController(destViewController, animated: false, completion: nil)
+        viewTransition("SideMenuNavView")
     }
     
     @IBAction func showRegisterView(sender: UIButton) {
-        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RegisterBoard") as! UIViewController
-        self.presentViewController(destViewController, animated: false, completion: nil)
+        viewTransition("RegisterBoard")
     }
     
     @IBAction func showLoginView(sender: UIButton) {
-        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginBoard") as! UIViewController
+        viewTransition("LoginBoard")
+    }
+    
+    func viewTransition(storyboardID: String) {
+        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardID) as! UIViewController
+        
         self.presentViewController(destViewController, animated: false, completion: nil)
     }
     
