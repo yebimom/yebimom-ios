@@ -9,10 +9,12 @@
 import UIKit
 import SwiftyJSON
 
-class CenterOfCategoryViewController: UIViewController {
+class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var centerHashID: String?
+    var facilities = [String]()
     
+    @IBOutlet weak var facilityTableView: UITableView!
     @IBOutlet weak var centerNameLabel: UILabel!
     
     override func viewDidLoad() {
@@ -21,9 +23,25 @@ class CenterOfCategoryViewController: UIViewController {
         let centerDetailOfCategoryURL = NSURL(string:"https://yebimom.com/api/centers/" + centerHashID!)
         var centerDetailOfCategoryJsonData = JSON(data: NSData(contentsOfURL: centerDetailOfCategoryURL!)!)
         
+        for (key: String, subJsonData: JSON)in centerDetailOfCategoryJsonData["facility_set"] {
+            facilities.append(subJsonData.stringValue)
+        }
         centerNameLabel.text = centerDetailOfCategoryJsonData["name"].string
+    
+        facilityTableView.dataSource = self
         
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return facilities.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "FacilityTableCell")
         
+        cell.textLabel?.text = facilities[indexPath.row]
+        
+        return cell
     }
 
     override func didReceiveMemoryWarning() {
