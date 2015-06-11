@@ -86,7 +86,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func viewTransition(storyboardID: String) {
         var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardID) as! UIViewController
-        
+
         self.presentViewController(destViewController, animated: false, completion: nil)
     }
     
@@ -145,7 +145,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         session.setObject(username, forKey: "USERNAME")
         session.setInteger(1, forKey: "ISLOGGEDIN")
         session.synchronize()
-        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        // for using 'presentViewController' mehod, this instruction was commented
+        //self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func incorrectUserInfoAlert() {
