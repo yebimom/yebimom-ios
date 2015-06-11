@@ -26,14 +26,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func showMainView(sender: UIBarButtonItem) {
-        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SideMenuNavView") as! UIViewController
-        
-        self.presentViewController(destViewController, animated: false, completion: nil)
+        viewTransition("SideMenuNavView")
     }
     
     @IBAction func showRegisterView(sender: UIButton) {
-        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RegisterBoard") as! UIViewController
-        self.presentViewController(destViewController, animated: false, completion: nil)
+        viewTransition("RegisterBoard")
     }
     
     @IBAction func userNameTextFieldReturn(sender: UITextField) {
@@ -68,7 +65,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     // println(jsonData.valueForKey("token"))
                     if(token != nil) {
                         loginSuccess(username)
-                        self.performSegueWithIdentifier("ShowMain", sender: self)
+                        viewTransition("SideMenuNavView")
                     }
                     else {
                         tokenAbsentAlert()
@@ -85,6 +82,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 connectionFailure(reponseError)
             }
         }
+    }
+    
+    func viewTransition(storyboardID: String) {
+        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardID) as! UIViewController
+
+        self.presentViewController(destViewController, animated: false, completion: nil)
     }
     
     func blankInfoCheckAndAlert(username: NSString, password: NSString) -> Bool {
@@ -142,7 +145,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         session.setObject(username, forKey: "USERNAME")
         session.setInteger(1, forKey: "ISLOGGEDIN")
         session.synchronize()
-        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        // for using 'presentViewController' mehod, this instruction was commented
+        //self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func incorrectUserInfoAlert() {
