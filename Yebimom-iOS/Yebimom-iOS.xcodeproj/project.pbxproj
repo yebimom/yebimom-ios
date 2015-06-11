@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29A2C3FA9AACEBCEF8344F86 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57266FA5BD13D0F98EC891BA /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		57A8FE17F112A4A5BE67C586 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57266FA5BD13D0F98EC891BA /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D998E2F61B1EC8E000E4AB0B /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F41B1EC8E000E4AB0B /* ENSideMenu.swift */; };
 		D998E2F71B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F51B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift */; };
@@ -27,6 +28,23 @@
 		D9B745851B22E9850080645D /* CategoryPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B745841B22E9850080645D /* CategoryPageTableViewCell.swift */; };
 		D9B7458D1B234FC50080645D /* CenterOfCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B7458C1B234FC50080645D /* CenterOfCategoryViewController.swift */; };
 		D9C848981B29A473006FCA39 /* FacilityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C848971B29A473006FCA39 /* FacilityTableViewCell.swift */; };
+		D9CE3D301B29F1AF00227E7F /* MainViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CE3D2F1B29F1AF00227E7F /* MainViewTest.swift */; };
+		D9CE3D311B29F2BE00227E7F /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E3061B1F108600E4AB0B /* MainTableViewController.swift */; };
+		D9CE3D321B29F36A00227E7F /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F41B1EC8E000E4AB0B /* ENSideMenu.swift */; };
+		D9CE3D331B29F36A00227E7F /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F51B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift */; };
+		D9CE3D341B29F38800227E7F /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E33E1B1F4DB500E4AB0B /* CategoryTableViewCell.swift */; };
+		D9CE3D351B29F38800227E7F /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E3831B21B65000E4AB0B /* EventTableViewCell.swift */; };
+		D9CE3D361B29F38800227E7F /* EventPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E659941B21E962001CA293 /* EventPageTableViewCell.swift */; };
+		D9CE3D371B29F38800227E7F /* CategoryPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B745841B22E9850080645D /* CategoryPageTableViewCell.swift */; };
+		D9CE3D381B29F38800227E7F /* FacilityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C848971B29A473006FCA39 /* FacilityTableViewCell.swift */; };
+		D9CE3D391B29F39800227E7F /* CenterOfCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B7458C1B234FC50080645D /* CenterOfCategoryViewController.swift */; };
+		D9CE3D3A1B29F39C00227E7F /* LoginOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B4654D1B27E2F4001DE177 /* LoginOrRegisterViewController.swift */; };
+		D9CE3D3B1B29F39C00227E7F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E3721B2086C900E4AB0B /* LoginViewController.swift */; };
+		D9CE3D3C1B29F39C00227E7F /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E37E1B219E9F00E4AB0B /* SignupViewController.swift */; };
+		D9CE3D3D1B29F3A600227E7F /* ENSwiftSideMenuNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F81B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift */; };
+		D9CE3D3E1B29F3A600227E7F /* ENSideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2FD1B1ECA6E00E4AB0B /* ENSideMenuTableViewController.swift */; };
+		D9CE3D3F1B29F3AB00227E7F /* EventPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E659921B21E93B001CA293 /* EventPageTableViewController.swift */; };
+		D9CE3D401B29F3AB00227E7F /* CategoryPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B745821B22E9760080645D /* CategoryPageTableViewController.swift */; };
 		D9E659931B21E93B001CA293 /* EventPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E659921B21E93B001CA293 /* EventPageTableViewController.swift */; };
 		D9E659951B21E962001CA293 /* EventPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E659941B21E962001CA293 /* EventPageTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +84,7 @@
 		D9B745841B22E9850080645D /* CategoryPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPageTableViewCell.swift; sourceTree = "<group>"; };
 		D9B7458C1B234FC50080645D /* CenterOfCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterOfCategoryViewController.swift; sourceTree = "<group>"; };
 		D9C848971B29A473006FCA39 /* FacilityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacilityTableViewCell.swift; sourceTree = "<group>"; };
+		D9CE3D2F1B29F1AF00227E7F /* MainViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewTest.swift; sourceTree = "<group>"; };
 		D9E659921B21E93B001CA293 /* EventPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageTableViewController.swift; sourceTree = "<group>"; };
 		D9E659941B21E962001CA293 /* EventPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageTableViewCell.swift; sourceTree = "<group>"; };
 		EE85F1E416213D26275F6D1E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A2C3FA9AACEBCEF8344F86 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +248,7 @@
 		D9A332001B1D74A8005E2FD1 /* Yebimom-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				D9CE3D2E1B29F16800227E7F /* MainView */,
 				D9A332031B1D74A8005E2FD1 /* Yebimom_iOSTests.swift */,
 				D9A332011B1D74A8005E2FD1 /* Supporting Files */,
 			);
@@ -277,6 +298,14 @@
 			name = Detail;
 			sourceTree = "<group>";
 		};
+		D9CE3D2E1B29F16800227E7F /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				D9CE3D2F1B29F1AF00227E7F /* MainViewTest.swift */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,9 +333,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9A3320A1B1D74A8005E2FD1 /* Build configuration list for PBXNativeTarget "Yebimom-iOSTests" */;
 			buildPhases = (
+				085995A978B1FA4B821D80D2 /* Check Pods Manifest.lock */,
 				D9A331F91B1D74A8005E2FD1 /* Sources */,
 				D9A331FA1B1D74A8005E2FD1 /* Frameworks */,
 				D9A331FB1B1D74A8005E2FD1 /* Resources */,
+				BA8BC084778032F4CC03C923 /* Embed Pods Frameworks */,
+				F7E2703EF4EC6B9CE2BD769D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -376,6 +408,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		085995A978B1FA4B821D80D2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		1F5093F25963F5AE80256F5E /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,6 +453,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BA8BC084778032F4CC03C923 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F5D2016A4727425D976DF302 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,6 +481,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7E2703EF4EC6B9CE2BD769D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -452,7 +529,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9CE3D3A1B29F39C00227E7F /* LoginOrRegisterViewController.swift in Sources */,
+				D9CE3D321B29F36A00227E7F /* ENSideMenu.swift in Sources */,
+				D9CE3D3E1B29F3A600227E7F /* ENSideMenuTableViewController.swift in Sources */,
+				D9CE3D371B29F38800227E7F /* CategoryPageTableViewCell.swift in Sources */,
+				D9CE3D3F1B29F3AB00227E7F /* EventPageTableViewController.swift in Sources */,
+				D9CE3D361B29F38800227E7F /* EventPageTableViewCell.swift in Sources */,
 				D9A332041B1D74A8005E2FD1 /* Yebimom_iOSTests.swift in Sources */,
+				D9CE3D381B29F38800227E7F /* FacilityTableViewCell.swift in Sources */,
+				D9CE3D311B29F2BE00227E7F /* MainTableViewController.swift in Sources */,
+				D9CE3D331B29F36A00227E7F /* ENSideMenuNavigationController.swift in Sources */,
+				D9CE3D401B29F3AB00227E7F /* CategoryPageTableViewController.swift in Sources */,
+				D9CE3D3C1B29F39C00227E7F /* SignupViewController.swift in Sources */,
+				D9CE3D351B29F38800227E7F /* EventTableViewCell.swift in Sources */,
+				D9CE3D301B29F1AF00227E7F /* MainViewTest.swift in Sources */,
+				D9CE3D391B29F39800227E7F /* CenterOfCategoryViewController.swift in Sources */,
+				D9CE3D3B1B29F39C00227E7F /* LoginViewController.swift in Sources */,
+				D9CE3D3D1B29F3A600227E7F /* ENSwiftSideMenuNavViewController.swift in Sources */,
+				D9CE3D341B29F38800227E7F /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +687,7 @@
 		};
 		D9A3320B1B1D74A8005E2FD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F18C3D6DDBC750FBE81DF760 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -612,6 +707,7 @@
 		};
 		D9A3320C1B1D74A8005E2FD1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE85F1E416213D26275F6D1E /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
