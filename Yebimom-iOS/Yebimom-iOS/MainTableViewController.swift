@@ -63,7 +63,7 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     }
     
     override func toggleSideMenuView () {
-        if(isSideMenuOpen()) {
+        if isSideMenuOpen() {
             hideSideMenuView()
         }
         else {

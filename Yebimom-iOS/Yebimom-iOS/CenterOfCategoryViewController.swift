@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import GoogleMaps
 
 class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -16,6 +17,7 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
     
     @IBOutlet weak var facilityTableView: UITableView!
     @IBOutlet weak var centerNameLabel: UILabel!
+    @IBOutlet weak var mapViewOutlet: GMSMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,11 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
     
         facilityTableView.dataSource = self
         
+        // Center location map using Google Map
+        var camera = GMSCameraPosition.cameraWithLatitude(-33.86,
+            longitude: 151.20, zoom: 6)
+        mapViewOutlet.camera = camera
+        //
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

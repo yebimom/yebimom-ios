@@ -36,4 +36,7 @@ Carthage/Build
 
 # unused file
 .DS_Store
+
+# Secure file
+keys.plist
 # === #
