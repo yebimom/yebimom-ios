@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import GoogleMaps
 
 class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 

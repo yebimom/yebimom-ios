@@ -46,7 +46,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         var username:NSString = userNameTextField.text
         var password:NSString = passwordTextField.text
 
-        if(blankInfoCheckAndAlert(username, password: password) == false) {
+        if blankInfoCheckAndAlert(username, password: password) == false {
             /* It will be good if Passwords are hashed */
             var url:NSURL = NSURL(string:"https://yebimom.com/api/login/")!
             var post:NSString = "username=\(username)&password=\(password)"
@@ -56,14 +56,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             var response: NSURLResponse?
             var urlData: NSData? = NSURLConnection.sendSynchronousRequest(request, returningResponse:&response, error:&reponseError)
 
-            if ( urlData != nil ) {
+            if urlData != nil {
                 let res = response as! NSHTTPURLResponse!;
                 // NSLog("Response code: %ld", res.statusCode);
-                if (res.statusCode >= 200 && res.statusCode < 300)
-                {
+                if res.statusCode >= 200 && res.statusCode < 300 {
                     var token: AnyObject? = getTokenFromResponseData(urlData!)
                     // println(jsonData.valueForKey("token"))
-                    if(token != nil) {
+                    if token != nil {
                         loginSuccess(username)
                         viewTransition("SideMenuNavView")
                     }
@@ -71,7 +70,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         tokenAbsentAlert()
                     }
                 }
-                else if(res.statusCode == 400) {
+                else if res.statusCode == 400 {
                     incorrectUserInfoAlert()
                 }
                 else {
@@ -163,7 +162,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func connectionFailure(reponseError: NSError?) {
         var alertView:UIAlertView = UIAlertView()
         alertView.title = "로그인 실패"
-        if((reponseError) != nil) {
+        if (reponseError) != nil {
             alertView.message = reponseError?.localizedDescription
         }
         else {
