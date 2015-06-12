@@ -720,7 +720,7 @@
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38Z-54-BNR" userLabel="Map View">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38Z-54-BNR" userLabel="Map View" customClass="GMSMapView">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -891,6 +891,7 @@
                     <connections>
                         <outlet property="centerNameLabel" destination="swD-PO-iYG" id="1Zb-mV-btE"/>
                         <outlet property="facilityTableView" destination="tFg-gg-Xu6" id="D1R-9v-bqJ"/>
+                        <outlet property="mapViewOutlet" destination="38Z-54-BNR" id="57z-rS-dVt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMN-lq-m2k" userLabel="First Responder" sceneMemberID="firstResponder"/>
