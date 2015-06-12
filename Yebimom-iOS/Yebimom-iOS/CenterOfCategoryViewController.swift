@@ -17,6 +17,7 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
     
     @IBOutlet weak var facilityTableView: UITableView!
     @IBOutlet weak var centerNameLabel: UILabel!
+    @IBOutlet weak var mapViewOutlet: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,15 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
     
         facilityTableView.dataSource = self
         
+        // These codes will be moved system initial code later
+        var keys: NSDictionary?
+        if NSBundle.mainBundle().pathForResource("keys", ofType: "plist") != nil {
+            let path = NSBundle.mainBundle().pathForResource("keys", ofType: "plist")
+            keys = NSDictionary(contentsOfFile: path!)
+        }
+        let GOOGLE_MAP_API_KEY = keys?["GOOGLE_MAP_API_KEY"] as? String
+        let GOOGLE_API_CLIENT_ID = keys?["GOOGLE_API_CLIENT_ID"] as? String
+        //
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
