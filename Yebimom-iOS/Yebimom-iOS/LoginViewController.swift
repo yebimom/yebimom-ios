@@ -21,8 +21,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func showMainView(sender: UIBarButtonItem) {
@@ -30,7 +28,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func showRegisterView(sender: UIButton) {
-        viewTransition("RegisterBoard")
+        storyBoardTransition("RegisterBoard")
     }
     
     @IBAction func userNameTextFieldReturn(sender: UITextField) {
@@ -85,8 +83,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func viewTransition(storyboardID: String) {
         var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardID) as! UIViewController
-
+        
         self.presentViewController(destViewController, animated: false, completion: nil)
+    }
+    
+    func storyBoardTransition(storyBoardID: String) {
+        // Cannot change this method to "viewTransition", that occur some problems
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        var destViewController : UIViewController
+        destViewController = mainStoryboard.instantiateViewControllerWithIdentifier(storyBoardID) as! UIViewController
+        sideMenuController()?.setContentViewController(destViewController)
     }
     
     func blankInfoCheckAndAlert(username: NSString, password: NSString) -> Bool {
@@ -143,7 +149,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         var session:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         session.setObject(username, forKey: "USERNAME")
         session.setBool(true, forKey: "ISLOGGEDIN")
-        //session.synchronize()
+        session.synchronize()
         
         // for using 'presentViewController' mehod, this instruction was commented
         //self.dismissViewControllerAnimated(true, completion: nil)

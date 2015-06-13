@@ -21,17 +21,25 @@ class LoginOrRegisterViewController: UIViewController {
     }
     
     @IBAction func showRegisterView(sender: UIButton) {
-        viewTransition("RegisterBoard")
+        storyBoardTransition("RegisterBoard")
     }
     
     @IBAction func showLoginView(sender: UIButton) {
-        viewTransition("LoginBoard")
+        storyBoardTransition("LoginBoard")
     }
     
     func viewTransition(storyboardID: String) {
         var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardID) as! UIViewController
         
         self.presentViewController(destViewController, animated: false, completion: nil)
+    }
+    
+    func storyBoardTransition(storyBoardID: String) {
+        // Cannot change this method to "viewTransition", that occur some problems
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        var destViewController : UIViewController
+        destViewController = mainStoryboard.instantiateViewControllerWithIdentifier(storyBoardID) as! UIViewController
+        sideMenuController()?.setContentViewController(destViewController)
     }
     
     override func didReceiveMemoryWarning() {

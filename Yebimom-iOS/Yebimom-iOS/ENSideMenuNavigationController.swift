@@ -41,13 +41,17 @@ public class ENSideMenuNavigationController: UINavigationController, ENSideMenuP
     
     // MARK: - Navigation
     public func setContentViewController(contentViewController: UIViewController) {
-        self.sideMenu?.toggleMenu()
+        // This was modified by wikibootup
+        //self.sideMenu?.toggleMenu()
+        self.sideMenu?.hideSideMenu()
+        
         switch sideMenuAnimationType {
         case .None:
             self.viewControllers = [contentViewController]
             break
         default:
-            contentViewController.navigationItem.hidesBackButton = true
+            // This was modified by wikibootup
+            // contentViewController.navigationItem.hidesBackButton = true
             self.setViewControllers([contentViewController], animated: true)
             break
         }
