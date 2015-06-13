@@ -11,13 +11,15 @@ import UIKit
 class ENSideMenuTableViewController: UITableViewController {
     var selectedMenuItem : Int = 0
     var sideMenuList = [String()]
+    var session:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var session:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        var isLoggedIn: Bool = session.boolForKey("ISLOGGEDIN")
         
+        var isLoggedIn: Bool = session.boolForKey("ISLOGGEDIN")
+        println(isLoggedIn)
         if isLoggedIn {
             sideMenuList = ["", "", "", "", "", "", "", "Logout"]
         }
@@ -96,7 +98,16 @@ class ENSideMenuTableViewController: UITableViewController {
         
         switch (indexPath.row) {
             case 7:
-                storyBoardTransition("LoginOrRegister")
+                if session.boolForKey("ISLOGGEDIN") {
+                    var session:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+                    session.removeObjectForKey("USERNAME")
+                    session.setBool(false, forKey: "ISLOGGEDIN")
+                    //session.synchronize()
+                    storyBoardTransition("Main")
+                }
+                else {
+                    storyBoardTransition("LoginOrRegister")
+                }
             default:
                 storyBoardTransition("Main")
         }

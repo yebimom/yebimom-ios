@@ -143,7 +143,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         var session:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         session.setObject(username, forKey: "USERNAME")
         session.setBool(true, forKey: "ISLOGGEDIN")
-        session.synchronize()
+        //session.synchronize()
         
         // for using 'presentViewController' mehod, this instruction was commented
         //self.dismissViewControllerAnimated(true, completion: nil)
