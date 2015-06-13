@@ -24,7 +24,7 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func showLoginView(sender: UIButton) {
-        viewTransition("LoginBoard")
+        storyBoardTransition("LoginBoard")
     }
     
     @IBAction func userNameTextFieldReturn(sender: UITextField) {
@@ -45,7 +45,15 @@ class SignupViewController: UIViewController {
         
         self.presentViewController(destViewController, animated: false, completion: nil)
     }
-
+    
+    func storyBoardTransition(storyBoardID: String) {
+        // Cannot change this method to "viewTransition", that occur some problems
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        var destViewController : UIViewController
+        destViewController = mainStoryboard.instantiateViewControllerWithIdentifier(storyBoardID) as! UIViewController
+        sideMenuController()?.setContentViewController(destViewController)
+    }
+    
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         userNameTextField.endEditing(true)
         passwordTextField.endEditing(true)
