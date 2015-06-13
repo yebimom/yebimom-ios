@@ -9,7 +9,7 @@
         <!--Main Table View Controller-->
         <scene sceneID="1d2-fN-I90">
             <objects>
-                <tableViewController storyboardIdentifier="MainBoard" id="eO0-mK-8cW" customClass="MainTableViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Main" id="eO0-mK-8cW" customClass="MainTableViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="307" sectionHeaderHeight="22" sectionFooterHeight="22" id="8d4-vc-S5K">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="770"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -657,7 +657,7 @@
                                                             </mask>
                                                         </variation>
                                                     </progressView>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tFg-gg-Xu6">
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tFg-gg-Xu6">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <prototypes>
@@ -772,21 +772,21 @@
                                                 <exclude reference="WJX-Gh-sMC"/>
                                                 <exclude reference="pMy-Sa-9ml"/>
                                                 <exclude reference="syC-Il-qBT"/>
-                                                <exclude reference="8yZ-X9-SIR"/>
-                                                <exclude reference="9UR-GP-7hL"/>
-                                                <exclude reference="rQd-Z1-9lA"/>
-                                                <exclude reference="slh-us-Gu8"/>
-                                                <exclude reference="2GM-ra-5AC"/>
-                                                <exclude reference="D1t-ca-RSx"/>
-                                                <exclude reference="ZQE-7W-W7i"/>
-                                                <exclude reference="rKH-gJ-S4Y"/>
-                                                <exclude reference="uNt-9z-XuJ"/>
                                                 <exclude reference="BbN-B1-XzR"/>
                                                 <exclude reference="JqI-8h-xD7"/>
                                                 <exclude reference="bGc-zu-hUJ"/>
                                                 <exclude reference="hme-5M-Vep"/>
                                                 <exclude reference="p8j-ij-Ysh"/>
                                                 <exclude reference="un4-bg-2eU"/>
+                                                <exclude reference="2GM-ra-5AC"/>
+                                                <exclude reference="D1t-ca-RSx"/>
+                                                <exclude reference="ZQE-7W-W7i"/>
+                                                <exclude reference="rKH-gJ-S4Y"/>
+                                                <exclude reference="uNt-9z-XuJ"/>
+                                                <exclude reference="8yZ-X9-SIR"/>
+                                                <exclude reference="9UR-GP-7hL"/>
+                                                <exclude reference="rQd-Z1-9lA"/>
+                                                <exclude reference="slh-us-Gu8"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
@@ -801,21 +801,21 @@
                                                 <include reference="WJX-Gh-sMC"/>
                                                 <include reference="pMy-Sa-9ml"/>
                                                 <include reference="syC-Il-qBT"/>
-                                                <include reference="8yZ-X9-SIR"/>
-                                                <include reference="9UR-GP-7hL"/>
-                                                <include reference="rQd-Z1-9lA"/>
-                                                <include reference="slh-us-Gu8"/>
-                                                <include reference="2GM-ra-5AC"/>
-                                                <include reference="D1t-ca-RSx"/>
-                                                <include reference="ZQE-7W-W7i"/>
-                                                <include reference="rKH-gJ-S4Y"/>
-                                                <include reference="uNt-9z-XuJ"/>
                                                 <include reference="BbN-B1-XzR"/>
                                                 <include reference="JqI-8h-xD7"/>
                                                 <include reference="bGc-zu-hUJ"/>
                                                 <include reference="hme-5M-Vep"/>
                                                 <include reference="p8j-ij-Ysh"/>
                                                 <include reference="un4-bg-2eU"/>
+                                                <include reference="2GM-ra-5AC"/>
+                                                <include reference="D1t-ca-RSx"/>
+                                                <include reference="ZQE-7W-W7i"/>
+                                                <include reference="rKH-gJ-S4Y"/>
+                                                <include reference="uNt-9z-XuJ"/>
+                                                <include reference="8yZ-X9-SIR"/>
+                                                <include reference="9UR-GP-7hL"/>
+                                                <include reference="rQd-Z1-9lA"/>
+                                                <include reference="slh-us-Gu8"/>
                                             </mask>
                                         </variation>
                                     </view>

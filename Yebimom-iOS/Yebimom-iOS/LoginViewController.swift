@@ -142,8 +142,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // NSLog("Login SUCCESS");
         var session:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         session.setObject(username, forKey: "USERNAME")
-        session.setInteger(1, forKey: "ISLOGGEDIN")
-        session.synchronize()
+        session.setBool(true, forKey: "ISLOGGEDIN")
+        //session.synchronize()
         
         // for using 'presentViewController' mehod, this instruction was commented
         //self.dismissViewControllerAnimated(true, completion: nil)
