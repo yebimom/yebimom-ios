@@ -14,8 +14,17 @@ class ENSideMenuTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        var session:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        var isLoggedIn: Bool = session.boolForKey("ISLOGGEDIN")
         
-        sideMenuList = ["Main", "Login or Register", "Help", "Settings"]
+        if isLoggedIn {
+            sideMenuList = ["", "", "", "", "", "", "", "Logout"]
+        }
+        else {
+            sideMenuList = ["", "", "", "", "", "", "", "Login or Register"]
+        }
+        
         
         // Customize apperance of table view
         tableView.contentInset = UIEdgeInsetsMake(64.0, 0, 0, 0) //
@@ -43,7 +52,7 @@ class ENSideMenuTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return 4
+        return 8
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -68,6 +77,14 @@ class ENSideMenuTableViewController: UITableViewController {
         return 50.0
     }
     
+    func storyBoardTransition(storyBoardID: String) {
+        // Cannot change this method to "viewTransition", that occur some problems
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        var destViewController : UIViewController
+        destViewController = mainStoryboard.instantiateViewControllerWithIdentifier(storyBoardID) as! UIViewController
+        sideMenuController()?.setContentViewController(destViewController)
+    }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         // println("did select row: \(indexPath.row)")
@@ -77,26 +94,13 @@ class ENSideMenuTableViewController: UITableViewController {
         }
         selectedMenuItem = indexPath.row
         
-        //Present new view controller
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
-        var destViewController : UIViewController
         switch (indexPath.row) {
-        case 0:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Main") as! UIViewController
-            break
-        case 1:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginOrRegister")as! UIViewController
-            break
-        case 2:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Help")as! UIViewController
-            break
-        default:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Settings") as! UIViewController
-            break
+            case 7:
+                storyBoardTransition("LoginOrRegister")
+            default:
+                storyBoardTransition("Main")
         }
-        sideMenuController()?.setContentViewController(destViewController)
     }
-    
     
     /*
     // MARK: - Navigation

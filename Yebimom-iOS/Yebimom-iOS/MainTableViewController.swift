@@ -77,9 +77,6 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        
-        let session:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        let isLoggedIn:Int = session.integerForKey("ISLOGGEDIN") as Int
     }
     
     
