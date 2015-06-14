@@ -15,6 +15,7 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     var categoryNames = [String]()
     var cetegorySlugs = [String]()
     var numOfCentersOfCategory = [Int]()
+    var imageURLS = [String]()
     
     var numOfEvents: Int = 0
     
@@ -38,6 +39,13 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         for (key: String, subJsonData: JSON)in categoryJsonData {
             categoryNames.append(subJsonData["name"].string!)
             cetegorySlugs.append(subJsonData["slug"].string!)
+            // now server error
+            if subJsonData["image"].string != nil {
+                imageURLS.append(subJsonData["image"].string!)
+            }
+            else {
+                imageURLS.append("")
+            }
             
             let centersOfCategoryURL = NSURL(string:"https://yebimom.com/api/categories/" + subJsonData["slug"].string!)
             var centersOfCategoryJsonData = JSON(data: NSData(contentsOfURL: centersOfCategoryURL!)!)
@@ -114,6 +122,28 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
                 let cell = tableView.dequeueReusableCellWithIdentifier("CategoryTableCell", forIndexPath: indexPath) as! CategoryTableViewCell
                 cell.categoryNameLabel.text = categoryNames[indexPath.row]
                 cell.numOfCentersOfCategoryLabel.text = "\(numOfCentersOfCategory[indexPath.row]) 곳"
+                
+                
+                cell.categoryImage.imageFromURL(imageURLS[indexPath.row], placeholder: UIImage(named: "logo.png")!, fadeIn: true) {
+                    (image: UIImage?) in
+                    if image != nil {
+                        cell.categoryImage.image = image!
+                    }
+                }
+                
+                /*
+                let width = cell.categoryImage.frame.width
+                let height = cell.categoryImage.frame.height
+                UIImage(
+                    named: "logo.png")!.resize(CGSize(width: 30, height: 30)) {
+                        
+                }
+                */
+                cell.categoryImage.alpha = 0.2
+                
+
+
+                
                 return cell
             default:
                 let cell: UITableViewCell! = nil

@@ -11,8 +11,8 @@ import UIKit
 class CategoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var categoryNameLabel: UILabel!
-    
     @IBOutlet weak var numOfCentersOfCategoryLabel: UILabel!
+    @IBOutlet weak var categoryImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
