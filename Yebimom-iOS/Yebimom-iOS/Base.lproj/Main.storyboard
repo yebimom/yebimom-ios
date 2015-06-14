@@ -217,6 +217,7 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="categoryImage" destination="BqA-A5-p7q" id="bkd-wH-lSU"/>
                                     <outlet property="categoryNameLabel" destination="I4J-Nw-YBv" id="MbO-Zs-why"/>
                                     <outlet property="numOfCentersOfCategoryLabel" destination="d4N-eX-61a" id="1BO-cQ-MKt"/>
                                     <segue destination="RXA-mg-BlP" kind="show" identifier="ShowCategoryPage" id="xoo-Ic-CSn"/>

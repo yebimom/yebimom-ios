@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		29A2C3FA9AACEBCEF8344F86 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57266FA5BD13D0F98EC891BA /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		57A8FE17F112A4A5BE67C586 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57266FA5BD13D0F98EC891BA /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D975209F1B2DDD3E0026D85F /* AF+Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D975209D1B2DDD3E0026D85F /* AF+Image+Extension.swift */; };
+		D97520A01B2DDD3E0026D85F /* AF+ImageVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D975209E1B2DDD3E0026D85F /* AF+ImageVIew+Extension.swift */; };
+		D97520A11B2DE4590026D85F /* AF+Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D975209D1B2DDD3E0026D85F /* AF+Image+Extension.swift */; };
+		D97520A21B2DE45B0026D85F /* AF+ImageVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D975209E1B2DDD3E0026D85F /* AF+ImageVIew+Extension.swift */; };
 		D998E2F61B1EC8E000E4AB0B /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F41B1EC8E000E4AB0B /* ENSideMenu.swift */; };
 		D998E2F71B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F51B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift */; };
 		D998E2F91B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F81B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift */; };
@@ -62,6 +66,8 @@
 
 /* Begin PBXFileReference section */
 		57266FA5BD13D0F98EC891BA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D975209D1B2DDD3E0026D85F /* AF+Image+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AF+Image+Extension.swift"; sourceTree = "<group>"; };
+		D975209E1B2DDD3E0026D85F /* AF+ImageVIew+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AF+ImageVIew+Extension.swift"; sourceTree = "<group>"; };
 		D998E2F41B1EC8E000E4AB0B /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
 		D998E2F51B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
 		D998E2F81B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSwiftSideMenuNavViewController.swift; sourceTree = "<group>"; };
@@ -130,9 +136,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D975209C1B2DDD3E0026D85F /* AF+Image+Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D975209D1B2DDD3E0026D85F /* AF+Image+Extension.swift */,
+				D975209E1B2DDD3E0026D85F /* AF+ImageVIew+Extension.swift */,
+			);
+			path = "AF+Image+Helper";
+			sourceTree = "<group>";
+		};
 		D998E2F21B1EC89B00E4AB0B /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				D975209C1B2DDD3E0026D85F /* AF+Image+Helper */,
 				D998E3761B20BCB600E4AB0B /* Networking */,
 				D998E2F31B1EC8A300E4AB0B /* ENSwiftSideMenu */,
 			);
@@ -511,10 +527,12 @@
 			files = (
 				D998E37F1B219E9F00E4AB0B /* SignupViewController.swift in Sources */,
 				D9E659951B21E962001CA293 /* EventPageTableViewCell.swift in Sources */,
+				D97520A01B2DDD3E0026D85F /* AF+ImageVIew+Extension.swift in Sources */,
 				D998E2F71B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift in Sources */,
 				D998E2F61B1EC8E000E4AB0B /* ENSideMenu.swift in Sources */,
 				D998E2FE1B1ECA6E00E4AB0B /* ENSideMenuTableViewController.swift in Sources */,
 				D9C848981B29A473006FCA39 /* FacilityTableViewCell.swift in Sources */,
+				D975209F1B2DDD3E0026D85F /* AF+Image+Extension.swift in Sources */,
 				D9B745831B22E9760080645D /* CategoryPageTableViewController.swift in Sources */,
 				D9E659931B21E93B001CA293 /* EventPageTableViewController.swift in Sources */,
 				D998E2F91B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift in Sources */,
@@ -544,6 +562,7 @@
 				D9CE3D311B29F2BE00227E7F /* MainTableViewController.swift in Sources */,
 				D9CE3D331B29F36A00227E7F /* ENSideMenuNavigationController.swift in Sources */,
 				D9CE3D401B29F3AB00227E7F /* CategoryPageTableViewController.swift in Sources */,
+				D97520A21B2DE45B0026D85F /* AF+ImageVIew+Extension.swift in Sources */,
 				D9CE3D3C1B29F39C00227E7F /* SignupViewController.swift in Sources */,
 				D9CE3D351B29F38800227E7F /* EventTableViewCell.swift in Sources */,
 				D9CE3D301B29F1AF00227E7F /* MainViewTest.swift in Sources */,
@@ -551,6 +570,7 @@
 				D9CE3D3B1B29F39C00227E7F /* LoginViewController.swift in Sources */,
 				D9CE3D3D1B29F3A600227E7F /* ENSwiftSideMenuNavViewController.swift in Sources */,
 				D9CE3D341B29F38800227E7F /* CategoryTableViewCell.swift in Sources */,
+				D97520A11B2DE4590026D85F /* AF+Image+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
