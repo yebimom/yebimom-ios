@@ -21,12 +21,15 @@ class ENSideMenuTableViewController: UITableViewController {
         var isLoggedIn: Bool = session.boolForKey("ISLOGGEDIN")
         // println(isLoggedIn)
         if isLoggedIn {
-            var username: AnyObject? = session.objectForKey("USERNAME") as! String
-            println("qqq" + "aaa")
-            sideMenuList = [" 님 환영합니다", "", "", "", "", "", "", "Logout"]
+            var username: String = session.objectForKey("USERNAME") as! String
+            sideMenuList = [
+                username + " 님 환영합니다",
+                "", "", "", "", "", "",
+                "Logout"]
         }
         else {
-            sideMenuList = ["", "", "", "", "", "", "", "Login or Register"]
+            sideMenuList = ["", "", "", "", "", "", "",
+                "Login or Register"]
         }
         
         
