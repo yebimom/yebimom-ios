@@ -24,20 +24,44 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
 
         let centerDetailOfCategoryURL = NSURL(string:"https://yebimom.com/api/centers/" + centerHashID!)
         var centerDetailOfCategoryJsonData = JSON(data: NSData(contentsOfURL: centerDetailOfCategoryURL!)!)
+        let centerName: String? = centerDetailOfCategoryJsonData["name"].string
         
         for (key: String, subJsonData: JSON)in centerDetailOfCategoryJsonData["facility_set"] {
             facilities.append(subJsonData.stringValue)
         }
-        centerNameLabel.text = centerDetailOfCategoryJsonData["name"].string
+        centerNameLabel.text = centerName
     
         facilityTableView.dataSource = self
         
         // Center location map using Google Map
         let latitude = centerDetailOfCategoryJsonData["latitude"].double
         let longitude = centerDetailOfCategoryJsonData["longitude"].double
+        let coordinate = CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!)
+        mapViewOutlet.camera = GMSCameraPosition.cameraWithTarget(coordinate, zoom: 16)
+        
+        var locationMarker = GMSMarker(position: coordinate)
+        locationMarker.snippet = centerName
+        locationMarker.appearAnimation = kGMSMarkerAnimationPop
+        locationMarker.map = mapViewOutlet
+        
+        /*
+        
+        let latitude = centerDetailOfCategoryJsonData["latitude"].double
+        let longitude = centerDetailOfCategoryJsonData["longitude"].double
         var camera = GMSCameraPosition.cameraWithLatitude(latitude!,
             longitude: longitude!, zoom: 16)
-        mapViewOutlet.camera = camera
+        
+        var mapView = GMSMapView.mapWithFrame(CGRectZero, camera:camera)
+        
+        var marker = GMSMarker()
+        marker.position = camera.target
+        marker.snippet = "Hello World"
+        marker.appearAnimation = kGMSMarkerAnimationPop
+        marker.map = mapView
+        */
+        //self.view = mapView
+        //mapViewOutlet = mapView
+        //mapViewOutlet.camera = camera
         //
     }
     
