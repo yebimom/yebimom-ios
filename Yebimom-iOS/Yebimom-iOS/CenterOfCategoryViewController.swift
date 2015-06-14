@@ -33,8 +33,10 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
         facilityTableView.dataSource = self
         
         // Center location map using Google Map
-        var camera = GMSCameraPosition.cameraWithLatitude(-33.86,
-            longitude: 151.20, zoom: 6)
+        let latitude = centerDetailOfCategoryJsonData["latitude"].double
+        let longitude = centerDetailOfCategoryJsonData["longitude"].double
+        var camera = GMSCameraPosition.cameraWithLatitude(latitude!,
+            longitude: longitude!, zoom: 16)
         mapViewOutlet.camera = camera
         //
     }
