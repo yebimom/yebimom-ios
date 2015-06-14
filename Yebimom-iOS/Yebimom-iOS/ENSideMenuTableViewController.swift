@@ -19,12 +19,17 @@ class ENSideMenuTableViewController: UITableViewController {
 
         
         var isLoggedIn: Bool = session.boolForKey("ISLOGGEDIN")
-        println(isLoggedIn)
+        // println(isLoggedIn)
         if isLoggedIn {
-            sideMenuList = ["", "", "", "", "", "", "", "Logout"]
+            var username: String = session.objectForKey("USERNAME") as! String
+            sideMenuList = [
+                username + " 님 환영합니다",
+                "", "", "", "", "", "",
+                "Logout"]
         }
         else {
-            sideMenuList = ["", "", "", "", "", "", "", "Login or Register"]
+            sideMenuList = ["", "", "", "", "", "", "",
+                "Login or Register"]
         }
         
         
@@ -63,8 +68,8 @@ class ENSideMenuTableViewController: UITableViewController {
         
         if (cell == nil) {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL")
-            cell!.backgroundColor = UIColor.clearColor()
-            cell!.textLabel?.textColor = UIColor.darkGrayColor()
+            cell!.backgroundColor = UIColor.whiteColor()
+            cell!.textLabel?.textColor = UIColor.blackColor()
             let selectedBackgroundView = UIView(frame: CGRectMake(0, 0, cell!.frame.size.width, cell!.frame.size.height))
             selectedBackgroundView.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.2)
             cell!.selectedBackgroundView = selectedBackgroundView
@@ -102,7 +107,7 @@ class ENSideMenuTableViewController: UITableViewController {
                     var session:NSUserDefaults = NSUserDefaults.standardUserDefaults()
                     session.removeObjectForKey("USERNAME")
                     session.setBool(false, forKey: "ISLOGGEDIN")
-                    //session.synchronize()
+                    session.synchronize()
                     storyBoardTransition("Main")
                 }
                 else {
