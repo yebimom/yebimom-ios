@@ -445,6 +445,9 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="centerNameLabel" destination="gtm-nA-lFH" id="EbL-fh-nWV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

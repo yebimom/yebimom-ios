@@ -7,13 +7,25 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class CenterSearchTableViewController: UITableViewController {
 
+    var centerNames = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationController?.navigationBarHidden = true
+        
+        //categories cell
+        let centersURL = NSURL(string:"https://yebimom.com/api/centers/")
+        var centersJsonData = JSON(data: NSData(contentsOfURL: centersURL!)!)
+        
+        for (key: String, subJsonData: JSON)in centersJsonData {
+            centerNames.append(subJsonData["name"].string!)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,14 +44,14 @@ class CenterSearchTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 1
+        return centerNames.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CenterSearchTableCell", forIndexPath: indexPath) as! CenterSearchTableViewCell
 
-        // Configure the cell...
+        cell.centerNameLabel.text = centerNames[indexPath.row]
 
         return cell
     }

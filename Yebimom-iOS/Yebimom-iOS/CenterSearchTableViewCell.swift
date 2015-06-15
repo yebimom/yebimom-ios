@@ -10,6 +10,7 @@ import UIKit
 
 class CenterSearchTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var centerNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
