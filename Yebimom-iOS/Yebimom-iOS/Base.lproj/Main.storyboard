@@ -230,7 +230,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Rpd-A8-cTg">
-                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="hbb-3P-57m"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="hbb-3P-57m">
+                            <connections>
+                                <action selector="search:" destination="eO0-mK-8cW" id="Q72-fH-JCU"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="icon_user_mother" id="ALe-Xo-dX7">
                             <connections>
                                 <action selector="sideMenuInfo:" destination="eO0-mK-8cW" id="WRa-X3-xhr"/>

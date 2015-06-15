@@ -79,9 +79,21 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         }
     }
     
+    @IBAction func search(sender: UIBarButtonItem) {
+        // storyBoardTransition("")
+    }
     @IBAction func sideMenuInfo(sender: UIBarButtonItem) {
         toggleSideMenuView()
     }
+    
+    func storyBoardTransition(storyBoardID: String) {
+        // Cannot change this method to "viewTransition", that occur some problems
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        var destViewController : UIViewController
+        destViewController = mainStoryboard.instantiateViewControllerWithIdentifier(storyBoardID) as! UIViewController
+        sideMenuController()?.setContentViewController(destViewController)
+    }
+
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
