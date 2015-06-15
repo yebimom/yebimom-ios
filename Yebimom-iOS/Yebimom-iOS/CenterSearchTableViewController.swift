@@ -5,11 +5,12 @@
 //  Created by wikibootup on 6/15/15.
 //  Copyright (c) 2015 wikibootup. All rights reserved.
 //
+//  Highly referenced by http:// www.raywenderlich.com/76519/add-table-view-search-swift
 
 import UIKit
 import SwiftyJSON
 
-class CenterSearchTableViewController: UITableViewController {
+class CenterSearchTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
 
     var centerNames = [String]()
     
