@@ -80,7 +80,7 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     }
     
     @IBAction func search(sender: UIBarButtonItem) {
-        // storyBoardTransition("")
+        storyBoardTransition("SearchPage")
     }
     @IBAction func sideMenuInfo(sender: UIBarButtonItem) {
         toggleSideMenuView()
