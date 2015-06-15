@@ -13,9 +13,6 @@
 		D97520A01B2DDD3E0026D85F /* AF+ImageVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D975209E1B2DDD3E0026D85F /* AF+ImageVIew+Extension.swift */; };
 		D97520A11B2DE4590026D85F /* AF+Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D975209D1B2DDD3E0026D85F /* AF+Image+Extension.swift */; };
 		D97520A21B2DE45B0026D85F /* AF+ImageVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D975209E1B2DDD3E0026D85F /* AF+ImageVIew+Extension.swift */; };
-		D97520A61B2E962A0026D85F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97520A31B2E962A0026D85F /* Bolts.framework */; };
-		D97520A71B2E962A0026D85F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97520A41B2E962A0026D85F /* Parse.framework */; };
-		D97520A81B2E962A0026D85F /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97520A51B2E962A0026D85F /* ParseCrashReporting.framework */; };
 		D97520AA1B2E964E0026D85F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97520A91B2E964E0026D85F /* AudioToolbox.framework */; };
 		D97520AC1B2E96B80026D85F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97520AB1B2E96B80026D85F /* CFNetwork.framework */; };
 		D97520AE1B2E96C00026D85F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97520AD1B2E96C00026D85F /* CoreGraphics.framework */; };
@@ -32,6 +29,9 @@
 		D97520C41B2E97560026D85F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97520C31B2E97560026D85F /* Social.framework */; };
 		D97520C81B2E98E20026D85F /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = D97520C71B2E98E20026D85F /* keys.plist */; };
 		D97520C91B2E98E20026D85F /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = D97520C71B2E98E20026D85F /* keys.plist */; };
+		D97520CB1B2EA7C60026D85F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97520A31B2E962A0026D85F /* Bolts.framework */; };
+		D97520CC1B2EA7C60026D85F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97520A41B2E962A0026D85F /* Parse.framework */; };
+		D97520CD1B2EA7C60026D85F /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97520A51B2E962A0026D85F /* ParseCrashReporting.framework */; };
 		D998E2F61B1EC8E000E4AB0B /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F41B1EC8E000E4AB0B /* ENSideMenu.swift */; };
 		D998E2F71B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F51B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift */; };
 		D998E2F91B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F81B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift */; };
@@ -87,9 +87,9 @@
 		57266FA5BD13D0F98EC891BA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D975209D1B2DDD3E0026D85F /* AF+Image+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AF+Image+Extension.swift"; sourceTree = "<group>"; };
 		D975209E1B2DDD3E0026D85F /* AF+ImageVIew+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AF+ImageVIew+Extension.swift"; sourceTree = "<group>"; };
-		D97520A31B2E962A0026D85F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../../../Desktop/parse-library-1.7.4/Bolts.framework"; sourceTree = "<group>"; };
-		D97520A41B2E962A0026D85F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../../../../Desktop/parse-library-1.7.4/Parse.framework"; sourceTree = "<group>"; };
-		D97520A51B2E962A0026D85F /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "../../../../../../Desktop/parse-library-1.7.4/ParseCrashReporting.framework"; sourceTree = "<group>"; };
+		D97520A31B2E962A0026D85F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../../apps/parse-library-1.7.4/Bolts.framework"; sourceTree = "<group>"; };
+		D97520A41B2E962A0026D85F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../../../apps/parse-library-1.7.4/Parse.framework"; sourceTree = "<group>"; };
+		D97520A51B2E962A0026D85F /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "../../../../../apps/parse-library-1.7.4/ParseCrashReporting.framework"; sourceTree = "<group>"; };
 		D97520A91B2E964E0026D85F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D97520AB1B2E96B80026D85F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D97520AD1B2E96C00026D85F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -155,9 +155,9 @@
 				D97520AE1B2E96C00026D85F /* CoreGraphics.framework in Frameworks */,
 				D97520AC1B2E96B80026D85F /* CFNetwork.framework in Frameworks */,
 				D97520AA1B2E964E0026D85F /* AudioToolbox.framework in Frameworks */,
-				D97520A61B2E962A0026D85F /* Bolts.framework in Frameworks */,
-				D97520A71B2E962A0026D85F /* Parse.framework in Frameworks */,
-				D97520A81B2E962A0026D85F /* ParseCrashReporting.framework in Frameworks */,
+				D97520CB1B2EA7C60026D85F /* Bolts.framework in Frameworks */,
+				D97520CC1B2EA7C60026D85F /* Parse.framework in Frameworks */,
+				D97520CD1B2EA7C60026D85F /* ParseCrashReporting.framework in Frameworks */,
 				57A8FE17F112A4A5BE67C586 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -783,6 +783,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wikibootup/Desktop/parse-library-1.7.4",
+					"/Users/wikibootup/Documents/apps/parse-library-1.7.4",
 				);
 				INFOPLIST_FILE = "Yebimom-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -799,6 +800,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wikibootup/Desktop/parse-library-1.7.4",
+					"/Users/wikibootup/Documents/apps/parse-library-1.7.4",
 				);
 				INFOPLIST_FILE = "Yebimom-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
