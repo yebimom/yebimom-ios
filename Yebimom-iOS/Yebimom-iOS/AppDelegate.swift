@@ -7,7 +7,11 @@
 //
 
 import UIKit
+
 import GoogleMaps
+
+import Parse
+import ParseCrashReporting
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        // Google map
         var keys: NSDictionary?
         if NSBundle.mainBundle().pathForResource("keys", ofType: "plist") != nil {
             let path = NSBundle.mainBundle().pathForResource("keys", ofType: "plist")
@@ -26,6 +30,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let GOOGLE_API_CLIENT_ID = keys?["GOOGLE_API_CLIENT_ID"] as? String
 
         GMSServices.provideAPIKey(GOOGLE_MAP_API_KEY)
+        
+        
+        // Parse
+        let PARSE_APPLICATION_ID = keys?["PARSE_APPLICATION_ID"] as? String
+        let PARSE_CLIENT_KEY = keys?["PARSE_CLIENT_KEY"] as? String
+        ParseCrashReporting.enable()
+        Parse.setApplicationId(PARSE_APPLICATION_ID!,
+            clientKey: PARSE_CLIENT_KEY!)
+        
         return true
     }
 
