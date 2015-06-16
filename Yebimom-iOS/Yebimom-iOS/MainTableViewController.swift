@@ -57,7 +57,14 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         var eventJsonData = JSON(data: NSData(contentsOfURL: eventURL!)!)
         numOfEvents = eventJsonData.count
         
+        // Navigation bar setting
+        setCustomNavigationBar()
+        
         removeAllOverlays()
+    }
+    
+    func setCustomNavigationBar() {
+        navigationController!.navigationBar.barTintColor = UIColor.whiteColor()
     }
     
     override func hideSideMenuView() {
@@ -79,8 +86,19 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         }
     }
     
+    @IBAction func search(sender: UIBarButtonItem) {
+        storyBoardTransition("SearchPage")
+    }
     @IBAction func sideMenuInfo(sender: UIBarButtonItem) {
         toggleSideMenuView()
+    }
+    
+    func storyBoardTransition(storyBoardID: String) {
+        // Cannot change this method to "viewTransition", that occur some problems
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        var destViewController : UIViewController
+        destViewController = mainStoryboard.instantiateViewControllerWithIdentifier(storyBoardID) as! UIViewController
+        sideMenuController()?.setContentViewController(destViewController)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -140,9 +158,6 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
                 }
                 */
                 cell.categoryImage.alpha = 0.2
-                
-
-
                 
                 return cell
             default:

@@ -32,6 +32,8 @@
 		D97520CB1B2EA7C60026D85F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97520A31B2E962A0026D85F /* Bolts.framework */; };
 		D97520CC1B2EA7C60026D85F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97520A41B2E962A0026D85F /* Parse.framework */; };
 		D97520CD1B2EA7C60026D85F /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97520A51B2E962A0026D85F /* ParseCrashReporting.framework */; };
+		D97520D61B2EC00B0026D85F /* CenterSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97520D51B2EC00B0026D85F /* CenterSearchTableViewController.swift */; };
+		D97520D81B2ED5230026D85F /* CenterSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97520D71B2ED5230026D85F /* CenterSearchTableViewCell.swift */; };
 		D998E2F61B1EC8E000E4AB0B /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F41B1EC8E000E4AB0B /* ENSideMenu.swift */; };
 		D998E2F71B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F51B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift */; };
 		D998E2F91B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F81B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift */; };
@@ -105,6 +107,8 @@
 		D97520C11B2E97500026D85F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		D97520C31B2E97560026D85F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		D97520C71B2E98E20026D85F /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		D97520D51B2EC00B0026D85F /* CenterSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterSearchTableViewController.swift; sourceTree = "<group>"; };
+		D97520D71B2ED5230026D85F /* CenterSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterSearchTableViewCell.swift; sourceTree = "<group>"; };
 		D998E2F41B1EC8E000E4AB0B /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
 		D998E2F51B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
 		D998E2F81B1EC99400E4AB0B /* ENSwiftSideMenuNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSwiftSideMenuNavViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +220,14 @@
 			path = "AF+Image+Helper";
 			sourceTree = "<group>";
 		};
+		D97520CE1B2EBBE40026D85F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D97520D51B2EC00B0026D85F /* CenterSearchTableViewController.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
 		D998E2F21B1EC89B00E4AB0B /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +250,7 @@
 		D998E2FA1B1EC9A200E4AB0B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D97520CE1B2EBBE40026D85F /* Search */,
 				D9B745891B234F370080645D /* Detail */,
 				D9B745881B230A650080645D /* User */,
 				D9B745871B230A560080645D /* Main */,
@@ -281,6 +294,7 @@
 				D9E659941B21E962001CA293 /* EventPageTableViewCell.swift */,
 				D9B745841B22E9850080645D /* CategoryPageTableViewCell.swift */,
 				D9C848971B29A473006FCA39 /* FacilityTableViewCell.swift */,
+				D97520D71B2ED5230026D85F /* CenterSearchTableViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -631,6 +645,8 @@
 				D9B4654E1B27E2F4001DE177 /* LoginOrRegisterViewController.swift in Sources */,
 				D9B7458D1B234FC50080645D /* CenterOfCategoryViewController.swift in Sources */,
 				D998E3841B21B65000E4AB0B /* EventTableViewCell.swift in Sources */,
+				D97520D81B2ED5230026D85F /* CenterSearchTableViewCell.swift in Sources */,
+				D97520D61B2EC00B0026D85F /* CenterSearchTableViewController.swift in Sources */,
 				D998E33F1B1F4DB500E4AB0B /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
