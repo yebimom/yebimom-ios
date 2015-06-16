@@ -57,7 +57,14 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         var eventJsonData = JSON(data: NSData(contentsOfURL: eventURL!)!)
         numOfEvents = eventJsonData.count
         
+        // Navigation bar setting
+        setCustomNavigationBar()
+        
         removeAllOverlays()
+    }
+    
+    func setCustomNavigationBar() {
+        navigationController!.navigationBar.barTintColor = UIColor.whiteColor()
     }
     
     override func hideSideMenuView() {
@@ -93,7 +100,6 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         destViewController = mainStoryboard.instantiateViewControllerWithIdentifier(storyBoardID) as! UIViewController
         sideMenuController()?.setContentViewController(destViewController)
     }
-
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
@@ -152,9 +158,6 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
                 }
                 */
                 cell.categoryImage.alpha = 0.2
-                
-
-
                 
                 return cell
             default:

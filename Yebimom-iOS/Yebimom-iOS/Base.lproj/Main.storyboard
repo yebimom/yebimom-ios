@@ -402,9 +402,6 @@
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="MJ9-Zg-OHs" id="Xsz-7h-J5K"/>
-                            </connections>
                         </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CenterSearchTableCell" rowHeight="60" id="cY9-ee-QzM" customClass="CenterSearchTableViewCell" customModule="Yebimom_iOS" customModuleProvider="target">
@@ -463,7 +460,6 @@
                 <searchDisplayController id="mH7-w0-T10">
                     <connections>
                         <outlet property="delegate" destination="MJ9-Zg-OHs" id="hh9-CB-AhI"/>
-                        <outlet property="searchBar" destination="BgY-j2-deW" id="gl1-DE-6m8"/>
                         <outlet property="searchContentsController" destination="MJ9-Zg-OHs" id="iLJ-T6-TRy"/>
                         <outlet property="searchResultsDataSource" destination="MJ9-Zg-OHs" id="pdF-0P-IZI"/>
                         <outlet property="searchResultsDelegate" destination="MJ9-Zg-OHs" id="WC6-ak-H7I"/>

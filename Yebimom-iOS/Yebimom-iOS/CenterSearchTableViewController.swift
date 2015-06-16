@@ -17,7 +17,9 @@ class CenterSearchTableViewController: UITableViewController, UISearchBarDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationController?.navigationBarHidden = true
+        let backMainButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "backMain:")
+        backMainButton.image = UIImage(named: "icon_back")
+        navigationItem.leftBarButtonItem = backMainButton
         
         //categories cell
         let centersURL = NSURL(string:"https://yebimom.com/api/centers/")
@@ -27,6 +29,17 @@ class CenterSearchTableViewController: UITableViewController, UISearchBarDelegat
             centerNames.append(subJsonData["name"].string!)
         }
         
+    }
+    
+    func viewTransition(storyboardID: String) {
+        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardID) as! UIViewController
+        
+        self.presentViewController(destViewController, animated: false, completion: nil)
+    }
+    
+    func backMain(sender: UIBarButtonItem) {
+        navigationController?.popViewControllerAnimated(true)
+        viewTransition("SideMenuNavView")
     }
 
     override func didReceiveMemoryWarning() {
