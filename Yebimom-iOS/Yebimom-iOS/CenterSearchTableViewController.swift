@@ -10,18 +10,16 @@
 import UIKit
 import SwiftyJSON
 
-class CenterSearchTableViewController: UITableViewController, UISearchBarDelegate {
+class CenterSearchTableViewController: UITableViewController, UISearchResultsUpdating {
 
     var centerNames = [String]()
-    var searchActive : Bool = false
-    var filtered:[String] = []
+    var filteredTableData = [String]()
+    var resultSearchController = UISearchController()
     
     @IBOutlet weak var centerSearchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        centerSearchBar.delegate = self
         
         let backMainButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "backMain:")
         backMainButton.image = UIImage(named: "icon_back")
@@ -35,36 +33,23 @@ class CenterSearchTableViewController: UITableViewController, UISearchBarDelegat
             centerNames.append(subJsonData["name"].string!)
         }
         
-    }
-    
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
-        searchActive = true;
-    }
-    
-    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
-        searchActive = false;
-    }
-    
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-        searchActive = false;
-    }
-    
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        searchActive = false;
-    }
-    
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         
-        filtered = centerNames.filter({ (text) -> Bool in
-            let tmp: NSString = text
-            let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
-            return range.location != NSNotFound
-        })
-        if(filtered.count == 0){
-            searchActive = false;
-        } else {
-            searchActive = true;
-        }
+        
+        resultSearchController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.dimsBackgroundDuringPresentation = false
+            controller.searchBar.sizeToFit()
+            
+            // Custom icon
+            //controller.searchBar.positionAdjustmentForSearchBarIcon(<#icon: UISearchBarIcon#>)
+            controller.searchBar.placeholder = "산후조리원 이름으로 검색하기"
+            self.tableView.tableHeaderView = controller.searchBar
+            
+            return controller
+        })()
+        
+        // Reload the table
         self.tableView.reloadData()
     }
     
@@ -78,9 +63,16 @@ class CenterSearchTableViewController: UITableViewController, UISearchBarDelegat
         navigationController?.popViewControllerAnimated(true)
         viewTransition("SideMenuNavView")
     }
-
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        centerSearchBar.endEditing(true)
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController)
+    {
+        filteredTableData.removeAll(keepCapacity: false)
+        
+        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text)
+        let array = (centerNames as NSArray).filteredArrayUsingPredicate(searchPredicate)
+        filteredTableData = array as! [String]
+        
+        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -100,22 +92,35 @@ class CenterSearchTableViewController: UITableViewController, UISearchBarDelegat
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         // return centerNames.count
-        if searchActive {
-            return filtered.count
+        if resultSearchController.active {
+            return filteredTableData.count
         }
-        return centerNames.count;
+        else {
+            return 0
+            //return centerNames.count
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CenterSearchTableCell", forIndexPath: indexPath) as! CenterSearchTableViewCell
 
+        if (self.resultSearchController.active) {
+            cell.centerNameLabel?.text = filteredTableData[indexPath.row]
+            return cell
+        }
+        else {
+            cell.centerNameLabel?.text = centerNames[indexPath.row]
+            return cell
+        }
+        
+        /*
         if searchActive {
             cell.centerNameLabel.text = filtered[indexPath.row]
         }
         else {
             cell.centerNameLabel.text = centerNames[indexPath.row];
         }
-
+        */
         return cell
     }
     
