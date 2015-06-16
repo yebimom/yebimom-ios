@@ -10,13 +10,19 @@
 import UIKit
 import SwiftyJSON
 
-class CenterSearchTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
+class CenterSearchTableViewController: UITableViewController, UISearchBarDelegate {
 
     var centerNames = [String]()
+    var searchActive : Bool = false
+    var filtered:[String] = []
+    
+    @IBOutlet weak var centerSearchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        centerSearchBar.delegate = self
+        
         let backMainButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "backMain:")
         backMainButton.image = UIImage(named: "icon_back")
         navigationItem.leftBarButtonItem = backMainButton
@@ -31,6 +37,37 @@ class CenterSearchTableViewController: UITableViewController, UISearchBarDelegat
         
     }
     
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchActive = true;
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filtered = centerNames.filter({ (text) -> Bool in
+            let tmp: NSString = text
+            let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            return range.location != NSNotFound
+        })
+        if(filtered.count == 0){
+            searchActive = false;
+        } else {
+            searchActive = true;
+        }
+        self.tableView.reloadData()
+    }
+    
     func viewTransition(storyboardID: String) {
         var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardID) as! UIViewController
         
@@ -42,6 +79,10 @@ class CenterSearchTableViewController: UITableViewController, UISearchBarDelegat
         viewTransition("SideMenuNavView")
     }
 
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        centerSearchBar.endEditing(true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -58,14 +99,22 @@ class CenterSearchTableViewController: UITableViewController, UISearchBarDelegat
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return centerNames.count
+        // return centerNames.count
+        if searchActive {
+            return filtered.count
+        }
+        return centerNames.count;
     }
-
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CenterSearchTableCell", forIndexPath: indexPath) as! CenterSearchTableViewCell
 
-        cell.centerNameLabel.text = centerNames[indexPath.row]
+        if searchActive {
+            cell.centerNameLabel.text = filtered[indexPath.row]
+        }
+        else {
+            cell.centerNameLabel.text = centerNames[indexPath.row];
+        }
 
         return cell
     }

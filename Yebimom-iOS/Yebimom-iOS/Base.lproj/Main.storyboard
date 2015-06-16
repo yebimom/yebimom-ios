@@ -453,6 +453,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="centerSearchBar" destination="BgY-j2-deW" id="dWA-hM-U0f"/>
                         <outlet property="searchDisplayController" destination="mH7-w0-T10" id="4tC-vI-uyB"/>
                     </connections>
                 </tableViewController>
