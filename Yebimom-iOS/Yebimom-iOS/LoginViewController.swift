@@ -115,7 +115,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             var alertView:UIAlertView = UIAlertView()
             alertView.title = "로그인 실패"
-            alertView.message = "Please enter Username and Password"
+            alertView.message = "사용자 명 또는 비밀번호를 입력해주세요"
             alertView.delegate = self
             alertView.addButtonWithTitle("확인")
             alertView.show()
@@ -187,7 +187,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             alertView.message = reponseError?.localizedDescription
         }
         else {
-            alertView.message = "Connection Failed"
+            alertView.message = "연결 오류"
         }
         alertView.delegate = self
         alertView.addButtonWithTitle("확인")
