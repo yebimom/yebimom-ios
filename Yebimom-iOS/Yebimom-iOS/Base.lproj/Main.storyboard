@@ -236,12 +236,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Rpd-A8-cTg">
-                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="hbb-3P-57m">
+                        <barButtonItem key="leftBarButtonItem" image="icon_search" id="hbb-3P-57m">
+                            <color key="tintColor" red="0.96039414405822754" green="0.40087046073227905" blue="0.65101101909709058" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="search:" destination="eO0-mK-8cW" id="Q72-fH-JCU"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="icon_user_mother" id="ALe-Xo-dX7">
+                            <color key="tintColor" red="0.96039414410000001" green="0.40087046069999999" blue="0.65101101910000003" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="sideMenuInfo:" destination="eO0-mK-8cW" id="WRa-X3-xhr"/>
                             </connections>
@@ -1657,6 +1659,7 @@
     </scenes>
     <resources>
         <image name="icon_back" width="16" height="16"/>
+        <image name="icon_search" width="16" height="16"/>
         <image name="icon_user_mother" width="16" height="16"/>
         <image name="login_facebook" width="502" height="102"/>
     </resources>
