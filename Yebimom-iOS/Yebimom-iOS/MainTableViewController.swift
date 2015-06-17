@@ -65,6 +65,10 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     
     func setCustomNavigationBar() {
         navigationController!.navigationBar.barTintColor = UIColor.whiteColor()
+
+        let logo = UIImage(named: "menubar_logo.png")
+        let imageView = UIImageView(image: logo)
+        self.navigationItem.titleView = imageView
     }
     
     override func hideSideMenuView() {
