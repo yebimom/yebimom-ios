@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import DynamicColor
 
 class LoginOrRegisterViewController: UIViewController {
 
+    @IBOutlet weak var navBar: UINavigationBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationController?.navigationBarHidden = true
+        let backMainButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "backMain:")
+        backMainButton.image = UIImage(named: "icon_back")
+        backMainButton.tintColor = UIColor(hex: 0xc0392b)
+        navigationItem.leftBarButtonItem = backMainButton
+        applyBackgroundImageSizeToFit("main_0.png")
     }
 
     @IBAction func showMainView(sender: UIBarButtonItem) {
@@ -28,10 +35,23 @@ class LoginOrRegisterViewController: UIViewController {
         storyBoardTransition("LoginBoard")
     }
     
+    func backMain(sender: UIBarButtonItem) {
+        navigationController?.popViewControllerAnimated(true)
+        viewTransition("SideMenuNavView")
+    }
+    
     func viewTransition(storyboardID: String) {
         var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardID) as! UIViewController
         
         self.presentViewController(destViewController, animated: false, completion: nil)
+    }
+    
+    func applyBackgroundImageSizeToFit(fileName: String) {
+        UIGraphicsBeginImageContext(view.frame.size)
+        UIImage(named: fileName)?.drawInRect(view.bounds)
+        var backGroundImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        view.backgroundColor = UIColor(patternImage: backGroundImage)
     }
     
     func storyBoardTransition(storyBoardID: String) {
