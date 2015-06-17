@@ -73,6 +73,7 @@
 		D9E659931B21E93B001CA293 /* EventPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E659921B21E93B001CA293 /* EventPageTableViewController.swift */; };
 		D9E659951B21E962001CA293 /* EventPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E659941B21E962001CA293 /* EventPageTableViewCell.swift */; };
 		D9F2EDFF1B2B2E800010EC8E /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9F2EDFE1B2B2E800010EC8E /* keys.plist */; };
+		D9FAF3001B313FCF0077A0DE /* BMJUA.otf in Resources */ = {isa = PBXBuildFile; fileRef = D9FAF2FF1B312CA70077A0DE /* BMJUA.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -508,6 +509,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9FAF3001B313FCF0077A0DE /* BMJUA.otf in Resources */,
 				D97520C81B2E98E20026D85F /* keys.plist in Resources */,
 				D9F2EDFF1B2B2E800010EC8E /* keys.plist in Resources */,
 				D9A331F31B1D74A8005E2FD1 /* Main.storyboard in Resources */,
