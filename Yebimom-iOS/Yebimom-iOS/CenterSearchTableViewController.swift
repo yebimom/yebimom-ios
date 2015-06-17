@@ -33,8 +33,6 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
             centerNames.append(subJsonData["name"].string!)
         }
         
-        
-        
         resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
             controller.searchResultsUpdater = self

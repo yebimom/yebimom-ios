@@ -37,9 +37,19 @@ class CategoryPageTableViewController: UITableViewController {
             centerHashID.append(subJsonData["hash_id"].string!)
         }
         
+        designCategoryPageNavigationBar()
         
         self.removeAllOverlays()
     }
+    
+    func designCategoryPageNavigationBar() {
+        navigationController!.navigationBar.barTintColor = UIColor.whiteColor()
+
+        let logo = UIImage(named: "menubar_logo.png")
+        let imageView = UIImageView(image: logo)
+        navigationItem.titleView = imageView
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

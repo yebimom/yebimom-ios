@@ -21,6 +21,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        designLoginNavigationBar()
+        applyBackgroundImageSizeToFit("main_0.png")
     }
 
     @IBAction func showMainView(sender: UIBarButtonItem) {
@@ -79,6 +82,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 connectionFailure(reponseError)
             }
         }
+    }    
+    
+    func applyBackgroundImageSizeToFit(fileName: String) {
+        UIGraphicsBeginImageContext(view.frame.size)
+        UIImage(named: fileName)?.drawInRect(view.bounds)
+        var backGroundImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        view.backgroundColor = UIColor(patternImage: backGroundImage)
+    }
+
+    func designLoginNavigationBar() {
+        navigationController?.navigationBar.hidden = true
     }
     
     func viewTransition(storyboardID: String) {
