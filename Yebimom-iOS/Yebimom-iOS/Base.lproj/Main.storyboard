@@ -318,7 +318,7 @@
                                     <action selector="showLoginView:" destination="YUm-T2-MrP" eventType="touchUpInside" id="yXA-Pd-EZR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chy-rW-saS">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chy-rW-saS">
                                 <rect key="frame" x="226" y="355" width="148" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="182" id="ZJg-17-gfh">
@@ -392,12 +392,13 @@
                                 <exclude reference="bto-3Z-Hwy"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="TJI-qM-fN6"/>
-                                <exclude reference="szL-1G-rSK"/>
-                                <exclude reference="VeU-Ze-wft"/>
                                 <exclude reference="62Q-6z-JpU"/>
                                 <exclude reference="IDv-Zc-Bcq"/>
                                 <exclude reference="ki9-pt-9mE"/>
+                                <exclude reference="ee7-uT-5Qg"/>
+                                <exclude reference="TJI-qM-fN6"/>
+                                <exclude reference="szL-1G-rSK"/>
+                                <exclude reference="VeU-Ze-wft"/>
                                 <exclude reference="35n-cz-MVb"/>
                                 <exclude reference="9m4-Ts-2ZM"/>
                                 <exclude reference="FSE-h0-OLk"/>
@@ -405,7 +406,6 @@
                                 <exclude reference="mwk-LN-jyd"/>
                                 <exclude reference="sPx-XG-Zg9"/>
                                 <exclude reference="xSA-5t-Y6f"/>
-                                <exclude reference="ee7-uT-5Qg"/>
                                 <exclude reference="Dqn-P6-v6k"/>
                                 <exclude reference="yA0-DV-SpH"/>
                             </mask>
@@ -416,12 +416,13 @@
                                 <include reference="bto-3Z-Hwy"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="TJI-qM-fN6"/>
-                                <include reference="szL-1G-rSK"/>
-                                <include reference="VeU-Ze-wft"/>
                                 <include reference="62Q-6z-JpU"/>
                                 <include reference="IDv-Zc-Bcq"/>
                                 <include reference="ki9-pt-9mE"/>
+                                <include reference="ee7-uT-5Qg"/>
+                                <include reference="TJI-qM-fN6"/>
+                                <include reference="szL-1G-rSK"/>
+                                <include reference="VeU-Ze-wft"/>
                                 <include reference="35n-cz-MVb"/>
                                 <exclude reference="9m4-Ts-2ZM"/>
                                 <include reference="FSE-h0-OLk"/>
@@ -429,7 +430,6 @@
                                 <include reference="mwk-LN-jyd"/>
                                 <include reference="sPx-XG-Zg9"/>
                                 <exclude reference="xSA-5t-Y6f"/>
-                                <include reference="ee7-uT-5Qg"/>
                                 <include reference="Dqn-P6-v6k"/>
                                 <include reference="yA0-DV-SpH"/>
                             </mask>
