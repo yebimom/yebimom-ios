@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DynamicColor
 
 class LoginOrRegisterViewController: UIViewController {
 
@@ -17,6 +18,7 @@ class LoginOrRegisterViewController: UIViewController {
 
         let backMainButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "backMain:")
         backMainButton.image = UIImage(named: "icon_back")
+        backMainButton.tintColor = UIColor(hex: 0xc0392b)
         navigationItem.leftBarButtonItem = backMainButton
         applyBackgroundImageSizeToFit("main_0.png")
     }
