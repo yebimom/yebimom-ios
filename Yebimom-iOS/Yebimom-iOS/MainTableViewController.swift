@@ -58,17 +58,17 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         numOfEvents = eventJsonData.count
         
         // Navigation bar setting
-        setCustomNavigationBar()
+        designMainNavigationBar()
         
         removeAllOverlays()
     }
     
-    func setCustomNavigationBar() {
+    func designMainNavigationBar() {
         navigationController!.navigationBar.barTintColor = UIColor.whiteColor()
 
         let logo = UIImage(named: "menubar_logo.png")
         let imageView = UIImageView(image: logo)
-        self.navigationItem.titleView = imageView
+        navigationItem.titleView = imageView
     }
     
     override func hideSideMenuView() {

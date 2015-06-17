@@ -16,7 +16,8 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        designSignUpNavigationBar()
+        applyBackgroundImageSizeToFit("main_0.png")
     }
     
     @IBAction func showMainView(sender: UIBarButtonItem) {
@@ -38,6 +39,18 @@ class SignupViewController: UIViewController {
     }
 
     @IBAction func signupTry(sender: UIButton) {
+    }
+    
+    func designSignUpNavigationBar() {
+        navigationController?.navigationBar.hidden = true
+    }
+    
+    func applyBackgroundImageSizeToFit(fileName: String) {
+        UIGraphicsBeginImageContext(view.frame.size)
+        UIImage(named: fileName)?.drawInRect(view.bounds)
+        var backGroundImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        view.backgroundColor = UIColor(patternImage: backGroundImage)
     }
     
     func viewTransition(storyboardID: String) {

@@ -16,10 +16,7 @@ class LoginOrRegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let backMainButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "backMain:")
-        backMainButton.image = UIImage(named: "icon_back")
-        backMainButton.tintColor = UIColor(hex: 0xc0392b)
-        navigationItem.leftBarButtonItem = backMainButton
+        designLoginOrRegisterNavigationBar()
         applyBackgroundImageSizeToFit("main_0.png")
     }
 
@@ -33,6 +30,20 @@ class LoginOrRegisterViewController: UIViewController {
     
     @IBAction func showLoginView(sender: UIButton) {
         storyBoardTransition("LoginBoard")
+    }
+    
+    func designLoginOrRegisterNavigationBar() {
+        navigationController?.navigationBar.hidden = true
+        /*
+        let backMainButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "backMain:")
+        backMainButton.image = UIImage(named: "icon_back")
+        backMainButton.tintColor = UIColor(hex: 0xc0392b)
+        navigationItem.leftBarButtonItem = backMainButton
+
+        let logo = UIImage(named: "menubar_logo.png")
+        let imageView = UIImageView(image: logo)
+        navigationItem.titleView = imageView
+        */
     }
     
     func backMain(sender: UIBarButtonItem) {
