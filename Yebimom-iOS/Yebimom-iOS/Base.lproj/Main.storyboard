@@ -5,6 +5,12 @@
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="BMJUA.otf">
+            <string>BMJUAOTF</string>
+            <string>BMJUAOTF</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Main Table View Controller-->
         <scene sceneID="1d2-fN-I90">
@@ -268,7 +274,7 @@
                                     </constraint>
                                     <constraint firstAttribute="height" constant="30" id="ZXR-Yi-2Jo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="BMJUAOTF" family="BM JUA_OTF" pointSize="17"/>
                                 <state key="normal" title="회원가입">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -296,7 +302,7 @@
                                     <constraint firstAttribute="width" constant="45" id="9u5-bi-o4q"/>
                                     <constraint firstAttribute="height" constant="30" id="h6p-9n-p4v"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="BMJUAOTF" family="BM JUA_OTF" pointSize="17"/>
                                 <state key="normal" title="로그인">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -328,7 +334,7 @@
                                         <variation key="widthClass=compact" constant="35"/>
                                     </constraint>
                                 </constraints>
-                                <state key="normal" title="페이스북으로 로그인하기" image="login_facebook">
+                                <state key="normal" image="login_facebook">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">

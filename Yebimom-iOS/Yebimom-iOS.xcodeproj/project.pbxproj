@@ -73,6 +73,7 @@
 		D9E659931B21E93B001CA293 /* EventPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E659921B21E93B001CA293 /* EventPageTableViewController.swift */; };
 		D9E659951B21E962001CA293 /* EventPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E659941B21E962001CA293 /* EventPageTableViewCell.swift */; };
 		D9F2EDFF1B2B2E800010EC8E /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9F2EDFE1B2B2E800010EC8E /* keys.plist */; };
+		D9FAF3001B313FCF0077A0DE /* BMJUA.otf in Resources */ = {isa = PBXBuildFile; fileRef = D9FAF2FF1B312CA70077A0DE /* BMJUA.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		D9E659921B21E93B001CA293 /* EventPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageTableViewController.swift; sourceTree = "<group>"; };
 		D9E659941B21E962001CA293 /* EventPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageTableViewCell.swift; sourceTree = "<group>"; };
 		D9F2EDFE1B2B2E800010EC8E /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		D9FAF2FF1B312CA70077A0DE /* BMJUA.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMJUA.otf; sourceTree = "<group>"; };
 		EE85F1E416213D26275F6D1E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F18C3D6DDBC750FBE81DF760 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -343,6 +345,7 @@
 		D9A331EB1B1D74A8005E2FD1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D9FAF2FE1B312C9E0077A0DE /* Fonts */,
 				D9A331EC1B1D74A8005E2FD1 /* Info.plist */,
 				D9F2EDFE1B2B2E800010EC8E /* keys.plist */,
 			);
@@ -409,6 +412,14 @@
 				D9CE3D2F1B29F1AF00227E7F /* MainViewTest.swift */,
 			);
 			name = MainView;
+			sourceTree = "<group>";
+		};
+		D9FAF2FE1B312C9E0077A0DE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D9FAF2FF1B312CA70077A0DE /* BMJUA.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,6 +509,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9FAF3001B313FCF0077A0DE /* BMJUA.otf in Resources */,
 				D97520C81B2E98E20026D85F /* keys.plist in Resources */,
 				D9F2EDFF1B2B2E800010EC8E /* keys.plist in Resources */,
 				D9A331F31B1D74A8005E2FD1 /* Main.storyboard in Resources */,
