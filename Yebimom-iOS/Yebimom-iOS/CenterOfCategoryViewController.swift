@@ -16,24 +16,36 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
     var facilities = [String]()
     
     @IBOutlet weak var facilityTableView: UITableView!
+    
     @IBOutlet weak var centerNameLabel: UILabel!
     @IBOutlet weak var centerAddressLabel: UILabel!
     @IBOutlet weak var centerImage: UIImageView!
+    
     @IBOutlet weak var mapViewOutlet: GMSMapView!
+    
+    @IBOutlet weak var detailAddressLabel: UILabel!
+    @IBOutlet weak var datailContactNumberLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let centerDetailOfCategoryURL = NSURL(string:"https://yebimom.com/api/centers/" + centerHashID!)
         var centerDetailOfCategoryJsonData = JSON(data: NSData(contentsOfURL: centerDetailOfCategoryURL!)!)
+        
+        // Center Info
         let centerName: String? = centerDetailOfCategoryJsonData["name"].string
-        let centerImageURL = centerDetailOfCategoryJsonData["main_image_url"].string
+        let centerAddress: String? = centerDetailOfCategoryJsonData["address"].stringValue
+        let centerImageURL: String? = centerDetailOfCategoryJsonData["main_image_url"].stringValue
+        let centerContactNumber: String? = centerDetailOfCategoryJsonData["phone"].stringValue
 
         for (key: String, subJsonData: JSON)in centerDetailOfCategoryJsonData["facility_set"] {
             facilities.append(subJsonData.stringValue)
         }
+        
+        
+        // Center Basic info view
         centerNameLabel.text = centerName
-        centerAddressLabel.text = centerDetailOfCategoryJsonData["address"].stringValue
+        centerAddressLabel.text = centerAddress
         centerImage.imageFromURL(centerImageURL!, placeholder: UIImage(), fadeIn: true) {
             (image: UIImage?) in
             if image != nil {
@@ -55,6 +67,10 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
         locationMarker.map = mapViewOutlet
         
         
+        // Detail
+        detailAddressLabel.text = centerAddress
+        datailContactNumberLabel.text = centerContactNumber
+        
         designCenterDetailNavigationBar()
     }
     
@@ -72,6 +88,8 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "FacilityTableCell")
+        
+        cell.backgroundColor = UIColor.clearColor()
         
         cell.textLabel?.text = facilities[indexPath.row]
         cell.imageView!.image = UIImage(
