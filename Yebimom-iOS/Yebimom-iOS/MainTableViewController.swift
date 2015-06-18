@@ -37,7 +37,6 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         for (key: String, subJsonData: JSON)in categoryJsonData {
             categoryNames.append(subJsonData["name"].string!)
             cetegorySlugs.append(subJsonData["slug"].string!)
-            // now server error
             if subJsonData["image"].string != nil {
                 imageURLS.append(subJsonData["image"].string!)
             }

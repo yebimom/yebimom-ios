@@ -21,10 +21,6 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let backMainButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "backMain:")
-        backMainButton.image = UIImage(named: "icon_back")
-        navigationItem.leftBarButtonItem = backMainButton
-        
         //categories cell
         let centersURL = NSURL(string:"https://yebimom.com/api/centers/")
         var centersJsonData = JSON(data: NSData(contentsOfURL: centersURL!)!)
@@ -47,6 +43,8 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
             return controller
         })()
         
+        designSearchPageNavigationBar()
+        
         // Reload the table
         self.tableView.reloadData()
     }
@@ -61,6 +59,13 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
         navigationController?.popViewControllerAnimated(true)
         viewTransition("SideMenuNavView")
     }
+    
+    func designSearchPageNavigationBar() {
+        let logo = UIImage(named: "menubar_logo.png")
+        let imageView = UIImageView(image: logo)
+        navigationItem.titleView = imageView
+    }
+
     
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {

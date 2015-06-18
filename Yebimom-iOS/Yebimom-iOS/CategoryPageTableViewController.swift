@@ -18,38 +18,53 @@ class CategoryPageTableViewController: UITableViewController {
     var centerNames = [String]()
     var centerAddress = [String]()
     var centerHashID = [String]()
+    var centerImageURLs = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView.rowHeight = 340
-        
         // when overlay, overlay sign will be shown
         let text = "Please wait..."
-        self.showWaitOverlayWithText(text)
+        showWaitOverlayWithText(text)
     
         let centersOfCategoryURL = NSURL(string:"https://yebimom.com/api/categories/" + categorySlug!)
         var centersOfCategoryJsonData = JSON(data: NSData(contentsOfURL: centersOfCategoryURL!)!)
 
         for (key: String, subJsonData: JSON)in centersOfCategoryJsonData {
-            centerNames.append(subJsonData["name"].string!)
-            centerAddress.append(subJsonData["address"].string!)
+            centerNames.append(subJsonData["name"].stringValue)
+            centerAddress.append(subJsonData["address"].stringValue)
             centerHashID.append(subJsonData["hash_id"].string!)
+            if subJsonData["main_image_url"].string != nil {
+                centerImageURLs.append(subJsonData["main_image_url"].string!)
+            }
+            else {
+                centerImageURLs.append("")
+            }
         }
         
         designCategoryPageNavigationBar()
         
-        self.removeAllOverlays()
+        removeAllOverlays()
+    }
+    
+    func viewTransition(storyboardID: String) {
+        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardID) as! UIViewController
+        
+        self.presentViewController(destViewController, animated: false, completion: nil)
+    }
+    
+    func backMain(sender: UIBarButtonItem) {
+        navigationController?.popViewControllerAnimated(true)
+        viewTransition("SideMenuNavView")
     }
     
     func designCategoryPageNavigationBar() {
-        navigationController!.navigationBar.barTintColor = UIColor.whiteColor()
-
         let logo = UIImage(named: "menubar_logo.png")
         let imageView = UIImageView(image: logo)
         navigationItem.titleView = imageView
+        // Custom back bar button causes disabling all functions only in this page back button
+        // So temporary delete custom button
+        UINavigationItem().backBarButtonItem?.tintColor = UIColor(hex: 0xc0392b)
     }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -76,7 +91,12 @@ class CategoryPageTableViewController: UITableViewController {
         
         cell.centerNameLabel.text = centerNames[indexPath.row]
         cell.centerAddressLabel.text = centerAddress[indexPath.row]
-
+        cell.centerImageURL.imageFromURL(centerImageURLs[indexPath.row], placeholder: UIImage(named: "blank_image_400x300")!, fadeIn: true) {
+            (image: UIImage?) in
+            if image != nil {
+                cell.centerImageURL.image = image!
+            }
+        }
         return cell
     }
 

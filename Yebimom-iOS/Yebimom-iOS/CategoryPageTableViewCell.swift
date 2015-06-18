@@ -12,7 +12,7 @@ class CategoryPageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var centerNameLabel: UILabel!
     @IBOutlet weak var centerAddressLabel: UILabel!
-
+    @IBOutlet weak var centerImageURL: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
