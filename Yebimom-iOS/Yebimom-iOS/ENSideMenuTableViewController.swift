@@ -68,11 +68,15 @@ class ENSideMenuTableViewController: UITableViewController {
         
         if (cell == nil) {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL")
-            cell!.backgroundColor = UIColor.whiteColor()
+            
             cell!.textLabel?.textColor = UIColor.blackColor()
+            cell!.textLabel?.font = UIFont (name: "BM JUA_OTF", size: 17)
+            
             let selectedBackgroundView = UIView(frame: CGRectMake(0, 0, cell!.frame.size.width, cell!.frame.size.height))
-            selectedBackgroundView.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.2)
             cell!.selectedBackgroundView = selectedBackgroundView
+            cell?.backgroundColor = UIColor.clearColor()
+            
+            cell?.imageView!.image = UIImage(named: "logo.png")
         }
         
         cell!.textLabel?.text = sideMenuList[indexPath.row]
