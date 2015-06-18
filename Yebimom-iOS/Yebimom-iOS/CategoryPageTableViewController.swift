@@ -142,6 +142,10 @@ class CategoryPageTableViewController: UITableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowCenterDetail" {
+            // Clean Back button title
+            // But when back to this page, title not recovered
+            navigationItem.title = ""
+            
             let detailViewController = segue.destinationViewController as! CenterOfCategoryViewController
             let indexPath = self.tableView.indexPathForSelectedRow()
             detailViewController.centerHashID = centerHashID[indexPath!.row]

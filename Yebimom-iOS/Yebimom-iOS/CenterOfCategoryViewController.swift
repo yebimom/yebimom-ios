@@ -17,6 +17,8 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
     
     @IBOutlet weak var facilityTableView: UITableView!
     @IBOutlet weak var centerNameLabel: UILabel!
+    @IBOutlet weak var centerAddressLabel: UILabel!
+    @IBOutlet weak var centerImage: UIImageView!
     @IBOutlet weak var mapViewOutlet: GMSMapView!
     
     override func viewDidLoad() {
@@ -25,11 +27,19 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
         let centerDetailOfCategoryURL = NSURL(string:"https://yebimom.com/api/centers/" + centerHashID!)
         var centerDetailOfCategoryJsonData = JSON(data: NSData(contentsOfURL: centerDetailOfCategoryURL!)!)
         let centerName: String? = centerDetailOfCategoryJsonData["name"].string
-        
+        let centerImageURL = centerDetailOfCategoryJsonData["main_image_url"].string
+
         for (key: String, subJsonData: JSON)in centerDetailOfCategoryJsonData["facility_set"] {
             facilities.append(subJsonData.stringValue)
         }
         centerNameLabel.text = centerName
+        centerAddressLabel.text = centerDetailOfCategoryJsonData["address"].stringValue
+        centerImage.imageFromURL(centerImageURL!, placeholder: UIImage(), fadeIn: true) {
+            (image: UIImage?) in
+            if image != nil {
+                self.centerImage.image = image
+            }
+        }
     
         facilityTableView.dataSource = self
         
@@ -43,6 +53,17 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
         locationMarker.snippet = centerName
         locationMarker.appearAnimation = kGMSMarkerAnimationPop
         locationMarker.map = mapViewOutlet
+        
+        
+        designCenterDetailNavigationBar()
+    }
+    
+    func designCenterDetailNavigationBar() {
+        navigationController!.navigationBar.barTintColor = UIColor.whiteColor()
+        
+        let logo = UIImage(named: "menubar_logo.png")
+        let imageView = UIImageView(image: logo)
+        navigationItem.titleView = imageView
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
