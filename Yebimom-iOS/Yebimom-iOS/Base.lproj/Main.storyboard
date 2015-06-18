@@ -25,6 +25,7 @@
             <string>BMJUAOTF</string>
             <string>BMJUAOTF</string>
             <string>BMJUAOTF</string>
+            <string>BMJUAOTF</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -723,7 +724,7 @@
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                         <variation key="widthClass=compact" misplaced="YES">
-                                                            <rect key="frame" x="185.5" y="47.5" width="29.5" height="20.5"/>
+                                                            <rect key="frame" x="185" y="47.5" width="29.5" height="20.5"/>
                                                         </variation>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_category_price" translatesAutoresizingMaskIntoConstraints="NO" id="lDZ-aq-6PI">
@@ -739,7 +740,7 @@
                                                             </mask>
                                                         </variation>
                                                         <variation key="widthClass=compact" misplaced="YES">
-                                                            <rect key="frame" x="77.5" y="78" width="55" height="50"/>
+                                                            <rect key="frame" x="77" y="78" width="55" height="50"/>
                                                             <mask key="constraints">
                                                                 <include reference="Ip2-uX-sA1"/>
                                                                 <include reference="oyh-Xs-zrq"/>
@@ -759,7 +760,7 @@
                                                             </mask>
                                                         </variation>
                                                         <variation key="widthClass=compact" misplaced="YES">
-                                                            <rect key="frame" x="172.5" y="78" width="55" height="50"/>
+                                                            <rect key="frame" x="172" y="78" width="55" height="50"/>
                                                             <mask key="constraints">
                                                                 <include reference="8Q8-4o-Imp"/>
                                                                 <include reference="mAQ-JY-BFv"/>
@@ -779,7 +780,7 @@
                                                             </mask>
                                                         </variation>
                                                         <variation key="widthClass=compact" misplaced="YES">
-                                                            <rect key="frame" x="267.5" y="78" width="55" height="50"/>
+                                                            <rect key="frame" x="267" y="78" width="55" height="50"/>
                                                             <mask key="constraints">
                                                                 <include reference="66f-fc-zIa"/>
                                                                 <include reference="dhu-12-RsI"/>
@@ -960,20 +961,40 @@
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipv-2h-2Aw" userLabel="Detail Info View">
+                                            <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipv-2h-2Aw" userLabel="Detail Info View">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격: 1,509,000원" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drS-Dm-7Av">
+                                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                        <fontDescription key="fontDescription" name="BMJUAOTF" family="BM JUA_OTF" pointSize="23"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="450" id="1Nm-TQ-eZR"/>
+                                                    <constraint firstAttribute="centerX" secondItem="drS-Dm-7Av" secondAttribute="centerX" id="Jpc-dg-mOP"/>
+                                                    <constraint firstItem="drS-Dm-7Av" firstAttribute="top" secondItem="ipv-2h-2Aw" secondAttribute="top" constant="5" id="au7-z1-XYK"/>
                                                 </constraints>
                                                 <variation key="default">
+                                                    <mask key="subviews">
+                                                        <exclude reference="drS-Dm-7Av"/>
+                                                    </mask>
                                                     <mask key="constraints">
                                                         <exclude reference="1Nm-TQ-eZR"/>
+                                                        <exclude reference="Jpc-dg-mOP"/>
+                                                        <exclude reference="au7-z1-XYK"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="widthClass=compact">
+                                                    <mask key="subviews">
+                                                        <include reference="drS-Dm-7Av"/>
+                                                    </mask>
                                                     <mask key="constraints">
                                                         <include reference="1Nm-TQ-eZR"/>
+                                                        <include reference="Jpc-dg-mOP"/>
+                                                        <include reference="au7-z1-XYK"/>
                                                     </mask>
                                                 </variation>
                                             </view>
