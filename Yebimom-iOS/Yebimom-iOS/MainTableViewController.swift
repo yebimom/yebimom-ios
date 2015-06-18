@@ -85,9 +85,6 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     @IBAction func sideMenuInfo(sender: UIBarButtonItem) {
         toggleSideMenuView()
     }
-    @IBAction func search(sender: UIBarButtonItem) {
-        storyBoardTransition("SearchPage")
-    }
     
     func storyBoardTransition(storyBoardID: String) {
         // Cannot change this method to "viewTransition", that occur some problems

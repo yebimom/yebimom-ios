@@ -11,8 +11,12 @@ import UIKit
 import SwiftyJSON
 
 class CenterSearchTableViewController: UITableViewController, UISearchResultsUpdating {
+    
+    var centerHashID = [String]()
 
     var centerNames = [String]()
+    var centerImageURLs = [String]()
+    
     var filteredTableData = [String]()
     var resultSearchController = UISearchController()
     
@@ -21,12 +25,22 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let backgroundImageName: String = "main_without_text.png"
+        applyBackgroundImageSizeToFit(backgroundImageName)
+        
         //categories cell
         let centersURL = NSURL(string:"https://yebimom.com/api/centers/")
         var centersJsonData = JSON(data: NSData(contentsOfURL: centersURL!)!)
         
         for (key: String, subJsonData: JSON)in centersJsonData {
             centerNames.append(subJsonData["name"].string!)
+            centerHashID.append(subJsonData["hash_id"].string!)
+            if subJsonData["main_image_url"].string != nil {
+                centerImageURLs.append(subJsonData["main_image_url"].string!)
+            }
+            else {
+                centerImageURLs.append("")
+            }
         }
         
         resultSearchController = ({
@@ -55,11 +69,6 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
         self.presentViewController(destViewController, animated: false, completion: nil)
     }
     
-    func backMain(sender: UIBarButtonItem) {
-        navigationController?.popViewControllerAnimated(true)
-        viewTransition("SideMenuNavView")
-    }
-    
     func designSearchPageNavigationBar() {
         let logo = UIImage(named: "menubar_logo.png")
         let imageView = UIImageView(image: logo)
@@ -76,6 +85,14 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
         filteredTableData = array as! [String]
         
         self.tableView.reloadData()
+    }
+    
+    func applyBackgroundImageSizeToFit(fileName: String) {
+        UIGraphicsBeginImageContext(view.frame.size)
+        UIImage(named: fileName)?.drawInRect(view.bounds)
+        var backGroundImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        view.backgroundColor = UIColor(patternImage: backGroundImage)
     }
     
     override func didReceiveMemoryWarning() {
@@ -109,6 +126,13 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
 
         if (self.resultSearchController.active) {
             cell.centerNameLabel?.text = filteredTableData[indexPath.row]
+            
+            cell.centerImage.imageFromURL(centerImageURLs[indexPath.row], placeholder: UIImage(named: "logo")!, fadeIn: true) {
+                (image: UIImage?) in
+                if image != nil {
+                    cell.centerImage.image = image
+                }
+            }
             return cell
         }
         else {
@@ -116,14 +140,6 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
             return cell
         }
         
-        /*
-        if searchActive {
-            cell.centerNameLabel.text = filtered[indexPath.row]
-        }
-        else {
-            cell.centerNameLabel.text = centerNames[indexPath.row];
-        }
-        */
         return cell
     }
     
@@ -163,14 +179,11 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowCenterDetailFromSearch" {
+            let detailViewController = segue.destinationViewController as! CenterOfCategoryViewController
+            let indexPath = self.tableView.indexPathForSelectedRow()
+            detailViewController.centerHashID = centerHashID[indexPath!.row]
+        }
     }
-    */
-
 }

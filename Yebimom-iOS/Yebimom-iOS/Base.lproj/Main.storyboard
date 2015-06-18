@@ -24,6 +24,7 @@
             <string>BMJUAOTF</string>
             <string>BMJUAOTF</string>
             <string>BMJUAOTF</string>
+            <string>BMJUAOTF</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -74,7 +75,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="189.5" y="145" width="21.5" height="17.5"/>
+                                                <rect key="frame" x="189" y="145" width="21.5" height="17.5"/>
                                             </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4J-Nw-YBv">
@@ -165,6 +166,9 @@
                     <navigationItem key="navigationItem" id="Rpd-A8-cTg">
                         <barButtonItem key="leftBarButtonItem" image="icon_menu" id="hbb-3P-57m">
                             <color key="tintColor" red="0.96039414405822754" green="0.40087046073227905" blue="0.65101101909709058" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="sideMenuInfo:" destination="eO0-mK-8cW" id="bdA-7w-nbZ"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="icon_search" id="ALe-Xo-dX7">
                             <color key="tintColor" red="0.96039414410000001" green="0.40087046069999999" blue="0.65101101910000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -377,11 +381,11 @@
             <objects>
                 <tableViewController storyboardIdentifier="SearchPage" id="MJ9-Zg-OHs" customClass="CenterSearchTableViewController" customModule="Yebimom_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qh1-mo-JG0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="770"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="BgY-j2-deW">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
@@ -393,39 +397,75 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="산후조리원 이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtm-nA-lFH">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="BMJUAOTF" family="BM JUA_OTF" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="85" y="8" width="108" height="24.5"/>
+                                            </variation>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JMW-8K-wSY">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="62" id="WFv-i4-EmJ"/>
+                                                <constraint firstAttribute="height" constant="44" id="o1w-hv-Pxh"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="WFv-i4-EmJ"/>
+                                                    <exclude reference="o1w-hv-Pxh"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="WFv-i4-EmJ"/>
+                                                    <include reference="o1w-hv-Pxh"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="gtm-nA-lFH" secondAttribute="bottom" constant="19.5" id="0en-Cz-G6n"/>
-                                        <constraint firstItem="gtm-nA-lFH" firstAttribute="leading" secondItem="m5m-su-2CA" secondAttribute="leadingMargin" constant="77" id="RuH-b1-1J2"/>
+                                        <constraint firstAttribute="bottomMargin" relation="lessThanOrEqual" secondItem="gtm-nA-lFH" secondAttribute="bottom" constant="19.5" id="0en-Cz-G6n"/>
+                                        <constraint firstAttribute="bottom" secondItem="JMW-8K-wSY" secondAttribute="bottom" constant="8" id="4mv-Jr-MyY"/>
+                                        <constraint firstItem="JMW-8K-wSY" firstAttribute="top" secondItem="m5m-su-2CA" secondAttribute="top" constant="8" id="F7m-d3-Eou"/>
+                                        <constraint firstItem="gtm-nA-lFH" firstAttribute="leading" secondItem="JMW-8K-wSY" secondAttribute="trailing" constant="15" id="P9r-xz-mH1"/>
                                         <constraint firstItem="gtm-nA-lFH" firstAttribute="top" secondItem="m5m-su-2CA" secondAttribute="topMargin" id="Zut-fD-e79"/>
+                                        <constraint firstItem="JMW-8K-wSY" firstAttribute="leading" secondItem="m5m-su-2CA" secondAttribute="leading" constant="8" id="hxQ-VN-zJO"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
                                             <exclude reference="gtm-nA-lFH"/>
+                                            <exclude reference="JMW-8K-wSY"/>
                                         </mask>
                                         <mask key="constraints">
+                                            <exclude reference="4mv-Jr-MyY"/>
+                                            <exclude reference="F7m-d3-Eou"/>
+                                            <exclude reference="hxQ-VN-zJO"/>
                                             <exclude reference="0en-Cz-G6n"/>
-                                            <exclude reference="RuH-b1-1J2"/>
+                                            <exclude reference="P9r-xz-mH1"/>
                                             <exclude reference="Zut-fD-e79"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
                                         <mask key="subviews">
                                             <include reference="gtm-nA-lFH"/>
+                                            <include reference="JMW-8K-wSY"/>
                                         </mask>
                                         <mask key="constraints">
+                                            <include reference="4mv-Jr-MyY"/>
+                                            <include reference="F7m-d3-Eou"/>
+                                            <include reference="hxQ-VN-zJO"/>
                                             <include reference="0en-Cz-G6n"/>
-                                            <include reference="RuH-b1-1J2"/>
+                                            <include reference="P9r-xz-mH1"/>
                                             <include reference="Zut-fD-e79"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
+                                    <outlet property="centerImage" destination="JMW-8K-wSY" id="tU1-zx-XAg"/>
                                     <outlet property="centerNameLabel" destination="gtm-nA-lFH" id="EbL-fh-nWV"/>
+                                    <segue destination="tRu-pw-Gf4" kind="show" identifier="ShowCenterDetailFromSearch" id="6w5-Dr-LEh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -434,6 +474,9 @@
                             <outlet property="delegate" destination="MJ9-Zg-OHs" id="x1p-Mc-kWs"/>
                         </connections>
                     </tableView>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="6Ni-nP-9QP">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                     <connections>
                         <outlet property="centerSearchBar" destination="BgY-j2-deW" id="dWA-hM-U0f"/>
                         <outlet property="searchDisplayController" destination="mH7-w0-T10" id="4tC-vI-uyB"/>
@@ -603,7 +646,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="centerAddressLabel" destination="6Ot-HQ-1Ao" id="Fb7-TM-uPT"/>
-                                    <outlet property="centerImageURL" destination="if1-7d-hNW" id="ghd-vr-sU5"/>
+                                    <outlet property="centerImage" destination="if1-7d-hNW" id="2Ns-iu-2R5"/>
                                     <outlet property="centerNameLabel" destination="sj0-oW-URb" id="XZ0-4Q-FfA"/>
                                     <segue destination="tRu-pw-Gf4" kind="show" identifier="ShowCenterDetail" id="JTd-kY-izq"/>
                                 </connections>
@@ -1585,4 +1628,7 @@
         <image name="icon_search" width="16" height="16"/>
         <image name="login_facebook" width="502" height="102"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="JTd-kY-izq"/>
+    </inferredMetricsTieBreakers>
 </document>

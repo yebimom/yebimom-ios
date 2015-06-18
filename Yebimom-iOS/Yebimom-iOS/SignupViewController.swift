@@ -15,9 +15,11 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var passwordConfirmTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let backgroundImageName: String = "main_0.png"
+        applyBackgroundImageSizeToFit(backgroundImageName)
 
         designSignUpNavigationBar()
-        applyBackgroundImageSizeToFit("main_0.png")
     }
     
     @IBAction func showMainView(sender: UIBarButtonItem) {

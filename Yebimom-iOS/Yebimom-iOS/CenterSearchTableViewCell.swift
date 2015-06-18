@@ -11,6 +11,8 @@ import UIKit
 class CenterSearchTableViewCell: UITableViewCell {
 
     @IBOutlet weak var centerNameLabel: UILabel!
+    @IBOutlet weak var centerImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
