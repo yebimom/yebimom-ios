@@ -165,14 +165,11 @@
                     <navigationItem key="navigationItem" id="Rpd-A8-cTg">
                         <barButtonItem key="leftBarButtonItem" image="icon_menu" id="hbb-3P-57m">
                             <color key="tintColor" red="0.96039414405822754" green="0.40087046073227905" blue="0.65101101909709058" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="sideMenuInfo:" destination="eO0-mK-8cW" id="NiF-XR-wo7"/>
-                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="icon_search" id="ALe-Xo-dX7">
                             <color key="tintColor" red="0.96039414410000001" green="0.40087046069999999" blue="0.65101101910000003" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="search:" destination="eO0-mK-8cW" id="A9f-CP-MeD"/>
+                                <segue destination="MJ9-Zg-OHs" kind="show" id="0bJ-ci-jbd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

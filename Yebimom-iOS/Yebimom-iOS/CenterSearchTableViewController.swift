@@ -64,11 +64,6 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
         let logo = UIImage(named: "menubar_logo.png")
         let imageView = UIImageView(image: logo)
         navigationItem.titleView = imageView
-        
-        let backMainButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "backMain:")
-        backMainButton.image = UIImage(named: "icon_back")
-        navigationItem.leftBarButtonItem = backMainButton
-        navigationItem.leftBarButtonItem?.tintColor = UIColor(hex: 0xc0392b)
     }
 
     

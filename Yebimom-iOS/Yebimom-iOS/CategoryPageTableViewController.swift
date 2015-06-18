@@ -63,6 +63,7 @@ class CategoryPageTableViewController: UITableViewController {
         navigationItem.titleView = imageView
         // Custom back bar button causes disabling all functions only in this page back button
         // So temporary delete custom button
+        UINavigationItem().backBarButtonItem?.tintColor = UIColor(hex: 0xc0392b)
     }
 
     override func didReceiveMemoryWarning() {
