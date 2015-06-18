@@ -236,11 +236,9 @@
 		D998E2F21B1EC89B00E4AB0B /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				D975209C1B2DDD3E0026D85F /* AF+Image+Helper */,
+				D9FAF3151B32DBE30077A0DE /* Extensions */,
 				D998E3761B20BCB600E4AB0B /* Networking */,
 				D998E2F31B1EC8A300E4AB0B /* ENSwiftSideMenu */,
-				D9FAF3031B329D840077A0DE /* RBResizer.swift */,
-				D9FAF3061B32CC7D0077A0DE /* ImageRoundedExtension.swift */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -424,6 +422,16 @@
 				D9FAF2FF1B312CA70077A0DE /* BMJUA.otf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		D9FAF3151B32DBE30077A0DE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D975209C1B2DDD3E0026D85F /* AF+Image+Helper */,
+				D9FAF3031B329D840077A0DE /* RBResizer.swift */,
+				D9FAF3061B32CC7D0077A0DE /* ImageRoundedExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
