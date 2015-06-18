@@ -89,6 +89,8 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "FacilityTableCell")
         
+        cell.backgroundColor = UIColor.clearColor()
+        
         cell.textLabel?.text = facilities[indexPath.row]
         cell.imageView!.image = UIImage(
             //there's korean encoding problem, temporary solution using index

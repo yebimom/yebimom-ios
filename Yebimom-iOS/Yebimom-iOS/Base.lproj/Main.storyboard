@@ -899,7 +899,7 @@
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tFg-gg-Xu6">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <prototypes>
                                                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FacilityTableCell" id="y3W-Bk-ENs" customClass="FacilityTableViewCell" customModule="Yebimom_iOS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -907,11 +907,12 @@
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y3W-Bk-ENs" id="iC7-wS-0BQ">
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </tableViewCellContentView>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </tableViewCell>
                                                         </prototypes>
                                                     </tableView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.95771692149999998" green="0.95771692149999998" blue="0.95771692149999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="tFg-gg-Xu6" secondAttribute="trailing" constant="75" id="E4f-i0-h96"/>
                                                     <constraint firstItem="tFg-gg-Xu6" firstAttribute="leading" secondItem="Rgh-hX-n29" secondAttribute="leading" constant="75" id="RXT-Mp-MwL"/>
