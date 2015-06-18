@@ -22,8 +22,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let backgroundImageName: String = "main_0.png"
+        applyBackgroundImageSizeToFit(backgroundImageName)
+
         designLoginNavigationBar()
-        applyBackgroundImageSizeToFit("main_0.png")
     }
 
     @IBAction func showMainView(sender: UIBarButtonItem) {

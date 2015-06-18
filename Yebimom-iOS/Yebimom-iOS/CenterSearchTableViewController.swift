@@ -23,6 +23,9 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let backgroundImageName: String = "main_without_text.png"
+        applyBackgroundImageSizeToFit(backgroundImageName)
+        
         //categories cell
         let centersURL = NSURL(string:"https://yebimom.com/api/centers/")
         var centersJsonData = JSON(data: NSData(contentsOfURL: centersURL!)!)
@@ -74,6 +77,14 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
         filteredTableData = array as! [String]
         
         self.tableView.reloadData()
+    }
+    
+    func applyBackgroundImageSizeToFit(fileName: String) {
+        UIGraphicsBeginImageContext(view.frame.size)
+        UIImage(named: fileName)?.drawInRect(view.bounds)
+        var backGroundImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        view.backgroundColor = UIColor(patternImage: backGroundImage)
     }
     
     override func didReceiveMemoryWarning() {
@@ -166,6 +177,7 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
             let detailViewController = segue.destinationViewController as! CenterOfCategoryViewController
             let indexPath = self.tableView.indexPathForSelectedRow()
             detailViewController.centerHashID = centerHashID[indexPath!.row]
+            println(detailViewController.centerHashID)
         }
     }
 }
