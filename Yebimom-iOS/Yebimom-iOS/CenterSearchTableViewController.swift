@@ -11,6 +11,8 @@ import UIKit
 import SwiftyJSON
 
 class CenterSearchTableViewController: UITableViewController, UISearchResultsUpdating {
+    
+    var centerHashID = [String]()
 
     var centerNames = [String]()
     var filteredTableData = [String]()
@@ -27,6 +29,7 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
         
         for (key: String, subJsonData: JSON)in centersJsonData {
             centerNames.append(subJsonData["name"].string!)
+            centerHashID.append(subJsonData["hash_id"].string!)
         }
         
         resultSearchController = ({
@@ -53,11 +56,6 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
         var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardID) as! UIViewController
         
         self.presentViewController(destViewController, animated: false, completion: nil)
-    }
-    
-    func backMain(sender: UIBarButtonItem) {
-        navigationController?.popViewControllerAnimated(true)
-        viewTransition("SideMenuNavView")
     }
     
     func designSearchPageNavigationBar() {
@@ -163,14 +161,11 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowCenterDetailFromSearch" {
+            let detailViewController = segue.destinationViewController as! CenterOfCategoryViewController
+            let indexPath = self.tableView.indexPathForSelectedRow()
+            detailViewController.centerHashID = centerHashID[indexPath!.row]
+        }
     }
-    */
-
 }
