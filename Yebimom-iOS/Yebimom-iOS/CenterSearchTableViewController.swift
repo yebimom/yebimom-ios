@@ -184,7 +184,6 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
             let detailViewController = segue.destinationViewController as! CenterOfCategoryViewController
             let indexPath = self.tableView.indexPathForSelectedRow()
             detailViewController.centerHashID = centerHashID[indexPath!.row]
-            println(detailViewController.centerHashID)
         }
     }
 }
