@@ -22,12 +22,9 @@ class CategoryPageTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView.rowHeight = 340
-        
         // when overlay, overlay sign will be shown
         let text = "Please wait..."
-        self.showWaitOverlayWithText(text)
+        showWaitOverlayWithText(text)
     
         let centersOfCategoryURL = NSURL(string:"https://yebimom.com/api/categories/" + categorySlug!)
         var centersOfCategoryJsonData = JSON(data: NSData(contentsOfURL: centersOfCategoryURL!)!)
@@ -46,7 +43,7 @@ class CategoryPageTableViewController: UITableViewController {
         
         designCategoryPageNavigationBar()
         
-        self.removeAllOverlays()
+        removeAllOverlays()
     }
     
     func viewTransition(storyboardID: String) {
@@ -61,18 +58,12 @@ class CategoryPageTableViewController: UITableViewController {
     }
     
     func designCategoryPageNavigationBar() {
-        navigationController!.navigationBar.barTintColor = UIColor.whiteColor()
-
         let logo = UIImage(named: "menubar_logo.png")
         let imageView = UIImageView(image: logo)
         navigationItem.titleView = imageView
-        
-        let backMainButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "backMain:")
-        backMainButton.image = UIImage(named: "icon_back")
-        navigationItem.leftBarButtonItem = backMainButton
-        navigationItem.leftBarButtonItem?.tintColor = UIColor(hex: 0xc0392b)
+        // Custom back bar button causes disabling all functions only in this page back button
+        // So temporary delete custom button
     }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
