@@ -91,10 +91,10 @@ class CategoryPageTableViewController: UITableViewController {
         
         cell.centerNameLabel.text = centerNames[indexPath.row]
         cell.centerAddressLabel.text = centerAddress[indexPath.row]
-        cell.centerImageURL.imageFromURL(centerImageURLs[indexPath.row], placeholder: UIImage(named: "blank_image_400x300")!, fadeIn: true) {
+        cell.centerImage.imageFromURL(centerImageURLs[indexPath.row], placeholder: UIImage(named: "blank_image_400x300")!, fadeIn: true) {
             (image: UIImage?) in
             if image != nil {
-                cell.centerImageURL.image = image!
+                cell.centerImage.image = image!
             }
         }
         return cell

@@ -404,35 +404,66 @@
                                                 <rect key="frame" x="85" y="8" width="108" height="24.5"/>
                                             </variation>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JMW-8K-wSY">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="62" id="WFv-i4-EmJ"/>
+                                                <constraint firstAttribute="height" constant="44" id="o1w-hv-Pxh"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="WFv-i4-EmJ"/>
+                                                    <exclude reference="o1w-hv-Pxh"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="WFv-i4-EmJ"/>
+                                                    <include reference="o1w-hv-Pxh"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="gtm-nA-lFH" secondAttribute="bottom" constant="19.5" id="0en-Cz-G6n"/>
-                                        <constraint firstItem="gtm-nA-lFH" firstAttribute="leading" secondItem="m5m-su-2CA" secondAttribute="leadingMargin" constant="77" id="RuH-b1-1J2"/>
+                                        <constraint firstAttribute="bottomMargin" relation="lessThanOrEqual" secondItem="gtm-nA-lFH" secondAttribute="bottom" constant="19.5" id="0en-Cz-G6n"/>
+                                        <constraint firstAttribute="bottom" secondItem="JMW-8K-wSY" secondAttribute="bottom" constant="8" id="4mv-Jr-MyY"/>
+                                        <constraint firstItem="JMW-8K-wSY" firstAttribute="top" secondItem="m5m-su-2CA" secondAttribute="top" constant="8" id="F7m-d3-Eou"/>
+                                        <constraint firstItem="gtm-nA-lFH" firstAttribute="leading" secondItem="JMW-8K-wSY" secondAttribute="trailing" constant="15" id="P9r-xz-mH1"/>
                                         <constraint firstItem="gtm-nA-lFH" firstAttribute="top" secondItem="m5m-su-2CA" secondAttribute="topMargin" id="Zut-fD-e79"/>
+                                        <constraint firstItem="JMW-8K-wSY" firstAttribute="leading" secondItem="m5m-su-2CA" secondAttribute="leading" constant="8" id="hxQ-VN-zJO"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
                                             <exclude reference="gtm-nA-lFH"/>
+                                            <exclude reference="JMW-8K-wSY"/>
                                         </mask>
                                         <mask key="constraints">
+                                            <exclude reference="4mv-Jr-MyY"/>
+                                            <exclude reference="F7m-d3-Eou"/>
+                                            <exclude reference="hxQ-VN-zJO"/>
                                             <exclude reference="0en-Cz-G6n"/>
-                                            <exclude reference="RuH-b1-1J2"/>
+                                            <exclude reference="P9r-xz-mH1"/>
                                             <exclude reference="Zut-fD-e79"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
                                         <mask key="subviews">
                                             <include reference="gtm-nA-lFH"/>
+                                            <include reference="JMW-8K-wSY"/>
                                         </mask>
                                         <mask key="constraints">
+                                            <include reference="4mv-Jr-MyY"/>
+                                            <include reference="F7m-d3-Eou"/>
+                                            <include reference="hxQ-VN-zJO"/>
                                             <include reference="0en-Cz-G6n"/>
-                                            <include reference="RuH-b1-1J2"/>
+                                            <include reference="P9r-xz-mH1"/>
                                             <include reference="Zut-fD-e79"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
+                                    <outlet property="centerImage" destination="JMW-8K-wSY" id="tU1-zx-XAg"/>
                                     <outlet property="centerNameLabel" destination="gtm-nA-lFH" id="EbL-fh-nWV"/>
                                 </connections>
                             </tableViewCell>
@@ -615,7 +646,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="centerAddressLabel" destination="6Ot-HQ-1Ao" id="Fb7-TM-uPT"/>
-                                    <outlet property="centerImageURL" destination="if1-7d-hNW" id="ghd-vr-sU5"/>
+                                    <outlet property="centerImage" destination="if1-7d-hNW" id="2Ns-iu-2R5"/>
                                     <outlet property="centerNameLabel" destination="sj0-oW-URb" id="XZ0-4Q-FfA"/>
                                     <segue destination="tRu-pw-Gf4" kind="show" identifier="ShowCenterDetail" id="JTd-kY-izq"/>
                                 </connections>

@@ -15,6 +15,8 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
     var centerHashID = [String]()
 
     var centerNames = [String]()
+    var centerImageURLs = [String]()
+    
     var filteredTableData = [String]()
     var resultSearchController = UISearchController()
     
@@ -33,6 +35,12 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
         for (key: String, subJsonData: JSON)in centersJsonData {
             centerNames.append(subJsonData["name"].string!)
             centerHashID.append(subJsonData["hash_id"].string!)
+            if subJsonData["main_image_url"].string != nil {
+                centerImageURLs.append(subJsonData["main_image_url"].string!)
+            }
+            else {
+                centerImageURLs.append("")
+            }
         }
         
         resultSearchController = ({
@@ -118,6 +126,13 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
 
         if (self.resultSearchController.active) {
             cell.centerNameLabel?.text = filteredTableData[indexPath.row]
+            
+            cell.centerImage.imageFromURL(centerImageURLs[indexPath.row], placeholder: UIImage(named: "logo")!, fadeIn: true) {
+                (image: UIImage?) in
+                if image != nil {
+                    cell.centerImage.image = image
+                }
+            }
             return cell
         }
         else {
@@ -125,14 +140,6 @@ class CenterSearchTableViewController: UITableViewController, UISearchResultsUpd
             return cell
         }
         
-        /*
-        if searchActive {
-            cell.centerNameLabel.text = filtered[indexPath.row]
-        }
-        else {
-            cell.centerNameLabel.text = centerNames[indexPath.row];
-        }
-        */
         return cell
     }
     

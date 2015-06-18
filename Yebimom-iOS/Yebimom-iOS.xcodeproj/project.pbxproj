@@ -74,6 +74,8 @@
 		D9FAF3001B313FCF0077A0DE /* BMJUA.otf in Resources */ = {isa = PBXBuildFile; fileRef = D9FAF2FF1B312CA70077A0DE /* BMJUA.otf */; };
 		D9FAF3041B329D840077A0DE /* RBResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FAF3031B329D840077A0DE /* RBResizer.swift */; };
 		D9FAF3051B329E480077A0DE /* RBResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FAF3031B329D840077A0DE /* RBResizer.swift */; };
+		D9FAF3071B32CC7D0077A0DE /* ImageRoundedExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FAF3061B32CC7D0077A0DE /* ImageRoundedExtension.swift */; };
+		D9FAF3081B32CC850077A0DE /* ImageRoundedExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FAF3061B32CC7D0077A0DE /* ImageRoundedExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +140,7 @@
 		D9F2EDFE1B2B2E800010EC8E /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		D9FAF2FF1B312CA70077A0DE /* BMJUA.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMJUA.otf; sourceTree = "<group>"; };
 		D9FAF3031B329D840077A0DE /* RBResizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBResizer.swift; sourceTree = "<group>"; };
+		D9FAF3061B32CC7D0077A0DE /* ImageRoundedExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRoundedExtension.swift; sourceTree = "<group>"; };
 		EE85F1E416213D26275F6D1E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F18C3D6DDBC750FBE81DF760 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -237,6 +240,7 @@
 				D998E3761B20BCB600E4AB0B /* Networking */,
 				D998E2F31B1EC8A300E4AB0B /* ENSwiftSideMenu */,
 				D9FAF3031B329D840077A0DE /* RBResizer.swift */,
+				D9FAF3061B32CC7D0077A0DE /* ImageRoundedExtension.swift */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -644,6 +648,7 @@
 				D97520A01B2DDD3E0026D85F /* AF+ImageVIew+Extension.swift in Sources */,
 				D998E2F71B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift in Sources */,
 				D998E2F61B1EC8E000E4AB0B /* ENSideMenu.swift in Sources */,
+				D9FAF3071B32CC7D0077A0DE /* ImageRoundedExtension.swift in Sources */,
 				D998E2FE1B1ECA6E00E4AB0B /* ENSideMenuTableViewController.swift in Sources */,
 				D9C848981B29A473006FCA39 /* FacilityTableViewCell.swift in Sources */,
 				D975209F1B2DDD3E0026D85F /* AF+Image+Extension.swift in Sources */,
@@ -683,6 +688,7 @@
 				D9CE3D301B29F1AF00227E7F /* MainViewTest.swift in Sources */,
 				D9CE3D391B29F39800227E7F /* CenterOfCategoryViewController.swift in Sources */,
 				D9FAF3051B329E480077A0DE /* RBResizer.swift in Sources */,
+				D9FAF3081B32CC850077A0DE /* ImageRoundedExtension.swift in Sources */,
 				D9CE3D3B1B29F39C00227E7F /* LoginViewController.swift in Sources */,
 				D9CE3D3D1B29F3A600227E7F /* ENSwiftSideMenuNavViewController.swift in Sources */,
 				D9CE3D341B29F38800227E7F /* CategoryTableViewCell.swift in Sources */,
