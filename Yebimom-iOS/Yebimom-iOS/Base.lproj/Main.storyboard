@@ -1059,7 +1059,9 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.95771692154255317" green="0.95771692154255317" blue="0.95771692154255317" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="450" id="1Nm-TQ-eZR"/>
+                                                    <constraint firstAttribute="height" constant="450" id="1Nm-TQ-eZR">
+                                                        <variation key="widthClass=compact" constant="300"/>
+                                                    </constraint>
                                                     <constraint firstItem="qG1-pV-TtT" firstAttribute="top" secondItem="brB-Vt-xx0" secondAttribute="bottom" constant="15" id="3WZ-SD-5sT"/>
                                                     <constraint firstItem="qG1-pV-TtT" firstAttribute="trailing" secondItem="kkb-Ob-de2" secondAttribute="trailing" id="5A5-FG-Okd"/>
                                                     <constraint firstItem="oaC-bn-gfZ" firstAttribute="leading" secondItem="rXx-Zc-S2T" secondAttribute="leading" constant="50" id="5dd-dV-0Tq">
