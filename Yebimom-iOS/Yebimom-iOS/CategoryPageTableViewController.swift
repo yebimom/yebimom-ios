@@ -58,9 +58,14 @@ class CategoryPageTableViewController: UITableViewController {
     }
     
     func designCategoryPageNavigationBar() {
+        /*
         let logo = UIImage(named: "menubar_logo.png")
         let imageView = UIImageView(image: logo)
         navigationItem.titleView = imageView
+        */
+        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont(name: "BM JUA_OTF", size: 17)!, NSForegroundColorAttributeName : UIColor.darkGrayColor()]
+        navigationItem.title = categoryName
+        
         // Custom back bar button causes disabling all functions only in this page back button
         // So temporary delete custom button
         UINavigationItem().backBarButtonItem?.tintColor = UIColor(hex: 0xc0392b)

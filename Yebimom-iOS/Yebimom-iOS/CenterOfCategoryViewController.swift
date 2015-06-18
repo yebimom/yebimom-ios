@@ -43,26 +43,6 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
         locationMarker.snippet = centerName
         locationMarker.appearAnimation = kGMSMarkerAnimationPop
         locationMarker.map = mapViewOutlet
-        
-        /*
-        
-        let latitude = centerDetailOfCategoryJsonData["latitude"].double
-        let longitude = centerDetailOfCategoryJsonData["longitude"].double
-        var camera = GMSCameraPosition.cameraWithLatitude(latitude!,
-            longitude: longitude!, zoom: 16)
-        
-        var mapView = GMSMapView.mapWithFrame(CGRectZero, camera:camera)
-        
-        var marker = GMSMarker()
-        marker.position = camera.target
-        marker.snippet = "Hello World"
-        marker.appearAnimation = kGMSMarkerAnimationPop
-        marker.map = mapView
-        */
-        //self.view = mapView
-        //mapViewOutlet = mapView
-        //mapViewOutlet.camera = camera
-        //
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,7 +53,6 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "FacilityTableCell")
         
         cell.textLabel?.text = facilities[indexPath.row]
-        
         return cell
     }
 
