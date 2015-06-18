@@ -63,6 +63,37 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         navigationItem.titleView = imageView
     }
     
+    func blurEffectToDisabledView() {
+        UIView.animateWithDuration(0, delay: 0.0,
+            options: UIViewAnimationOptions.CurveLinear,
+            animations: {
+            },
+            completion: ({finished in
+                if (finished) {
+                    UIView.animateWithDuration(0.5, animations: {
+                        self.view.alpha = 0.9
+                        self.view.backgroundColor = UIColor.darkGrayColor()
+                    })
+                }
+            }))
+    }
+    
+    func releaseBlurEffectToView() {
+        UIView.animateWithDuration(0, delay: 0.0,
+            options: UIViewAnimationOptions.CurveLinear,
+            animations: {
+            },
+            completion: ({finished in
+                if (finished) {
+                    UIView.animateWithDuration(0.5, animations: {
+                        self.view.alpha = 1.0
+                        self.view.backgroundColor = UIColor.whiteColor()
+                    })
+                }
+            }))
+    }
+
+    
     override func hideSideMenuView() {
         sideMenuController()?.sideMenu?.hideSideMenu()
         view.userInteractionEnabled = true
@@ -76,9 +107,11 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     override func toggleSideMenuView () {
         if isSideMenuOpen() {
             hideSideMenuView()
+            releaseBlurEffectToView()
         }
         else {
             showSideMenuView()
+            blurEffectToDisabledView()
         }
     }
     
@@ -127,6 +160,7 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
                 cell.categoryImage.image = image!
             }
         }
+        
         return cell
     }
 

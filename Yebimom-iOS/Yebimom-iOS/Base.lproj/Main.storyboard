@@ -150,6 +150,7 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="categoryImage" destination="BqA-A5-p7q" id="bkd-wH-lSU"/>
                                     <outlet property="categoryNameLabel" destination="I4J-Nw-YBv" id="MbO-Zs-why"/>
@@ -438,12 +439,12 @@
                                             <exclude reference="JMW-8K-wSY"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="4mv-Jr-MyY"/>
-                                            <exclude reference="F7m-d3-Eou"/>
-                                            <exclude reference="hxQ-VN-zJO"/>
                                             <exclude reference="0en-Cz-G6n"/>
                                             <exclude reference="P9r-xz-mH1"/>
                                             <exclude reference="Zut-fD-e79"/>
+                                            <exclude reference="4mv-Jr-MyY"/>
+                                            <exclude reference="F7m-d3-Eou"/>
+                                            <exclude reference="hxQ-VN-zJO"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
@@ -452,12 +453,12 @@
                                             <include reference="JMW-8K-wSY"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="4mv-Jr-MyY"/>
-                                            <include reference="F7m-d3-Eou"/>
-                                            <include reference="hxQ-VN-zJO"/>
                                             <include reference="0en-Cz-G6n"/>
                                             <include reference="P9r-xz-mH1"/>
                                             <include reference="Zut-fD-e79"/>
+                                            <include reference="4mv-Jr-MyY"/>
+                                            <include reference="F7m-d3-Eou"/>
+                                            <include reference="hxQ-VN-zJO"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>

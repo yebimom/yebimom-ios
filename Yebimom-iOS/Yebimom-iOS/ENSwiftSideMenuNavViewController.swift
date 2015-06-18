@@ -17,7 +17,7 @@ class ENSwiftSideMenuNavViewController: ENSideMenuNavigationController, ENSideMe
             // sideMenu?.allowLeftSwipe = false
             // sideMenu?.allowRightSwipe = false
             
-            sideMenu?.menuWidth = 280.0 // optional, default is 160
+            sideMenu?.menuWidth = 200.0 // optional, default is 160
             sideMenu?.bouncingEnabled = false
             
             // make navigation bar showing over side menu
