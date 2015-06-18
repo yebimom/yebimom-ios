@@ -17,8 +17,6 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     var numOfCentersOfCategory = [Int]()
     var imageURLS = [String]()
     
-    var numOfEvents: Int = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Wait overlay with text
@@ -51,11 +49,6 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
             var centersOfCategoryJsonData = JSON(data: NSData(contentsOfURL: centersOfCategoryURL!)!)
             numOfCentersOfCategory.append(centersOfCategoryJsonData.count)
         }
-        
-        // events cell
-        let eventURL = NSURL(string:"https://yebimom.com/api/events/")
-        var eventJsonData = JSON(data: NSData(contentsOfURL: eventURL!)!)
-        numOfEvents = eventJsonData.count
         
         // Navigation bar setting
         designMainNavigationBar()
@@ -90,11 +83,11 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         }
     }
     
-    @IBAction func search(sender: UIBarButtonItem) {
-        storyBoardTransition("SearchPage")
-    }
     @IBAction func sideMenuInfo(sender: UIBarButtonItem) {
         toggleSideMenuView()
+    }
+    @IBAction func search(sender: UIBarButtonItem) {
+        storyBoardTransition("SearchPage")
     }
     
     func storyBoardTransition(storyBoardID: String) {
@@ -109,7 +102,6 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
         super.viewDidAppear(true)
     }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -120,59 +112,27 @@ class MainTableViewController: UITableViewController, ENSideMenuDelegate {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 2
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch(section) {
-            case 0:
-                return 1
-            case 1:
-                return categoryNames.count
-            default:
-                return 0
-        }
+        return categoryNames.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        switch(indexPath.section) {
-            case 0:
-                let cell = tableView.dequeueReusableCellWithIdentifier("EventTableCell", forIndexPath: indexPath) as! EventTableViewCell
-                    cell.numOfEventsLabel.text = "\(numOfEvents) 건"
-                return cell
-            case 1:
-                let cell = tableView.dequeueReusableCellWithIdentifier("CategoryTableCell", forIndexPath: indexPath) as! CategoryTableViewCell
-                cell.categoryNameLabel.text = categoryNames[indexPath.row]
-                cell.numOfCentersOfCategoryLabel.text = "\(numOfCentersOfCategory[indexPath.row]) 곳"
-                
-                
-                cell.categoryImage.imageFromURL(imageURLS[indexPath.row], placeholder: UIImage(named: "logo.png")!, fadeIn: true) {
-                    (image: UIImage?) in
-                    if image != nil {
-                        cell.categoryImage.image = image!
-                    }
-                }
-                
-                /*
-                let width = cell.categoryImage.frame.width
-                let height = cell.categoryImage.frame.height
-                UIImage(
-                    named: "logo.png")!.resize(CGSize(width: 30, height: 30)) {
-                        
-                }
-                */
-                cell.categoryImage.alpha = 0.2
-                
-                return cell
-            default:
-                let cell: UITableViewCell! = nil
-                return cell
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("CategoryTableCell", forIndexPath: indexPath) as! CategoryTableViewCell
+        cell.categoryNameLabel.text = categoryNames[indexPath.row]
+        cell.numOfCentersOfCategoryLabel.text = "\(numOfCentersOfCategory[indexPath.row]) 곳"
+        
+        cell.categoryImage.imageFromURL(imageURLS[indexPath.row], placeholder: UIImage(), fadeIn: true) {
+            (image: UIImage?) in
+            if image != nil {
+                cell.categoryImage.image = image!
+            }
         }
-
-        let cell: UITableViewCell! = nil
         return cell
     }
-
 
     /*
     // Override to support conditional editing of the table view.

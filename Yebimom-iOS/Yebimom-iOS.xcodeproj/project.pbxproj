@@ -42,7 +42,6 @@
 		D998E33F1B1F4DB500E4AB0B /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E33E1B1F4DB500E4AB0B /* CategoryTableViewCell.swift */; };
 		D998E3731B2086C900E4AB0B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E3721B2086C900E4AB0B /* LoginViewController.swift */; };
 		D998E37F1B219E9F00E4AB0B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E37E1B219E9F00E4AB0B /* SignupViewController.swift */; };
-		D998E3841B21B65000E4AB0B /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E3831B21B65000E4AB0B /* EventTableViewCell.swift */; };
 		D9A331EE1B1D74A8005E2FD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A331ED1B1D74A8005E2FD1 /* AppDelegate.swift */; };
 		D9A331F31B1D74A8005E2FD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A331F11B1D74A8005E2FD1 /* Main.storyboard */; };
 		D9A331F51B1D74A8005E2FD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A331F41B1D74A8005E2FD1 /* Images.xcassets */; };
@@ -58,7 +57,6 @@
 		D9CE3D321B29F36A00227E7F /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F41B1EC8E000E4AB0B /* ENSideMenu.swift */; };
 		D9CE3D331B29F36A00227E7F /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E2F51B1EC8E000E4AB0B /* ENSideMenuNavigationController.swift */; };
 		D9CE3D341B29F38800227E7F /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E33E1B1F4DB500E4AB0B /* CategoryTableViewCell.swift */; };
-		D9CE3D351B29F38800227E7F /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E3831B21B65000E4AB0B /* EventTableViewCell.swift */; };
 		D9CE3D361B29F38800227E7F /* EventPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E659941B21E962001CA293 /* EventPageTableViewCell.swift */; };
 		D9CE3D371B29F38800227E7F /* CategoryPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B745841B22E9850080645D /* CategoryPageTableViewCell.swift */; };
 		D9CE3D381B29F38800227E7F /* FacilityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C848971B29A473006FCA39 /* FacilityTableViewCell.swift */; };
@@ -74,6 +72,8 @@
 		D9E659951B21E962001CA293 /* EventPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E659941B21E962001CA293 /* EventPageTableViewCell.swift */; };
 		D9F2EDFF1B2B2E800010EC8E /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9F2EDFE1B2B2E800010EC8E /* keys.plist */; };
 		D9FAF3001B313FCF0077A0DE /* BMJUA.otf in Resources */ = {isa = PBXBuildFile; fileRef = D9FAF2FF1B312CA70077A0DE /* BMJUA.otf */; };
+		D9FAF3041B329D840077A0DE /* RBResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FAF3031B329D840077A0DE /* RBResizer.swift */; };
+		D9FAF3051B329E480077A0DE /* RBResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FAF3031B329D840077A0DE /* RBResizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,7 +118,6 @@
 		D998E33E1B1F4DB500E4AB0B /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		D998E3721B2086C900E4AB0B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D998E37E1B219E9F00E4AB0B /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		D998E3831B21B65000E4AB0B /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		D9A331E81B1D74A8005E2FD1 /* Yebimom-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yebimom-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A331EC1B1D74A8005E2FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9A331ED1B1D74A8005E2FD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +137,7 @@
 		D9E659941B21E962001CA293 /* EventPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageTableViewCell.swift; sourceTree = "<group>"; };
 		D9F2EDFE1B2B2E800010EC8E /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		D9FAF2FF1B312CA70077A0DE /* BMJUA.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMJUA.otf; sourceTree = "<group>"; };
+		D9FAF3031B329D840077A0DE /* RBResizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBResizer.swift; sourceTree = "<group>"; };
 		EE85F1E416213D26275F6D1E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F18C3D6DDBC750FBE81DF760 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,6 +236,7 @@
 				D975209C1B2DDD3E0026D85F /* AF+Image+Helper */,
 				D998E3761B20BCB600E4AB0B /* Networking */,
 				D998E2F31B1EC8A300E4AB0B /* ENSwiftSideMenu */,
+				D9FAF3031B329D840077A0DE /* RBResizer.swift */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -292,7 +293,6 @@
 			isa = PBXGroup;
 			children = (
 				D998E33E1B1F4DB500E4AB0B /* CategoryTableViewCell.swift */,
-				D998E3831B21B65000E4AB0B /* EventTableViewCell.swift */,
 				D9E659941B21E962001CA293 /* EventPageTableViewCell.swift */,
 				D9B745841B22E9850080645D /* CategoryPageTableViewCell.swift */,
 				D9C848971B29A473006FCA39 /* FacilityTableViewCell.swift */,
@@ -655,8 +655,8 @@
 				D9A331EE1B1D74A8005E2FD1 /* AppDelegate.swift in Sources */,
 				D998E3071B1F108600E4AB0B /* MainTableViewController.swift in Sources */,
 				D9B4654E1B27E2F4001DE177 /* LoginOrRegisterViewController.swift in Sources */,
+				D9FAF3041B329D840077A0DE /* RBResizer.swift in Sources */,
 				D9B7458D1B234FC50080645D /* CenterOfCategoryViewController.swift in Sources */,
-				D998E3841B21B65000E4AB0B /* EventTableViewCell.swift in Sources */,
 				D97520D81B2ED5230026D85F /* CenterSearchTableViewCell.swift in Sources */,
 				D97520D61B2EC00B0026D85F /* CenterSearchTableViewController.swift in Sources */,
 				D998E33F1B1F4DB500E4AB0B /* CategoryTableViewCell.swift in Sources */,
@@ -680,9 +680,9 @@
 				D9CE3D401B29F3AB00227E7F /* CategoryPageTableViewController.swift in Sources */,
 				D97520A21B2DE45B0026D85F /* AF+ImageVIew+Extension.swift in Sources */,
 				D9CE3D3C1B29F39C00227E7F /* SignupViewController.swift in Sources */,
-				D9CE3D351B29F38800227E7F /* EventTableViewCell.swift in Sources */,
 				D9CE3D301B29F1AF00227E7F /* MainViewTest.swift in Sources */,
 				D9CE3D391B29F39800227E7F /* CenterOfCategoryViewController.swift in Sources */,
+				D9FAF3051B329E480077A0DE /* RBResizer.swift in Sources */,
 				D9CE3D3B1B29F39C00227E7F /* LoginViewController.swift in Sources */,
 				D9CE3D3D1B29F3A600227E7F /* ENSwiftSideMenuNavViewController.swift in Sources */,
 				D9CE3D341B29F38800227E7F /* CategoryTableViewCell.swift in Sources */,
