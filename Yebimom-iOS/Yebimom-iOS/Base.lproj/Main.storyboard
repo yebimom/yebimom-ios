@@ -963,53 +963,97 @@
                                                     </progressView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전화번호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eS-x2-6jv">
                                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여기에 주소" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="id5-Nu-P81">
                                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여기에 전화번호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brB-Vt-xx0">
                                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qG1-pV-TtT">
                                                         <rect key="frame" x="0.0" y="-2" width="150" height="2"/>
                                                         <color key="progressTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <variation key="widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="50" y="122" width="300" height="2"/>
+                                                        </variation>
                                                     </progressView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXw-f1-HHG">
                                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="홈페이지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYD-O5-USO">
                                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="50" y="139" width="45" height="16"/>
+                                                        </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여기에 홈페이지" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuV-Dr-AP8">
                                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="120" y="139" width="230" height="16"/>
+                                                        </variation>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kkb-Ob-de2">
                                                         <rect key="frame" x="0.0" y="-2" width="150" height="2"/>
                                                         <color key="progressTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <variation key="widthClass=compact" misplaced="YES">
-                                                            <rect key="frame" x="50" y="171" width="300" height="2"/>
+                                                            <rect key="frame" x="50" y="170" width="300" height="2"/>
                                                         </variation>
                                                     </progressView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajF-Mo-RlV">
+                                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="50" y="185" width="30" height="21"/>
+                                                        </variation>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최저요금: 가격미정/3주" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvm-zu-bPb">
+                                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="120" y="184" width="125" height="21"/>
+                                                        </variation>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Zx1-bF-Ggq">
+                                                        <rect key="frame" x="0.0" y="-2" width="150" height="2"/>
+                                                        <color key="progressTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="50" y="253" width="300" height="2"/>
+                                                        </variation>
+                                                    </progressView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최고요금: 가격미정/3주" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3N-KU-LEf">
+                                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="120" y="213" width="121" height="21"/>
+                                                        </variation>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.95771692154255317" green="0.95771692154255317" blue="0.95771692154255317" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -1019,6 +1063,7 @@
                                                     <constraint firstItem="id5-Nu-P81" firstAttribute="leading" secondItem="ZXw-f1-HHG" secondAttribute="leading" constant="50" id="9ss-3r-hVx">
                                                         <variation key="widthClass=compact" constant="70"/>
                                                     </constraint>
+                                                    <constraint firstItem="kvm-zu-bPb" firstAttribute="top" secondItem="kkb-Ob-de2" secondAttribute="bottom" constant="15" id="Ds4-Ak-AEx"/>
                                                     <constraint firstItem="XYD-O5-USO" firstAttribute="top" secondItem="qG1-pV-TtT" secondAttribute="bottom" constant="15" id="EHz-Am-9gS"/>
                                                     <constraint firstItem="ZuV-Dr-AP8" firstAttribute="leading" secondItem="XYD-O5-USO" secondAttribute="leading" constant="50" id="F3L-MA-pvh">
                                                         <variation key="widthClass=compact" constant="70"/>
@@ -1040,19 +1085,34 @@
                                                         <variation key="widthClass=compact" constant="70"/>
                                                     </constraint>
                                                     <constraint firstItem="id5-Nu-P81" firstAttribute="top" secondItem="jkI-zy-TCG" secondAttribute="bottom" constant="15" id="TZR-wU-xnB"/>
+                                                    <constraint firstItem="ajF-Mo-RlV" firstAttribute="top" secondItem="kkb-Ob-de2" secondAttribute="bottom" constant="15" id="W7x-fA-j8L"/>
+                                                    <constraint firstItem="Zx1-bF-Ggq" firstAttribute="leading" secondItem="kkb-Ob-de2" secondAttribute="leading" constant="52" id="WAs-zW-aEC">
+                                                        <variation key="widthClass=compact" constant="0.0"/>
+                                                    </constraint>
+                                                    <constraint firstItem="kkb-Ob-de2" firstAttribute="trailing" secondItem="Z3N-KU-LEf" secondAttribute="trailing" constant="25" id="WjZ-ir-nXo"/>
+                                                    <constraint firstItem="Z3N-KU-LEf" firstAttribute="leading" secondItem="ajF-Mo-RlV" secondAttribute="leading" constant="50" id="XhQ-qX-egF">
+                                                        <variation key="widthClass=compact" constant="70"/>
+                                                    </constraint>
                                                     <constraint firstItem="2eS-x2-6jv" firstAttribute="top" secondItem="id5-Nu-P81" secondAttribute="bottom" constant="10" id="Zvw-EI-E8K"/>
                                                     <constraint firstItem="drS-Dm-7Av" firstAttribute="top" secondItem="ipv-2h-2Aw" secondAttribute="top" constant="10" id="au7-z1-XYK"/>
                                                     <constraint firstItem="ZXw-f1-HHG" firstAttribute="top" secondItem="jkI-zy-TCG" secondAttribute="bottom" constant="15" id="bqk-yl-yW3"/>
                                                     <constraint firstItem="jkI-zy-TCG" firstAttribute="trailing" secondItem="brB-Vt-xx0" secondAttribute="trailing" id="c1P-VH-shJ"/>
+                                                    <constraint firstItem="kkb-Ob-de2" firstAttribute="leading" secondItem="ajF-Mo-RlV" secondAttribute="leading" id="gnu-6K-kP8"/>
+                                                    <constraint firstItem="Z3N-KU-LEf" firstAttribute="top" secondItem="kvm-zu-bPb" secondAttribute="bottom" constant="10" id="guL-Pg-NBk"/>
                                                     <constraint firstItem="qG1-pV-TtT" firstAttribute="leading" secondItem="jkI-zy-TCG" secondAttribute="leading" id="hhE-5q-RD5"/>
                                                     <constraint firstItem="2eS-x2-6jv" firstAttribute="leading" secondItem="jkI-zy-TCG" secondAttribute="leading" id="mOL-li-huB"/>
                                                     <constraint firstItem="kkb-Ob-de2" firstAttribute="top" secondItem="ZuV-Dr-AP8" secondAttribute="bottom" constant="15" id="nCL-gE-vIf"/>
                                                     <constraint firstItem="ZXw-f1-HHG" firstAttribute="leading" secondItem="jkI-zy-TCG" secondAttribute="leading" id="pFe-eP-W5z"/>
+                                                    <constraint firstItem="kvm-zu-bPb" firstAttribute="leading" secondItem="ajF-Mo-RlV" secondAttribute="leading" constant="50" id="qUm-lK-4lf">
+                                                        <variation key="widthClass=compact" constant="70"/>
+                                                    </constraint>
                                                     <constraint firstAttribute="trailing" secondItem="jkI-zy-TCG" secondAttribute="trailing" id="sx8-hx-Cyu">
                                                         <variation key="widthClass=compact" constant="50"/>
                                                     </constraint>
                                                     <constraint firstItem="brB-Vt-xx0" firstAttribute="top" secondItem="id5-Nu-P81" secondAttribute="bottom" constant="10" id="uya-1R-jqS"/>
+                                                    <constraint firstItem="Zx1-bF-Ggq" firstAttribute="trailing" secondItem="kkb-Ob-de2" secondAttribute="trailing" id="vtg-cw-uy4"/>
                                                     <constraint firstItem="qG1-pV-TtT" firstAttribute="leading" secondItem="kkb-Ob-de2" secondAttribute="leading" id="wjh-qY-QIK"/>
+                                                    <constraint firstItem="kvm-zu-bPb" firstAttribute="trailing" secondItem="kkb-Ob-de2" secondAttribute="trailing" constant="-21" id="ySl-u8-yhG"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="subviews">
@@ -1066,6 +1126,10 @@
                                                         <exclude reference="XYD-O5-USO"/>
                                                         <exclude reference="ZuV-Dr-AP8"/>
                                                         <exclude reference="kkb-Ob-de2"/>
+                                                        <exclude reference="ajF-Mo-RlV"/>
+                                                        <exclude reference="kvm-zu-bPb"/>
+                                                        <exclude reference="Zx1-bF-Ggq"/>
+                                                        <exclude reference="Z3N-KU-LEf"/>
                                                     </mask>
                                                     <mask key="constraints">
                                                         <exclude reference="1Nm-TQ-eZR"/>
@@ -1092,10 +1156,20 @@
                                                         <exclude reference="Kic-FP-4cU"/>
                                                         <exclude reference="QfU-LW-HvG"/>
                                                         <exclude reference="uya-1R-jqS"/>
+                                                        <exclude reference="WjZ-ir-nXo"/>
+                                                        <exclude reference="gnu-6K-kP8"/>
                                                         <exclude reference="nCL-gE-vIf"/>
                                                         <exclude reference="F3L-MA-pvh"/>
                                                         <exclude reference="Fg4-QQ-5w8"/>
                                                         <exclude reference="P93-MK-ApU"/>
+                                                        <exclude reference="W7x-fA-j8L"/>
+                                                        <exclude reference="WAs-zW-aEC"/>
+                                                        <exclude reference="vtg-cw-uy4"/>
+                                                        <exclude reference="Ds4-Ak-AEx"/>
+                                                        <exclude reference="qUm-lK-4lf"/>
+                                                        <exclude reference="ySl-u8-yhG"/>
+                                                        <exclude reference="XhQ-qX-egF"/>
+                                                        <exclude reference="guL-Pg-NBk"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="widthClass=compact">
@@ -1110,6 +1184,10 @@
                                                         <include reference="XYD-O5-USO"/>
                                                         <include reference="ZuV-Dr-AP8"/>
                                                         <include reference="kkb-Ob-de2"/>
+                                                        <include reference="ajF-Mo-RlV"/>
+                                                        <include reference="kvm-zu-bPb"/>
+                                                        <include reference="Zx1-bF-Ggq"/>
+                                                        <include reference="Z3N-KU-LEf"/>
                                                     </mask>
                                                     <mask key="constraints">
                                                         <include reference="1Nm-TQ-eZR"/>
@@ -1136,10 +1214,20 @@
                                                         <include reference="Kic-FP-4cU"/>
                                                         <include reference="QfU-LW-HvG"/>
                                                         <include reference="uya-1R-jqS"/>
+                                                        <exclude reference="WjZ-ir-nXo"/>
+                                                        <include reference="gnu-6K-kP8"/>
                                                         <include reference="nCL-gE-vIf"/>
                                                         <include reference="F3L-MA-pvh"/>
                                                         <include reference="Fg4-QQ-5w8"/>
                                                         <include reference="P93-MK-ApU"/>
+                                                        <include reference="W7x-fA-j8L"/>
+                                                        <include reference="WAs-zW-aEC"/>
+                                                        <include reference="vtg-cw-uy4"/>
+                                                        <include reference="Ds4-Ak-AEx"/>
+                                                        <include reference="qUm-lK-4lf"/>
+                                                        <exclude reference="ySl-u8-yhG"/>
+                                                        <include reference="XhQ-qX-egF"/>
+                                                        <include reference="guL-Pg-NBk"/>
                                                     </mask>
                                                 </variation>
                                             </view>
