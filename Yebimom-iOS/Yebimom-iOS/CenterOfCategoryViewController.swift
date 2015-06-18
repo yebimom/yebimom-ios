@@ -25,6 +25,7 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
     
     @IBOutlet weak var detailAddressLabel: UILabel!
     @IBOutlet weak var datailContactNumberLabel: UILabel!
+    @IBOutlet weak var detailHomepageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,13 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
         let centerName: String? = centerDetailOfCategoryJsonData["name"].string
         let centerAddress: String? = centerDetailOfCategoryJsonData["address"].stringValue
         let centerImageURL: String? = centerDetailOfCategoryJsonData["main_image_url"].stringValue
+        
+        
+        // Center Detail Info
         let centerContactNumber: String? = centerDetailOfCategoryJsonData["phone"].stringValue
+        let centerHomepage: String? = centerDetailOfCategoryJsonData["url"].stringValue
+
+        
 
         for (key: String, subJsonData: JSON)in centerDetailOfCategoryJsonData["facility_set"] {
             facilities.append(subJsonData.stringValue)
@@ -70,6 +77,12 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
         // Detail
         detailAddressLabel.text = centerAddress
         datailContactNumberLabel.text = centerContactNumber
+        if centerHomepage != "" {
+            detailHomepageLabel.text = centerHomepage
+        }
+        else {
+            detailHomepageLabel.text = "미등록"
+        }
         
         designCenterDetailNavigationBar()
     }
