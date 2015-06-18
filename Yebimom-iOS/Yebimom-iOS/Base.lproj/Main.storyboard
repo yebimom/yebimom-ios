@@ -553,9 +553,11 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="산후조리원 이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj0-oW-URb">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="ULM-5m-XER"/>
+                                                <constraint firstAttribute="height" constant="21" id="ULM-5m-XER">
+                                                    <variation key="widthClass=compact" constant="35"/>
+                                                </constraint>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="BMJUAOTF" family="BM JUA_OTF" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="BMJUAOTF" family="BM JUA_OTF" pointSize="25"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
@@ -563,7 +565,8 @@
                                                     <exclude reference="ULM-5m-XER"/>
                                                 </mask>
                                             </variation>
-                                            <variation key="widthClass=compact">
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="8" y="229" width="384" height="35"/>
                                                 <mask key="constraints">
                                                     <include reference="ULM-5m-XER"/>
                                                 </mask>
@@ -572,9 +575,11 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="산후조리원 주소" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ot-HQ-1Ao">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="32.5" id="7iH-5f-kHj"/>
+                                                <constraint firstAttribute="height" constant="32.5" id="7iH-5f-kHj">
+                                                    <variation key="widthClass=compact" constant="22"/>
+                                                </constraint>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="BMJUAOTF" family="BM JUA_OTF" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="BMJUAOTF" family="BM JUA_OTF" pointSize="14"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
@@ -592,7 +597,9 @@
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="Esp-tY-NZi" secondAttribute="bottom" id="7P0-eD-5VN"/>
                                         <constraint firstItem="sj0-oW-URb" firstAttribute="leading" secondItem="Tut-gY-VhX" secondAttribute="leadingMargin" id="8Cx-Oh-TE8"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="6Ot-HQ-1Ao" secondAttribute="bottom" constant="5" id="KV8-sE-bTl"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="6Ot-HQ-1Ao" secondAttribute="bottom" constant="5" id="KV8-sE-bTl">
+                                            <variation key="widthClass=compact" constant="2"/>
+                                        </constraint>
                                         <constraint firstItem="Esp-tY-NZi" firstAttribute="leading" secondItem="Tut-gY-VhX" secondAttribute="leading" id="L7n-sY-5RV"/>
                                         <constraint firstItem="6Ot-HQ-1Ao" firstAttribute="trailing" secondItem="Tut-gY-VhX" secondAttribute="trailingMargin" id="Lsp-Nr-PHh"/>
                                         <constraint firstItem="sj0-oW-URb" firstAttribute="trailing" secondItem="Tut-gY-VhX" secondAttribute="trailingMargin" id="Unl-cj-nXQ"/>
@@ -600,7 +607,9 @@
                                         <constraint firstAttribute="centerX" secondItem="if1-7d-hNW" secondAttribute="centerX" id="iXL-lV-SXV"/>
                                         <constraint firstAttribute="trailing" secondItem="Esp-tY-NZi" secondAttribute="trailing" id="r1L-mV-4cU"/>
                                         <constraint firstItem="6Ot-HQ-1Ao" firstAttribute="leading" secondItem="Tut-gY-VhX" secondAttribute="leadingMargin" id="seG-74-WsY"/>
-                                        <constraint firstItem="6Ot-HQ-1Ao" firstAttribute="top" secondItem="sj0-oW-URb" secondAttribute="bottom" constant="5" id="weR-DF-5m6"/>
+                                        <constraint firstItem="6Ot-HQ-1Ao" firstAttribute="top" secondItem="sj0-oW-URb" secondAttribute="bottom" constant="5" id="weR-DF-5m6">
+                                            <variation key="widthClass=compact" constant="2"/>
+                                        </constraint>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
