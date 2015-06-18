@@ -565,8 +565,7 @@
                                                     <exclude reference="ULM-5m-XER"/>
                                                 </mask>
                                             </variation>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="8" y="229" width="384" height="35"/>
+                                            <variation key="widthClass=compact">
                                                 <mask key="constraints">
                                                     <include reference="ULM-5m-XER"/>
                                                 </mask>

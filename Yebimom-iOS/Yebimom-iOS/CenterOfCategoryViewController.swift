@@ -53,6 +53,7 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "FacilityTableCell")
         
         cell.textLabel?.text = facilities[indexPath.row]
+        cell.imageView!.image = UIImage(named: "logo.png")
         return cell
     }
 
