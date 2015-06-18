@@ -18,6 +18,7 @@ class CategoryPageTableViewController: UITableViewController {
     var centerNames = [String]()
     var centerAddress = [String]()
     var centerHashID = [String]()
+    var centerImageURLs = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,14 +33,31 @@ class CategoryPageTableViewController: UITableViewController {
         var centersOfCategoryJsonData = JSON(data: NSData(contentsOfURL: centersOfCategoryURL!)!)
 
         for (key: String, subJsonData: JSON)in centersOfCategoryJsonData {
-            centerNames.append(subJsonData["name"].string!)
-            centerAddress.append(subJsonData["address"].string!)
+            centerNames.append(subJsonData["name"].stringValue)
+            centerAddress.append(subJsonData["address"].stringValue)
             centerHashID.append(subJsonData["hash_id"].string!)
+            if subJsonData["main_image_url"].string != nil {
+                centerImageURLs.append(subJsonData["main_image_url"].string!)
+            }
+            else {
+                centerImageURLs.append("")
+            }
         }
         
         designCategoryPageNavigationBar()
         
         self.removeAllOverlays()
+    }
+    
+    func viewTransition(storyboardID: String) {
+        var destViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardID) as! UIViewController
+        
+        self.presentViewController(destViewController, animated: false, completion: nil)
+    }
+    
+    func backMain(sender: UIBarButtonItem) {
+        navigationController?.popViewControllerAnimated(true)
+        viewTransition("SideMenuNavView")
     }
     
     func designCategoryPageNavigationBar() {
@@ -48,6 +66,11 @@ class CategoryPageTableViewController: UITableViewController {
         let logo = UIImage(named: "menubar_logo.png")
         let imageView = UIImageView(image: logo)
         navigationItem.titleView = imageView
+        
+        let backMainButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "backMain:")
+        backMainButton.image = UIImage(named: "icon_back")
+        navigationItem.leftBarButtonItem = backMainButton
+        navigationItem.leftBarButtonItem?.tintColor = UIColor(hex: 0xc0392b)
     }
 
 
@@ -76,7 +99,12 @@ class CategoryPageTableViewController: UITableViewController {
         
         cell.centerNameLabel.text = centerNames[indexPath.row]
         cell.centerAddressLabel.text = centerAddress[indexPath.row]
-
+        cell.centerImageURL.imageFromURL(centerImageURLs[indexPath.row], placeholder: UIImage(named: "blank_image_400x300")!, fadeIn: true) {
+            (image: UIImage?) in
+            if image != nil {
+                cell.centerImageURL.image = image!
+            }
+        }
         return cell
     }
 
