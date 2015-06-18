@@ -465,6 +465,7 @@
                                 <connections>
                                     <outlet property="centerImage" destination="JMW-8K-wSY" id="tU1-zx-XAg"/>
                                     <outlet property="centerNameLabel" destination="gtm-nA-lFH" id="EbL-fh-nWV"/>
+                                    <segue destination="tRu-pw-Gf4" kind="show" identifier="ShowCenterDetailFromSearch" id="6w5-Dr-LEh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -479,7 +480,6 @@
                     <connections>
                         <outlet property="centerSearchBar" destination="BgY-j2-deW" id="dWA-hM-U0f"/>
                         <outlet property="searchDisplayController" destination="mH7-w0-T10" id="4tC-vI-uyB"/>
-                        <segue destination="tRu-pw-Gf4" kind="show" identifier="ShowCenterDetailFromSearch" id="GMR-c2-pWr"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frJ-pm-oba" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1629,6 +1629,6 @@
         <image name="login_facebook" width="502" height="102"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GMR-c2-pWr"/>
+        <segue reference="JTd-kY-izq"/>
     </inferredMetricsTieBreakers>
 </document>
