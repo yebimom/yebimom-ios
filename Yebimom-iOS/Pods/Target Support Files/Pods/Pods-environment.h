@@ -24,6 +24,12 @@
 #define COCOAPODS_VERSION_MINOR_GoogleMaps 10
 #define COCOAPODS_VERSION_PATCH_GoogleMaps 1
 
+// Spring
+#define COCOAPODS_POD_AVAILABLE_Spring
+#define COCOAPODS_VERSION_MAJOR_Spring 1
+#define COCOAPODS_VERSION_MINOR_Spring 0
+#define COCOAPODS_VERSION_PATCH_Spring 3
+
 // SwiftOverlays
 #define COCOAPODS_POD_AVAILABLE_SwiftOverlays
 #define COCOAPODS_VERSION_MAJOR_SwiftOverlays 0
