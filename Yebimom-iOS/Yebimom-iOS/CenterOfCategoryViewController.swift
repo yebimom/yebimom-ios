@@ -53,6 +53,17 @@ class CenterOfCategoryViewController: UIViewController, UITableViewDataSource, U
         locationMarker.snippet = centerName
         locationMarker.appearAnimation = kGMSMarkerAnimationPop
         locationMarker.map = mapViewOutlet
+        
+        
+        designCenterDetailNavigationBar()
+    }
+    
+    func designCenterDetailNavigationBar() {
+        navigationController!.navigationBar.barTintColor = UIColor.whiteColor()
+        
+        let logo = UIImage(named: "menubar_logo.png")
+        let imageView = UIImageView(image: logo)
+        navigationItem.titleView = imageView
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
