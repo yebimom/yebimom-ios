@@ -960,6 +960,23 @@
                                                     </mask>
                                                 </variation>
                                             </view>
+                                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipv-2h-2Aw" userLabel="Detail Info View">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="450" id="1Nm-TQ-eZR"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="1Nm-TQ-eZR"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="1Nm-TQ-eZR"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -971,9 +988,13 @@
                                             <constraint firstItem="38Z-54-BNR" firstAttribute="top" secondItem="Rgh-hX-n29" secondAttribute="bottom" id="JqI-8h-xD7"/>
                                             <constraint firstAttribute="bottom" secondItem="38Z-54-BNR" secondAttribute="bottom" constant="104" id="Nhu-rS-3oc"/>
                                             <constraint firstItem="uiJ-LS-YsE" firstAttribute="leading" secondItem="B1F-7o-1H5" secondAttribute="leading" id="NmS-P3-GUV"/>
+                                            <constraint firstAttribute="trailing" secondItem="ipv-2h-2Aw" secondAttribute="trailing" id="W05-ly-wsR"/>
                                             <constraint firstAttribute="width" secondItem="uiJ-LS-YsE" secondAttribute="width" id="WJX-Gh-sMC"/>
+                                            <constraint firstItem="Rgh-hX-n29" firstAttribute="top" secondItem="ipv-2h-2Aw" secondAttribute="bottom" id="Yk2-aS-cUG"/>
                                             <constraint firstItem="Rgh-hX-n29" firstAttribute="top" secondItem="hzC-ge-cUv" secondAttribute="bottom" id="ZQE-7W-W7i"/>
                                             <constraint firstItem="38Z-54-BNR" firstAttribute="leading" secondItem="B1F-7o-1H5" secondAttribute="leading" id="bGc-zu-hUJ"/>
+                                            <constraint firstItem="ipv-2h-2Aw" firstAttribute="top" secondItem="hzC-ge-cUv" secondAttribute="bottom" id="c0u-Tw-hAU"/>
+                                            <constraint firstItem="ipv-2h-2Aw" firstAttribute="leading" secondItem="B1F-7o-1H5" secondAttribute="leading" id="goe-cn-FFy"/>
                                             <constraint firstItem="38Z-54-BNR" firstAttribute="leading" secondItem="B1F-7o-1H5" secondAttribute="leading" id="hme-5M-Vep"/>
                                             <constraint firstItem="38Z-54-BNR" firstAttribute="top" secondItem="Rgh-hX-n29" secondAttribute="bottom" id="p8j-ij-Ysh"/>
                                             <constraint firstAttribute="trailing" secondItem="uiJ-LS-YsE" secondAttribute="trailing" id="pMy-Sa-9ml"/>
@@ -990,6 +1011,7 @@
                                                 <exclude reference="hzC-ge-cUv"/>
                                                 <exclude reference="Rgh-hX-n29"/>
                                                 <exclude reference="38Z-54-BNR"/>
+                                                <exclude reference="ipv-2h-2Aw"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <exclude reference="NmS-P3-GUV"/>
@@ -1000,8 +1022,12 @@
                                                 <exclude reference="9UR-GP-7hL"/>
                                                 <exclude reference="rQd-Z1-9lA"/>
                                                 <exclude reference="slh-us-Gu8"/>
+                                                <exclude reference="W05-ly-wsR"/>
+                                                <exclude reference="c0u-Tw-hAU"/>
+                                                <exclude reference="goe-cn-FFy"/>
                                                 <exclude reference="2GM-ra-5AC"/>
                                                 <exclude reference="D1t-ca-RSx"/>
+                                                <exclude reference="Yk2-aS-cUG"/>
                                                 <exclude reference="ZQE-7W-W7i"/>
                                                 <exclude reference="rKH-gJ-S4Y"/>
                                                 <exclude reference="uNt-9z-XuJ"/>
@@ -1020,6 +1046,7 @@
                                                 <include reference="hzC-ge-cUv"/>
                                                 <include reference="Rgh-hX-n29"/>
                                                 <include reference="38Z-54-BNR"/>
+                                                <include reference="ipv-2h-2Aw"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <include reference="NmS-P3-GUV"/>
@@ -1030,9 +1057,13 @@
                                                 <include reference="9UR-GP-7hL"/>
                                                 <include reference="rQd-Z1-9lA"/>
                                                 <include reference="slh-us-Gu8"/>
+                                                <include reference="W05-ly-wsR"/>
+                                                <include reference="c0u-Tw-hAU"/>
+                                                <include reference="goe-cn-FFy"/>
                                                 <include reference="2GM-ra-5AC"/>
                                                 <exclude reference="D1t-ca-RSx"/>
-                                                <include reference="ZQE-7W-W7i"/>
+                                                <include reference="Yk2-aS-cUG"/>
+                                                <exclude reference="ZQE-7W-W7i"/>
                                                 <include reference="rKH-gJ-S4Y"/>
                                                 <include reference="uNt-9z-XuJ"/>
                                                 <include reference="BbN-B1-XzR"/>
@@ -1040,7 +1071,7 @@
                                                 <include reference="Nhu-rS-3oc"/>
                                                 <include reference="bGc-zu-hUJ"/>
                                                 <include reference="hme-5M-Vep"/>
-                                                <include reference="p8j-ij-Ysh"/>
+                                                <exclude reference="p8j-ij-Ysh"/>
                                                 <include reference="un4-bg-2eU"/>
                                             </mask>
                                         </variation>
